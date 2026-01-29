@@ -1,0 +1,323 @@
+<aura:component extends="c:STG_CMP_Base">
+
+    <aura:handler event="c:STG_EVT_Edit" action="{!c.toggleIsView}"/>
+
+    <aura:attribute name="defaultContactLanguageFluencyValue" type="String" />
+    <aura:attribute name="defaultContactLanguageFluencyLabel" type="String" />
+    <aura:attribute name="fluencyPicklistEntries" type="Map" />
+    <aura:attribute name="preferredPhonePicklistEntries" type="Map" />
+    <aura:attribute name="defaultPreferredPhoneValue" type="String" />
+    <aura:attribute name="defaultPreferredPhoneLabel" type="String" />
+
+    <aura:attribute name="accTypesToDeleteSelected" type="Object[]" />
+    <aura:attribute name="accTypesAddrSelected" type="Object[]" />
+
+    <aura:attribute name="accRecTypes" type="Map" />
+    <aura:attribute name="householdRecTypeName" type="String" />
+    <aura:attribute name="householdRecTypeId" type="String" />
+    <aura:attribute name="adminAccRecTypeName" type="String" />
+    <aura:attribute name="adminAccRecTypeId" type="String" />
+
+    <div class="slds-grid slds-wrap">
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgDefaultContactLanguageFluency}" />
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <c:CMP_Picklist_Dropdown class="contact-language-fluency-picklist"
+                setting="{!v.hierarchySettings.Default_Contact_Language_Fluency__c}"
+                isView="{!v.isView}"
+                picklistValue="{!v.defaultContactLanguageFluencyValue}"
+                picklistLabel="{!v.defaultContactLanguageFluencyLabel}"
+                picklistEntries="{!v.fluencyPicklistEntries}"
+                enableNoneOptionOnViewPage="true" />
+        </div>
+        <div class="slds-col slds-size--1-of-1">
+            <ui:outputText value="{!$Label.c.stgHelpDefaultContactLanguageFluency}" class="slds-text-body--small" />
+        </div>
+		<!-- Preferred Email & Phone -->
+        <hr class="slds-border--top slds-m-top--medium slds-m-bottom--medium" style="width:100%;" />
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgDisablePreferredEmailEnforcement}"/>
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <label class="slds-checkbox">
+                        <aura:if isTrue="{!v.isView}">
+                            <ui:outputCheckbox value="{!v.hierarchySettings.Disable_Preferred_Email_Enforcement__c}"
+                                               class="contact-addr-enabled" />
+                        <aura:set attribute="else">
+                            <ui:inputCheckbox value="{!v.hierarchySettings.Disable_Preferred_Email_Enforcement__c}"
+                                              class="contact-addr-enabled" />
+                            <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Disable_Preferred_Email_Enforcement__c}"></span>
+                            <span class="slds-form-element__label"></span>
+                        </aura:set>
+                        </aura:if>                       
+                    </label>
+                </div>
+            </div>
+        </div>
+                
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpContactPreferredEmail}" class="slds-text-body--small" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgEnablePreferredPhoneSync}"/>
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <label class="slds-checkbox">
+                        <aura:if isTrue="{!v.isView}">
+                            <ui:outputCheckbox value="{!v.hierarchySettings.Enable_New_Preferred_Phone_Sync__c}"
+                                               class="contact-preferred-phone-sync-enabled"
+                                               aura:id="enablePrefPhone" />
+                        <aura:set attribute="else">
+                            <ui:inputCheckbox value="{!v.hierarchySettings.Enable_New_Preferred_Phone_Sync__c}"
+                                              class="contact-preferred-phone-sync-enabled"
+                                              aura:id="enablePrefPhoneEdit"/>
+                            <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Enable_New_Preferred_Phone_Sync__c}"></span>
+                            <span class="slds-form-element__label"></span>
+                        </aura:set>
+                        </aura:if>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpContactPreferredPhoneSync}" class="slds-text-body--small" />
+        </div>
+
+        <aura:if isTrue="{!v.hierarchySettings.Enable_New_Preferred_Phone_Sync__c}">
+            <div class="slds-col slds-size--1-of-2 slds-p-left--large">
+                <ui:outputText value="{!$Label.c.stgDisablePreferredPhoneEnforcement}"/>
+            </div>
+            <div class="slds-col slds-size--1-of-2">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <label class="slds-checkbox">
+                            <aura:if isTrue="{!v.isView}">
+                                <ui:outputCheckbox value="{!v.hierarchySettings.Disable_Preferred_Phone_Enforcement__c}"
+                                                   class="contact-addr-enabled"
+                                                   aura:id="disablePhoneErrors" />
+                            <aura:set attribute="else">
+                                <ui:inputCheckbox value="{!v.hierarchySettings.Disable_Preferred_Phone_Enforcement__c}"
+                                                  class="contact-addr-enabled"
+                                                  aura:id="disablePhoneErrorsEdit"/>
+                                <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Disable_Preferred_Phone_Enforcement__c}"></span>
+                                <span class="slds-form-element__label"></span>
+                            </aura:set>
+                            </aura:if>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium slds-p-left--large">
+                <ui:outputText value="{!$Label.c.stgHelpContactPreferredPhone}" class="slds-text-body--small" />
+            </div>
+        <aura:set attribute="else">
+            <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium"></div>
+        </aura:set>
+        </aura:if>
+
+        <div class="slds-col slds-size--1-of-2 slds-p-right--xx-large">
+            <h2>
+                <ui:outputText value="{!$Label.c.stgPreferredEmailDataCleanup}" class="slds-text-body--small" />
+            </h2>
+            <div class="slds-text-body--small">
+                <p>
+                    <ui:outputText value="{!$Label.c.stgRunCleanUpEnableFirstTime}" class="slds-text-body--small" />
+                </p>
+                <p>
+                    <ui:outputText value="{!$Label.c.stgHelpEnsureExistContactPreferEmail}" class="slds-text-body--small" />
+                </p>
+                
+                <ui:outputText value="{!$Label.c.stgPreferredPhoneSelection}"/>
+                
+            </div>
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <lightning:button variant="brand" label="{!$Label.c.stgRunCleanUp}" iconName="utility:copy" iconPosition="left" onclick="{! c.runCleanUp }" aura:id="cleanUpBtn" disabled="{!or(and(and(v.hierarchySettings.Disable_Preferred_Phone_Enforcement__c, v.hierarchySettings.Disable_Preferred_Email_Enforcement__c), v.isView), !v.isView)}"  />
+            <br />
+            <ui:outputText aura:id="cleanUpMsg" value="{!$Label.c.stgCleanupQueuedEmailSent}" class="slds-text-color--weak slds-hide" />
+        
+        <div class="slds-p-top_xx-large"> </div>
+                 
+            <c:CMP_Picklist_Dropdown class="contact-preferred-phone-picklist"
+                setting="{!v.hierarchySettings.Preferred_Phone_Selection__c}"
+                isView="{!v.isView}"               
+                picklistValue="{!v.defaultPreferredPhoneValue}"
+                picklistLabel="{!v.defaultPreferredPhoneLabel}"
+                picklistEntries="{!v.preferredPhonePicklistEntries}"
+                enableNoneOptionOnViewPage="true" />
+        
+        
+        </div>
+        
+	    <!-- End of Preferred Email & Phone -->
+        
+        <hr class="slds-border--top slds-m-top--medium slds-m-bottom--medium" style="width:100%;" />
+        
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgContactMultiAddressesEnabled}" class="slds-text-body--small" />
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <label class="slds-checkbox">
+                        <aura:if isTrue="{!v.isView}">
+                            <ui:outputCheckbox value="{!v.hierarchySettings.Contacts_Addresses_Enabled__c}"
+                                               class="contact-addr-enabled" />
+                        <aura:set attribute="else">
+                            <ui:inputCheckbox value="{!v.hierarchySettings.Contacts_Addresses_Enabled__c}"
+                                              class="contact-addr-enabled" />
+                            <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Contacts_Addresses_Enabled__c}"></span>
+                            <span class="slds-form-element__label"></span>
+                        </aura:set>
+                        </aura:if>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpContactAddrs}" class="slds-text-body--small" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgAdminAccountRecordType}" class="slds-text-body--small" />
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <c:CMP_RecTypes_Dropdown class="hh-addresses-account-record-type"
+                                     setting="{!v.hierarchySettings.Administrative_Account_Record_Type__c}"
+                                     isView="{!v.isView}"
+                                     recTypeId="{!v.adminAccRecTypeId}"
+                                     recTypeName="{!v.adminAccRecTypeName}"
+                                     recTypes="{!v.accRecTypes}"
+            />
+        </div>
+
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpAdminRecType}" class="slds-text-body--small" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgAccountRecordTypeSupportsHHAddress}" class="slds-text-body--small" />
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <c:CMP_RecTypes_Dropdown class="hh-addresses-account-record-type"
+                                     setting="{!v.hierarchySettings.Household_Addresses_RecType__c}"
+                                     isView="{!v.isView}"
+                                     recTypeId="{!v.householdRecTypeId}"
+                                     recTypeName="{!v.householdRecTypeName}"
+                                     recTypes="{!v.accRecTypes}"
+            />
+        </div>
+
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpHouseholdRecType}" class="slds-text-body--small" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <div>
+                <ui:outputText value="{!$Label.c.stgAccountTypesMultiAddressesEnabled}" class="slds-text-body--small" />
+            </div>
+            <ui:outputText value="{!$Label.c.stgHelpAddressAccRecType}" class="slds-text-body--small" />
+        </div>
+        <div class="slds-col slds-size--1-of-2 slds-m-bottom--medium">
+            <c:CMP_RecTypes setting="{!v.hierarchySettings.Accounts_Addresses_Enabled__c}"
+                            recTypesSelected="{!v.accTypesAddrSelected}" isView="{!v.isView}"
+                            class="multi-addresses-enabled" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <ui:outputText value="{!$Label.c.stgSimpleAddressChangeUpdate}" class="slds-text-body--small" />     
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <label class="slds-checkbox">
+                  <aura:if isTrue="{!v.isView}">
+                      <ui:outputCheckbox value="{!v.hierarchySettings.Simple_Address_Change_Treated_as_Update__c}"
+                                         class="addr-change-outputcheck" />
+                  <aura:set attribute="else">
+                      <ui:inputCheckbox value="{!v.hierarchySettings.Simple_Address_Change_Treated_as_Update__c}"
+                                        class="addr-change-inputcheck" />
+                      <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Simple_Address_Change_Treated_as_Update__c}"></span>
+                      <span class="slds-form-element__label"></span>
+                  </aura:set>
+                  </aura:if>
+              </label>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size--1-of-1 slds-m-bottom--medium">
+            <ui:outputText value="{!$Label.c.stgHelpSimpleAddrChangeIsUpdate}" class="slds-text-body--small" />
+        </div>
+
+        <div class="slds-col slds-size--1-of-2">
+            <div>
+                <ui:outputText value="{!$Label.c.stgAccoutTypesWithoutContactsDelete}" class="slds-text-body--small" />
+            </div>
+            <div class="slds-text-body--small">
+                <ui:outputText value="{!$Label.c.stgHelpAccoutsDeletedIfChildContactsDeleted}" class="slds-text-body--small" />
+            </div>
+        </div>
+        <div class="slds-col slds-size--1-of-2">
+          <c:CMP_RecTypes setting="{!v.hierarchySettings.Accounts_to_Delete__c}"
+                          recTypesSelected="{!v.accTypesToDeleteSelected}" isView="{!v.isView}"
+                          class="accounts-to-delete" />
+        </div>
+
+        <hr />
+
+        <div class="slds-col slds-size--1-of-2 slds-p-top--large slds-m-top--large slds-border--top slds-p-right--xx-large">
+            <h2>
+                <ui:outputText value="{!$Label.c.stgEthnicityRaceBackfillContacts}" class="slds-text-body--small" />
+            </h2>
+            <div class="slds-text-body--small">
+
+                <p>
+                    <ui:outputText value="{!$Label.c.stgHelpEthnicityRaceBackfill}" class="slds-text-body--small" />
+                </p>
+                <br />
+                <h3><strong>
+                        <ui:outputText value="{!$Label.c.stgBeforeRunBackfill}" class="slds-text-body--small" />
+                </strong></h3>
+                <ul class="slds-list--dotted">
+                    <li>
+                        <ui:outputText value="{!$Label.c.stgAddNotHispanicOrLatinoPicklistValue}" class="slds-text-body--small" />
+                    </li>
+                    <li>
+                        <ui:outputText value="{!$Label.c.stgAddHispanicOrLatinoPicklistValue}" class="slds-text-body--small" />
+                    </li>
+                </ul>
+                <br />
+                <h3><strong>
+                        <ui:outputText value="{!$Label.c.stgAfterRunBackfill}" class="slds-text-body--small" />
+                </strong></h3>
+                <ul class="slds-list--dotted">
+                    <li>
+                        <ui:outputText value="{!$Label.c.stgHelpIfCustomValuesEthnicityCopyRace}" class="slds-text-body--small" />
+                    </li>
+                    <li>
+                        <ui:outputText value="{!$Label.c.stgHelpRemoveAllPicklistValuesEthnicityExceptHispanicOrLatino}" class="slds-text-body--small" />
+                    </li>
+                    <li>
+                        <ui:outputText value="{!$Label.c.stgHelpUpdateReportIfDependenciesEthnicity}" class="slds-text-body--small" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slds-col slds-size--1-of-2 slds-p-top--large slds-m-top--large slds-border--top">
+            <lightning:button variant="brand" label="{!$Label.c.stgBtnRunBackfill}" iconName="utility:copy" iconPosition="left" onclick="{! c.runBackfill }" aura:id="ethnicRaceBtn" />
+            <br />
+            <ui:outputText aura:id="ethnicRaceMsg" value="{!$Label.c.stgBackfillQueuedEmailSent}" class="slds-text-color--weak slds-hide" />
+        </div>
+        
+    </div>
+</aura:component>

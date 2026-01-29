@@ -1,0 +1,1106 @@
+{
+  "generatedAt": "2026-01-29T23:04:32.496Z",
+  "sourceFiles": 24,
+  "byProject": {
+    "large": [
+      {
+        "file": "client-responsiveness-large.json",
+        "path": "performance-metrics/client-responsiveness-large.json",
+        "project": "large",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:18.102Z",
+        "metrics": {
+          "totalProfileTimeMs": 23676,
+          "blockingRelatedNodes": 2,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      },
+      {
+        "file": "deferred-reference-large.json",
+        "path": "performance-metrics/deferred-reference-large.json",
+        "project": "large",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:18.305Z",
+        "metrics": {
+          "totalTimeMs": 23676,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "deferredRelatedNodes": 74
+        }
+      },
+      {
+        "file": "document-open-large.json",
+        "path": "performance-metrics/document-open-large.json",
+        "project": "large",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:18.230Z",
+        "metrics": {
+          "totalTimeMs": 23676,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "documentRelatedNodes": 10
+        }
+      },
+      {
+        "file": "event-loop-blocking-large.json",
+        "path": "performance-metrics/event-loop-blocking-large.json",
+        "project": "large",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:18.165Z",
+        "metrics": {
+          "totalProfileTimeMs": 23676,
+          "longTaskCount": 11,
+          "maxBlockingMs": 15684,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile"
+        }
+      },
+      {
+        "file": "high-priority-request-large.json",
+        "path": "performance-metrics/high-priority-request-large.json",
+        "project": "large",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:59.456Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 19,
+          "maxLatencyMs": 28,
+          "p95LatencyMs": 28
+        }
+      },
+      {
+        "file": "queue-priority-large.json",
+        "path": "performance-metrics/queue-priority-large.json",
+        "project": "large",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.727Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      },
+      {
+        "file": "queue-samples-large.json",
+        "path": "performance-metrics/queue-samples-large.json",
+        "project": "large",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "workspace-load-large.json",
+        "path": "performance-metrics/workspace-load-large.json",
+        "project": "large",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:58.620Z",
+        "metrics": {
+          "totalTimeMs": 3,
+          "filesProcessed": 625,
+          "filesPerSecond": 208333.33,
+          "queueDepthMax": null,
+          "success": true
+        }
+      }
+    ],
+    "medium": [
+      {
+        "file": "client-responsiveness-medium.json",
+        "path": "performance-metrics/client-responsiveness-medium.json",
+        "project": "medium",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:17.818Z",
+        "metrics": {
+          "totalProfileTimeMs": 24786,
+          "blockingRelatedNodes": 4,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      },
+      {
+        "file": "deferred-reference-medium.json",
+        "path": "performance-metrics/deferred-reference-medium.json",
+        "project": "medium",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:17.976Z",
+        "metrics": {
+          "totalTimeMs": 24786,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "deferredRelatedNodes": 50
+        }
+      },
+      {
+        "file": "document-open-medium.json",
+        "path": "performance-metrics/document-open-medium.json",
+        "project": "medium",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:17.923Z",
+        "metrics": {
+          "totalTimeMs": 24786,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "documentRelatedNodes": 7
+        }
+      },
+      {
+        "file": "event-loop-blocking-medium.json",
+        "path": "performance-metrics/event-loop-blocking-medium.json",
+        "project": "medium",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:17.872Z",
+        "metrics": {
+          "totalProfileTimeMs": 24786,
+          "longTaskCount": 4,
+          "maxBlockingMs": 22200,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+        }
+      },
+      {
+        "file": "high-priority-request-medium.json",
+        "path": "performance-metrics/high-priority-request-medium.json",
+        "project": "medium",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:57.560Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 26,
+          "maxLatencyMs": 28,
+          "p95LatencyMs": 28
+        }
+      },
+      {
+        "file": "queue-priority-medium.json",
+        "path": "performance-metrics/queue-priority-medium.json",
+        "project": "medium",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.686Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      },
+      {
+        "file": "queue-samples-medium.json",
+        "path": "performance-metrics/queue-samples-medium.json",
+        "project": "medium",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "workspace-load-medium.json",
+        "path": "performance-metrics/workspace-load-medium.json",
+        "project": "medium",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:56.739Z",
+        "metrics": {
+          "totalTimeMs": 4,
+          "filesProcessed": 139,
+          "filesPerSecond": 34750,
+          "queueDepthMax": null,
+          "success": true
+        }
+      }
+    ],
+    "small": [
+      {
+        "file": "client-responsiveness-small.json",
+        "path": "performance-metrics/client-responsiveness-small.json",
+        "project": "small",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:17.548Z",
+        "metrics": {
+          "totalProfileTimeMs": 19060,
+          "blockingRelatedNodes": 1,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      },
+      {
+        "file": "deferred-reference-small.json",
+        "path": "performance-metrics/deferred-reference-small.json",
+        "project": "small",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:17.710Z",
+        "metrics": {
+          "totalTimeMs": 19060,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "deferredRelatedNodes": 29
+        }
+      },
+      {
+        "file": "document-open-small.json",
+        "path": "performance-metrics/document-open-small.json",
+        "project": "small",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:17.655Z",
+        "metrics": {
+          "totalTimeMs": 19060,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "documentRelatedNodes": 6
+        }
+      },
+      {
+        "file": "event-loop-blocking-small.json",
+        "path": "performance-metrics/event-loop-blocking-small.json",
+        "project": "small",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:17.601Z",
+        "metrics": {
+          "totalProfileTimeMs": 19060,
+          "longTaskCount": 2,
+          "maxBlockingMs": 17242,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile"
+        }
+      },
+      {
+        "file": "high-priority-request-small.json",
+        "path": "performance-metrics/high-priority-request-small.json",
+        "project": "small",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:55.704Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 26,
+          "maxLatencyMs": 30,
+          "p95LatencyMs": 28
+        }
+      },
+      {
+        "file": "queue-priority-small.json",
+        "path": "performance-metrics/queue-priority-small.json",
+        "project": "small",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.639Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      },
+      {
+        "file": "queue-samples-small.json",
+        "path": "performance-metrics/queue-samples-small.json",
+        "project": "small",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "workspace-load-small.json",
+        "path": "performance-metrics/workspace-load-small.json",
+        "project": "small",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:54.884Z",
+        "metrics": {
+          "totalTimeMs": 3,
+          "filesProcessed": 30,
+          "filesPerSecond": 10000,
+          "queueDepthMax": null,
+          "success": true
+        }
+      }
+    ]
+  },
+  "byScenario": {
+    "client-responsiveness": [
+      {
+        "file": "client-responsiveness-large.json",
+        "path": "performance-metrics/client-responsiveness-large.json",
+        "project": "large",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:18.102Z",
+        "metrics": {
+          "totalProfileTimeMs": 23676,
+          "blockingRelatedNodes": 2,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      },
+      {
+        "file": "client-responsiveness-medium.json",
+        "path": "performance-metrics/client-responsiveness-medium.json",
+        "project": "medium",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:17.818Z",
+        "metrics": {
+          "totalProfileTimeMs": 24786,
+          "blockingRelatedNodes": 4,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      },
+      {
+        "file": "client-responsiveness-small.json",
+        "path": "performance-metrics/client-responsiveness-small.json",
+        "project": "small",
+        "scenario": "client-responsiveness",
+        "timestamp": "2026-01-29T22:03:17.548Z",
+        "metrics": {
+          "totalProfileTimeMs": 19060,
+          "blockingRelatedNodes": 1,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "uiFreezeCount": null,
+          "maxFreezeDurationMs": null,
+          "eventLoopLagMaxMs": null
+        }
+      }
+    ],
+    "deferred-reference": [
+      {
+        "file": "deferred-reference-large.json",
+        "path": "performance-metrics/deferred-reference-large.json",
+        "project": "large",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:18.305Z",
+        "metrics": {
+          "totalTimeMs": 23676,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "deferredRelatedNodes": 74
+        }
+      },
+      {
+        "file": "deferred-reference-medium.json",
+        "path": "performance-metrics/deferred-reference-medium.json",
+        "project": "medium",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:17.976Z",
+        "metrics": {
+          "totalTimeMs": 24786,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "deferredRelatedNodes": 50
+        }
+      },
+      {
+        "file": "deferred-reference-small.json",
+        "path": "performance-metrics/deferred-reference-small.json",
+        "project": "small",
+        "scenario": "deferred-reference",
+        "timestamp": "2026-01-29T22:03:17.710Z",
+        "metrics": {
+          "totalTimeMs": 19060,
+          "retryCount": null,
+          "deferredTaskCount": null,
+          "timeSpentMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "deferredRelatedNodes": 29
+        }
+      }
+    ],
+    "document-open": [
+      {
+        "file": "document-open-large.json",
+        "path": "performance-metrics/document-open-large.json",
+        "project": "large",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:18.230Z",
+        "metrics": {
+          "totalTimeMs": 23676,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+          "documentRelatedNodes": 10
+        }
+      },
+      {
+        "file": "document-open-medium.json",
+        "path": "performance-metrics/document-open-medium.json",
+        "project": "medium",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:17.923Z",
+        "metrics": {
+          "totalTimeMs": 24786,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+          "documentRelatedNodes": 7
+        }
+      },
+      {
+        "file": "document-open-small.json",
+        "path": "performance-metrics/document-open-small.json",
+        "project": "small",
+        "scenario": "document-open",
+        "timestamp": "2026-01-29T22:03:17.655Z",
+        "metrics": {
+          "totalTimeMs": 19060,
+          "documentOpenCount": null,
+          "documentsPerSecond": null,
+          "maxQueueDepth": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+          "documentRelatedNodes": 6
+        }
+      }
+    ],
+    "event-loop-blocking": [
+      {
+        "file": "event-loop-blocking-large.json",
+        "path": "performance-metrics/event-loop-blocking-large.json",
+        "project": "large",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:18.165Z",
+        "metrics": {
+          "totalProfileTimeMs": 23676,
+          "longTaskCount": 11,
+          "maxBlockingMs": 15684,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile"
+        }
+      },
+      {
+        "file": "event-loop-blocking-medium.json",
+        "path": "performance-metrics/event-loop-blocking-medium.json",
+        "project": "medium",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:17.872Z",
+        "metrics": {
+          "totalProfileTimeMs": 24786,
+          "longTaskCount": 4,
+          "maxBlockingMs": 22200,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+        }
+      },
+      {
+        "file": "event-loop-blocking-small.json",
+        "path": "performance-metrics/event-loop-blocking-small.json",
+        "project": "small",
+        "scenario": "event-loop-blocking",
+        "timestamp": "2026-01-29T22:03:17.601Z",
+        "metrics": {
+          "totalProfileTimeMs": 19060,
+          "longTaskCount": 2,
+          "maxBlockingMs": 17242,
+          "eventLoopLagMaxMs": null,
+          "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile"
+        }
+      }
+    ],
+    "high-priority-request": [
+      {
+        "file": "high-priority-request-large.json",
+        "path": "performance-metrics/high-priority-request-large.json",
+        "project": "large",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:59.456Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 19,
+          "maxLatencyMs": 28,
+          "p95LatencyMs": 28
+        }
+      },
+      {
+        "file": "high-priority-request-medium.json",
+        "path": "performance-metrics/high-priority-request-medium.json",
+        "project": "medium",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:57.560Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 26,
+          "maxLatencyMs": 28,
+          "p95LatencyMs": 28
+        }
+      },
+      {
+        "file": "high-priority-request-small.json",
+        "path": "performance-metrics/high-priority-request-small.json",
+        "project": "small",
+        "scenario": "high-priority-request",
+        "timestamp": "2026-01-29T23:03:55.704Z",
+        "metrics": {
+          "requestCount": 30,
+          "successCount": 30,
+          "avgLatencyMs": 27,
+          "minLatencyMs": 26,
+          "maxLatencyMs": 30,
+          "p95LatencyMs": 28
+        }
+      }
+    ],
+    "queue-priority": [
+      {
+        "file": "queue-priority-large.json",
+        "path": "performance-metrics/queue-priority-large.json",
+        "project": "large",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.727Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      },
+      {
+        "file": "queue-priority-medium.json",
+        "path": "performance-metrics/queue-priority-medium.json",
+        "project": "medium",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.686Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      },
+      {
+        "file": "queue-priority-small.json",
+        "path": "performance-metrics/queue-priority-small.json",
+        "project": "small",
+        "scenario": "queue-priority",
+        "timestamp": "2026-01-29T23:04:00.639Z",
+        "metrics": {
+          "sampleCount": 1,
+          "queueDepthMaxByPriority": null,
+          "avgQueueDepth": 0,
+          "starvationCount": null
+        }
+      }
+    ],
+    "unknown": [
+      {
+        "file": "queue-samples-large.json",
+        "path": "performance-metrics/queue-samples-large.json",
+        "project": "large",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "queue-samples-medium.json",
+        "path": "performance-metrics/queue-samples-medium.json",
+        "project": "medium",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "queue-samples-small.json",
+        "path": "performance-metrics/queue-samples-small.json",
+        "project": "small",
+        "scenario": "unknown",
+        "metrics": {
+          "samples": [
+            {
+              "queueSizes": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "started": 1,
+              "completed": 1
+            }
+          ]
+        }
+      }
+    ],
+    "workspace-load": [
+      {
+        "file": "workspace-load-large.json",
+        "path": "performance-metrics/workspace-load-large.json",
+        "project": "large",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:58.620Z",
+        "metrics": {
+          "totalTimeMs": 3,
+          "filesProcessed": 625,
+          "filesPerSecond": 208333.33,
+          "queueDepthMax": null,
+          "success": true
+        }
+      },
+      {
+        "file": "workspace-load-medium.json",
+        "path": "performance-metrics/workspace-load-medium.json",
+        "project": "medium",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:56.739Z",
+        "metrics": {
+          "totalTimeMs": 4,
+          "filesProcessed": 139,
+          "filesPerSecond": 34750,
+          "queueDepthMax": null,
+          "success": true
+        }
+      },
+      {
+        "file": "workspace-load-small.json",
+        "path": "performance-metrics/workspace-load-small.json",
+        "project": "small",
+        "scenario": "workspace-load",
+        "timestamp": "2026-01-29T23:03:54.884Z",
+        "metrics": {
+          "totalTimeMs": 3,
+          "filesProcessed": 30,
+          "filesPerSecond": 10000,
+          "queueDepthMax": null,
+          "success": true
+        }
+      }
+    ]
+  },
+  "entries": [
+    {
+      "file": "client-responsiveness-large.json",
+      "project": "large",
+      "scenario": "client-responsiveness",
+      "timestamp": "2026-01-29T22:03:18.102Z",
+      "metrics": {
+        "totalProfileTimeMs": 23676,
+        "blockingRelatedNodes": 2,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+        "uiFreezeCount": null,
+        "maxFreezeDurationMs": null,
+        "eventLoopLagMaxMs": null
+      }
+    },
+    {
+      "file": "client-responsiveness-medium.json",
+      "project": "medium",
+      "scenario": "client-responsiveness",
+      "timestamp": "2026-01-29T22:03:17.818Z",
+      "metrics": {
+        "totalProfileTimeMs": 24786,
+        "blockingRelatedNodes": 4,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+        "uiFreezeCount": null,
+        "maxFreezeDurationMs": null,
+        "eventLoopLagMaxMs": null
+      }
+    },
+    {
+      "file": "client-responsiveness-small.json",
+      "project": "small",
+      "scenario": "client-responsiveness",
+      "timestamp": "2026-01-29T22:03:17.548Z",
+      "metrics": {
+        "totalProfileTimeMs": 19060,
+        "blockingRelatedNodes": 1,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+        "uiFreezeCount": null,
+        "maxFreezeDurationMs": null,
+        "eventLoopLagMaxMs": null
+      }
+    },
+    {
+      "file": "deferred-reference-large.json",
+      "project": "large",
+      "scenario": "deferred-reference",
+      "timestamp": "2026-01-29T22:03:18.305Z",
+      "metrics": {
+        "totalTimeMs": 23676,
+        "retryCount": null,
+        "deferredTaskCount": null,
+        "timeSpentMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+        "deferredRelatedNodes": 74
+      }
+    },
+    {
+      "file": "deferred-reference-medium.json",
+      "project": "medium",
+      "scenario": "deferred-reference",
+      "timestamp": "2026-01-29T22:03:17.976Z",
+      "metrics": {
+        "totalTimeMs": 24786,
+        "retryCount": null,
+        "deferredTaskCount": null,
+        "timeSpentMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+        "deferredRelatedNodes": 50
+      }
+    },
+    {
+      "file": "deferred-reference-small.json",
+      "project": "small",
+      "scenario": "deferred-reference",
+      "timestamp": "2026-01-29T22:03:17.710Z",
+      "metrics": {
+        "totalTimeMs": 19060,
+        "retryCount": null,
+        "deferredTaskCount": null,
+        "timeSpentMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+        "deferredRelatedNodes": 29
+      }
+    },
+    {
+      "file": "document-open-large.json",
+      "project": "large",
+      "scenario": "document-open",
+      "timestamp": "2026-01-29T22:03:18.230Z",
+      "metrics": {
+        "totalTimeMs": 23676,
+        "documentOpenCount": null,
+        "documentsPerSecond": null,
+        "maxQueueDepth": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+        "documentRelatedNodes": 10
+      }
+    },
+    {
+      "file": "document-open-medium.json",
+      "project": "medium",
+      "scenario": "document-open",
+      "timestamp": "2026-01-29T22:03:17.923Z",
+      "metrics": {
+        "totalTimeMs": 24786,
+        "documentOpenCount": null,
+        "documentsPerSecond": null,
+        "maxQueueDepth": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+        "documentRelatedNodes": 7
+      }
+    },
+    {
+      "file": "document-open-small.json",
+      "project": "small",
+      "scenario": "document-open",
+      "timestamp": "2026-01-29T22:03:17.655Z",
+      "metrics": {
+        "totalTimeMs": 19060,
+        "documentOpenCount": null,
+        "documentsPerSecond": null,
+        "maxQueueDepth": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+        "documentRelatedNodes": 6
+      }
+    },
+    {
+      "file": "event-loop-blocking-large.json",
+      "project": "large",
+      "scenario": "event-loop-blocking",
+      "timestamp": "2026-01-29T22:03:18.165Z",
+      "metrics": {
+        "totalProfileTimeMs": 23676,
+        "longTaskCount": 11,
+        "maxBlockingMs": 15684,
+        "eventLoopLagMaxMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile"
+      }
+    },
+    {
+      "file": "event-loop-blocking-medium.json",
+      "project": "medium",
+      "scenario": "event-loop-blocking",
+      "timestamp": "2026-01-29T22:03:17.872Z",
+      "metrics": {
+        "totalProfileTimeMs": 24786,
+        "longTaskCount": 4,
+        "maxBlockingMs": 22200,
+        "eventLoopLagMaxMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+      }
+    },
+    {
+      "file": "event-loop-blocking-small.json",
+      "project": "small",
+      "scenario": "event-loop-blocking",
+      "timestamp": "2026-01-29T22:03:17.601Z",
+      "metrics": {
+        "totalProfileTimeMs": 19060,
+        "longTaskCount": 2,
+        "maxBlockingMs": 17242,
+        "eventLoopLagMaxMs": null,
+        "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile"
+      }
+    },
+    {
+      "file": "high-priority-request-large.json",
+      "project": "large",
+      "scenario": "high-priority-request",
+      "timestamp": "2026-01-29T23:03:59.456Z",
+      "metrics": {
+        "requestCount": 30,
+        "successCount": 30,
+        "avgLatencyMs": 27,
+        "minLatencyMs": 19,
+        "maxLatencyMs": 28,
+        "p95LatencyMs": 28
+      }
+    },
+    {
+      "file": "high-priority-request-medium.json",
+      "project": "medium",
+      "scenario": "high-priority-request",
+      "timestamp": "2026-01-29T23:03:57.560Z",
+      "metrics": {
+        "requestCount": 30,
+        "successCount": 30,
+        "avgLatencyMs": 27,
+        "minLatencyMs": 26,
+        "maxLatencyMs": 28,
+        "p95LatencyMs": 28
+      }
+    },
+    {
+      "file": "high-priority-request-small.json",
+      "project": "small",
+      "scenario": "high-priority-request",
+      "timestamp": "2026-01-29T23:03:55.704Z",
+      "metrics": {
+        "requestCount": 30,
+        "successCount": 30,
+        "avgLatencyMs": 27,
+        "minLatencyMs": 26,
+        "maxLatencyMs": 30,
+        "p95LatencyMs": 28
+      }
+    },
+    {
+      "file": "queue-priority-large.json",
+      "project": "large",
+      "scenario": "queue-priority",
+      "timestamp": "2026-01-29T23:04:00.727Z",
+      "metrics": {
+        "sampleCount": 1,
+        "queueDepthMaxByPriority": null,
+        "avgQueueDepth": 0,
+        "starvationCount": null
+      }
+    },
+    {
+      "file": "queue-priority-medium.json",
+      "project": "medium",
+      "scenario": "queue-priority",
+      "timestamp": "2026-01-29T23:04:00.686Z",
+      "metrics": {
+        "sampleCount": 1,
+        "queueDepthMaxByPriority": null,
+        "avgQueueDepth": 0,
+        "starvationCount": null
+      }
+    },
+    {
+      "file": "queue-priority-small.json",
+      "project": "small",
+      "scenario": "queue-priority",
+      "timestamp": "2026-01-29T23:04:00.639Z",
+      "metrics": {
+        "sampleCount": 1,
+        "queueDepthMaxByPriority": null,
+        "avgQueueDepth": 0,
+        "starvationCount": null
+      }
+    },
+    {
+      "file": "queue-samples-large.json",
+      "project": "large",
+      "scenario": "unknown",
+      "metrics": {
+        "samples": [
+          {
+            "queueSizes": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "started": 1,
+            "completed": 1
+          }
+        ]
+      }
+    },
+    {
+      "file": "queue-samples-medium.json",
+      "project": "medium",
+      "scenario": "unknown",
+      "metrics": {
+        "samples": [
+          {
+            "queueSizes": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "started": 1,
+            "completed": 1
+          }
+        ]
+      }
+    },
+    {
+      "file": "queue-samples-small.json",
+      "project": "small",
+      "scenario": "unknown",
+      "metrics": {
+        "samples": [
+          {
+            "queueSizes": {
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "started": 1,
+            "completed": 1
+          }
+        ]
+      }
+    },
+    {
+      "file": "workspace-load-large.json",
+      "project": "large",
+      "scenario": "workspace-load",
+      "timestamp": "2026-01-29T23:03:58.620Z",
+      "metrics": {
+        "totalTimeMs": 3,
+        "filesProcessed": 625,
+        "filesPerSecond": 208333.33,
+        "queueDepthMax": null,
+        "success": true
+      }
+    },
+    {
+      "file": "workspace-load-medium.json",
+      "project": "medium",
+      "scenario": "workspace-load",
+      "timestamp": "2026-01-29T23:03:56.739Z",
+      "metrics": {
+        "totalTimeMs": 4,
+        "filesProcessed": 139,
+        "filesPerSecond": 34750,
+        "queueDepthMax": null,
+        "success": true
+      }
+    },
+    {
+      "file": "workspace-load-small.json",
+      "project": "small",
+      "scenario": "workspace-load",
+      "timestamp": "2026-01-29T23:03:54.884Z",
+      "metrics": {
+        "totalTimeMs": 3,
+        "filesProcessed": 30,
+        "filesPerSecond": 10000,
+        "queueDepthMax": null,
+        "success": true
+      }
+    }
+  ]
+}

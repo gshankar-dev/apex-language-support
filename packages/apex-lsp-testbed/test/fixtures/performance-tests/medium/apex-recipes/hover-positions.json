@@ -1,0 +1,779 @@
+{
+  "timestamp": "2026-01-27T18:43:15.379Z",
+  "config": {
+    "hoverCount": 5000,
+    "delayMs": 50
+  },
+  "positions": [
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls",
+      "line": 23,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Data Recipes/SOQLRecipes.cls",
+      "line": 13,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOQLRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 16,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 39,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Collection Recipes/IterableApiClient.cls",
+      "line": 70,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterableApiClient.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Collection Recipes/IterationRecipes.cls",
+      "line": 20,
+      "character": 62,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterationRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 42,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Collection Recipes/CollectionUtils.cls",
+      "line": 26,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/CollectionUtils.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls",
+      "line": 12,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 70,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls",
+      "line": 15,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls",
+      "line": 18,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls",
+      "line": 15,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Async Apex Recipes/ScheduledApexDemo.cls",
+      "line": 8,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/ScheduledApexDemo.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls",
+      "line": 17,
+      "character": 54,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 169,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 40,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls",
+      "line": 15,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls",
+      "line": 17,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 199,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls",
+      "line": 21,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Async Apex Recipes/ScheduledApexRecipes.cls",
+      "line": 14,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/ScheduledApexRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls",
+      "line": 27,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/ScheduledApexDemo.cls",
+      "line": 20,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/ScheduledApexDemo.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls",
+      "line": 13,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Data Recipes/DMLRecipes.cls",
+      "line": 19,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DMLRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls",
+      "line": 21,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Custom Metadata Recipes/CustomMetadataUtilties.cls",
+      "line": 63,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Custom Metadata Recipes/CustomMetadataUtilties.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls",
+      "line": 12,
+      "character": 32,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls",
+      "line": 15,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls",
+      "line": 13,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 105,
+      "character": 74,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls",
+      "line": 28,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls",
+      "line": 16,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Collection Recipes/IterableApiClient.cls",
+      "line": 88,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterableApiClient.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Collection Recipes/IterableApiClient.cls",
+      "line": 5,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterableApiClient.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls",
+      "line": 28,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Data Recipes/SOQLRecipes.cls",
+      "line": 14,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOQLRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/ScheduledApexRecipes.cls",
+      "line": 23,
+      "character": 41,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/ScheduledApexRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls",
+      "line": 12,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Data Recipes/SOQLRecipes.cls",
+      "line": 35,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOQLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls",
+      "line": 12,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Collection Recipes/IterationRecipes.cls",
+      "line": 36,
+      "character": 24,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterationRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls",
+      "line": 4,
+      "character": 48,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 19,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls",
+      "line": 125,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls",
+      "line": 15,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/LoggingRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls",
+      "line": 17,
+      "character": 62,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Collection Recipes/IterationRecipes.cls",
+      "line": 18,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterationRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Collection Recipes/IterableApiClient.cls",
+      "line": 17,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterableApiClient.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/Collection Recipes/CollectionUtils.cls",
+      "line": 8,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/CollectionUtils.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 169,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Data Recipes/SOSLRecipes.cls",
+      "line": 22,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOSLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 24,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Data Recipes/DMLRecipes.cls",
+      "line": 23,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DMLRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Custom Metadata Recipes/CustomMetadataUtilties.cls",
+      "line": 57,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Custom Metadata Recipes/CustomMetadataUtilties.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Data Recipes/SOQLRecipes.cls",
+      "line": 154,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOQLRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls",
+      "line": 5,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls",
+      "line": 14,
+      "character": 54,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Collection Recipes/IterationRecipes.cls",
+      "line": 15,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterationRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls",
+      "line": 282,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls",
+      "line": 49,
+      "character": 32,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 120,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Collection Recipes/ListSortingRecipes.cls",
+      "line": 10,
+      "character": 56,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/ListSortingRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls",
+      "line": 42,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls",
+      "line": 47,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Collection Recipes/CollectionUtils.cls",
+      "line": 21,
+      "character": 62,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/CollectionUtils.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 44,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Data Recipes/SOSLRecipes.cls",
+      "line": 21,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOSLRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls",
+      "line": 23,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 15,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Data Recipes/SOQLRecipes.cls",
+      "line": 13,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOQLRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls",
+      "line": 12,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/DataWeaveErrorRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls",
+      "line": 12,
+      "character": 43,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls",
+      "line": 151,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls",
+      "line": 6,
+      "character": 5,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 23,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls",
+      "line": 15,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls",
+      "line": 439,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Collection Recipes/AccountNumberOfEmployeesComparator.cls",
+      "line": 7,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/AccountNumberOfEmployeesComparator.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Collection Recipes/ListSortingRecipes.cls",
+      "line": 16,
+      "character": 54,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/ListSortingRecipes.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 107,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls",
+      "line": 17,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls",
+      "line": 4,
+      "character": 51,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls"
+    },
+    {
+      "symbol": "DateTime",
+      "file": "force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls",
+      "line": 172,
+      "character": 27,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Files Recipes/FilesRecipes.cls",
+      "line": 13,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Files Recipes/FilesRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/CsvData.cls",
+      "line": 2,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/CsvData.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Data Recipes/DMLRecipes.cls",
+      "line": 71,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DMLRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Data Recipes/SOSLRecipes.cls",
+      "line": 18,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/SOSLRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Collection Recipes/CollectionUtils.cls",
+      "line": 38,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/CollectionUtils.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls",
+      "line": 93,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Encryption Recipes/EncryptionRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls",
+      "line": 57,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/Collection Recipes/AccountNumberOfEmployeesComparator.cls",
+      "line": 7,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/AccountNumberOfEmployeesComparator.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Collection Recipes/IterationRecipes.cls",
+      "line": 34,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/IterationRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls",
+      "line": 17,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/ObjectConversionRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Data Recipes/DMLRecipes.cls",
+      "line": 70,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DMLRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls",
+      "line": 12,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/FormattingRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls",
+      "line": 42,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableWithCalloutRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Data Recipes/DMLRecipes.cls",
+      "line": 68,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DMLRecipes.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls",
+      "line": 33,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/AtFutureRecipes.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls",
+      "line": 79,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Email Recipes/InboundEmailHandlerRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 53,
+      "character": 67,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls",
+      "line": 17,
+      "character": 66,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/BasicDataWeaveInApexRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls",
+      "line": 27,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/QueueableChainingRecipes.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls",
+      "line": 16,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/CsvToJsonConversionRecipes.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls",
+      "line": 14,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/DataWeaveInApex Recipes/MultipleInputRecipes.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls",
+      "line": 17,
+      "character": 51,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/MetadataCatalogRecipes.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls",
+      "line": 25,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Async Apex Recipes/BatchApexRecipes.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls",
+      "line": 47,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Collection Recipes/AccountShippingCountryComparator.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls",
+      "line": 39,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/medium/apex-recipes/force-app/main/default/classes/Data Recipes/DynamicSOQLRecipes.cls"
+    }
+  ]
+}

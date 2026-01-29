@@ -1,0 +1,819 @@
+minimum_cumulusci_version: 3.74.0
+project:
+    name: EDA
+    package:
+        name: EDA
+        namespace: hed
+        api_version: 52.0
+        install_class: STG_InstallScript
+    git:
+        prefix_release: rel/
+        repo_url: https://github.com/SalesforceFoundation/EDA
+        default_branch: main
+    source_format: sfdx
+    dependency_resolutions:
+        preproduction: include_beta
+
+sources:
+    latest_release:
+        github: https://github.com/SalesforceFoundation/EDA
+        release: latest
+
+tasks:
+    add_relationship_type_values:
+        description: "Adds Parent's Sibling, Niece, Nephew, and Sibling's Child as picklist values to the Relationship__c.Type__c field."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        group: "EDA: Metadata"
+        ui_options:
+            add_relationship_type_values:
+                name: Add Relationship Type Picklist Values
+
+        options:
+            picklists: hed__Relationship__c.hed__Type__c
+            entries:
+                - fullName: "Parent's Sibling"
+                  label: "Parent's Sibling"
+                  add_before: "Cousin"
+                - fullName: "Niece"
+                  label: "Niece"
+                  add_before: "Cousin"
+                - fullName: "Nephew"
+                  label: "Nephew"
+                  add_before: "Cousin"
+                - fullName: "Sibling's Child"
+                  label: "Sibling's Child"
+                  add_before: "Cousin"
+
+    add_citizenship_status_values:
+        group: "EDA: Trial"
+        description: Adds additional picklist values to hed__Citizenship_Status__c on Contact
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Contact.hed__Citizenship_Status__c
+            entries:
+                - fullName: "Temporary Resident"
+                  label: "Temporary Resident"
+                  add_before: "Other (Non-U.S.)"
+
+    create_learner_portal_community:
+        group: "EDA: Community Config"
+        description: Creates the learner portal community
+        class_path: cumulusci.tasks.salesforce.CreateCommunity
+        options:
+            template: "Customer Service"
+            url_path_prefix: "LearnerPortal"
+            name: "LearnerPortalCommunity"
+            timeout: 600
+
+    deploy_dev_config:
+        group: "EDA: Dev Config"
+        description: Deploys configuration for Development. Assigns page layouts, compact layouts, and sets tab visibilities. Record type visibilities are set in the update_admin_profile task.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/config/dev
+
+    delete_dev_config:
+        group: "EDA: Dev Config"
+        description: Removes Development configuration. Sets page layouts, compact layouts to system defaults. Removes record type visibilites.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/dev_delete
+
+    deploy_einstein_templates:
+        group: "EDA: Einstein Templates"
+        description: Deploys Einstein Analytics Templates
+        class_path: cumulusci.tasks.salesforce.Deploy
+        ui_options:
+            name: Deploy Einstein Analytics Templates
+        options:
+            path: unpackaged/config/analytics
+            namespace_inject: $project_config.project__package__namespace
+            unmanaged: False
+
+    deploy_encryption_permset:
+        group: "EDA: Shield Platform Encryption"
+        description: Deploys "Manage Encryption Keys" permission set.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/spe
+            namespace_inject: $project_config.project__package__namespace
+
+    deploy_install_emulator:
+        group: "EDA: Metadata"
+        description: Deploys an install context class, allowing for batch jobs from the installer to resolve.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/install_emulator
+
+    deploy_learner_portal:
+        group: "EDA: Community Config"
+        description: Deploys the learner portal community
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/learner_community
+
+    deploy_release_gating:
+        group: "EDA: Metadata"
+        description: mocked release gating metadata to display the variety of permutations EDA supports.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/release_gating
+
+    deploy_settings_product:
+        group: "EDA: Metadata"
+        description: mocked settings product information metadata to display a demo product.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/settings_product
+
+    deploy_workbench_translation_settings:
+        group: "EDA: Metadata"
+        description: Deploys settings to enable Translation Workbench, end user languages, and platform languages.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/config/workbench
+            unmanaged: True
+
+    deploy_translations:
+        group: "EDA: Metadata"
+        description: Assigns languages and marks them as active.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/config/translations/
+            unmanaged: True
+
+    deploy_post:
+        ui_options:
+            course_connection_record_types:
+                name: EDA - Course Connection Record Types
+            facility_display_name:
+                name: EDA - Facility Display Name Formula Field
+            case_behavior_record_types:
+                name: EDA - Case Behavior Record Types
+            eda_app:
+                name: EDA - Education Data Architecture App
+            credentialing_fields:
+                name: EDA - Credentialing Ids
+                is_required: False
+                is_recommended: False
+
+    deploy_pre:
+        ui_options:
+            acc_record_types:
+                name: EDA - Account Record Types
+            contact_key_affl_fields:
+                name: EDA - Contact Key Affiliation Fields
+
+    deploy_functional_tests:
+        group: "EDA: Unpackaged Tests"
+        description: Deploys apex unmanaged functional tests against packaged EDA
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/functional_tests
+
+    deploy_functional_test_utilities:
+        description: Deploys metadata and configuration for unpackaged test utilities against packaged EDA
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        group: "EDA: Unpackaged Tests"
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/test_utilities
+
+    deploy_unpackaged_tests:
+        description: Deploys metadata and configuration for unpackaged unit tests against unpackaged EDA
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        group: "EDA: Unpackaged Tests"
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/test_unpackaged
+            unmanaged: True
+
+    deploy_trial_config:
+        description: Deploys metadata and configuration for TSOs.
+        class_path: cumulusci.tasks.salesforce.Deploy
+        group: "EDA: Trial"
+        ui_options:
+            name: Deploy Trial Metadata
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            path: unpackaged/config/trial
+
+    assign_encryption_permset:
+        group: "EDA: Shield Platform Encryption"
+        description: Assigns the Encryption permission set to the current user for Shield Platform Encryption testing.
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: "force:user:permset:assign -n Encryption"
+
+    cancel_eda_scheduled_jobs:
+        group: "EDA: Dev Config"
+        description: Unscheduleds EDA Apex jobs
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/schedule.cls
+            apex: cancelScheduledJobs();
+
+    check_translation_workbench_enabled:
+        group: "EDA: Metadata"
+        description: Detects whether or not translation workbench is enabled
+        class_path: cumulusci.tasks.preflight.settings.CheckSettingsValue
+        options:
+            settings_type: languageSettings
+            settings_field: IsTranslationWorkbenchEnabled
+            value: true
+
+    create_no_access_user:
+        group: "EDA: User Tasks"
+        description: "Create a user with no access to Education Cloud components"
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: "force:user:create -a no_access --definitionfile datasets/dev_data/users/user-def_no-access.json"
+
+    create_tenant_secret:
+        group: "EDA: Shield Platform Encryption"
+        description: Creates a new tenant secret for Shield Platform Encryption testing.
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'force:data:record:create -s TenantSecret -v "Description=Testing"'
+
+    execute_install_apex:
+        group: "EDA: Post Intall Apex"
+        description: Runs most of the install script methods from STG_InstallScript class
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/install_emulator.cls
+            apex: executeInstallApex();
+
+    execute_automatic_household_naming:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex to set Automatic_Household_Naming__c to true.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        ui_options:
+            execute_automatic_household_naming:
+                name: Enable EDA's Automatic Household Naming Settings
+        options:
+            apex: >
+                %%%NAMESPACE%%%Hierarchy_Settings__c hierSettings = %%%NAMESPACE%%%Hierarchy_Settings__c.getOrgDefaults();
+                hierSettings.%%%NAMESPACE%%%Automatic_Household_Naming__c = true;
+                update hierSettings;
+
+    execute_enable_course_connections:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex to enable Course Connections and set the Student and Faculty default Record Types.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        ui_options:
+            execute_enable_course_connections:
+                name: Enable EDA's Course Connection Settings
+        options:
+            path: scripts/setup.cls
+            apex: configCourseConnections();
+
+    execute_preferred_phone_selection:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex to set Preferred Phone to 'Other Phone'.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        ui_options:
+            execute_preferred_phone_selection:
+                name: Enable EDA's Preferred Phone Selection Settings
+        options:
+            apex: >
+                %%%NAMESPACE%%%Hierarchy_Settings__c hierSettings = %%%NAMESPACE%%%Hierarchy_Settings__c.getOrgDefaults();
+                hierSettings.%%%NAMESPACE%%%Preferred_Phone_Selection__c = 'Other Phone';
+                update hierSettings;
+
+    execute_enable_record_type_validation:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex to enable record type validation for EDA settings.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        ui_options:
+            execute_enable_record_type_validation:
+                name: Enable EDA's RecordType Validation Settings
+        options:
+            apex: >
+                %%%NAMESPACE%%%Hierarchy_Settings__c hierSettings = %%%NAMESPACE%%%Hierarchy_Settings__c.getOrgDefaults();
+                hierSettings.%%%NAMESPACE%%%Affiliation_Record_Type_Enforced__c = true;
+                update hierSettings;
+
+    execute_send_error_notifications:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex to enable Error Notifications.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        ui_options:
+            execute_send_error_notifications:
+                name: Enable EDA's Error Notifications Settings
+        options:
+            apex: >
+                %%%NAMESPACE%%%Hierarchy_Settings__c hierSettings = %%%NAMESPACE%%%Hierarchy_Settings__c.getOrgDefaults();
+                hierSettings.%%%NAMESPACE%%%Error_Notifications_On__c = true;
+                update hierSettings;
+
+    execute_qa_apex:
+        group: "EDA: Post Intall Apex"
+        description: Runs anonymous apex for qa to configure settings.
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/setup.cls
+            apex: qaSetup();
+
+    github_release:
+        options:
+            release_content: |
+                Check out the Salesforce Release Notes on [Salesforce Help & Training](https://sfdc.co/bnL4Cb).
+
+    github_release_notes:
+        options:
+            trial_info: "`TBD`"
+
+    has_einstein_licenses:
+        group: "EDA: Einstein Templates"
+        description: Queries the target org for the existence of required permsets and returns true if found.
+        class_path: tasks.check_einstein.CheckPermSetLicenses
+        options:
+            permission_sets:
+                - EinsteinAnalyticsUser
+                - EinsteinAnalyticsAdmin
+                - EinsteinAnalyticsPlusAdmin
+                - EinsteinAnalyticsPlusUser
+
+    publish_learner_portal:
+        group: "EDA: Community Config"
+        description: Publishes the learner portal
+        class_path: cumulusci.tasks.salesforce.PublishCommunity
+        options:
+            name: "LearnerPortalCommunity"
+
+    retrieve_config_dev:
+        group: "EDA: Metadata"
+        description: Retrieves the current changes in the scratch org into unpackaged/config/dev.
+        class_path: cumulusci.tasks.salesforce.sourcetracking.RetrieveChanges
+        options:
+            path: unpackaged/config/dev
+            namespace_tokenize: $project_config.project__package__namespace
+
+    retrieve_config_trial:
+        group: "EDA: Metadata"
+        description: Retrieves the current changes in the scratch org into unpackaged/config/trial.
+        class_path: cumulusci.tasks.salesforce.sourcetracking.RetrieveChanges
+        options:
+            path: unpackaged/config/trial
+            namespace_tokenize: $project_config.project__package__namespace
+
+    retrieve_custom_labels_and_translations:
+        description: "Retrieve custom labels and translations from the default scratch org"
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: "force:source:retrieve"
+            extra: "-m CustomLabels,Translations"
+        group: "EDA: Metadata"
+
+    robot:
+        # description: Runs a Robot Framework test from a .robot file.
+        options:
+            suites: robot/EDA/tests
+            options:
+                outputdir: robot/EDA/results
+
+    robot_libdoc:
+        # description: Generates documentation for project keyword files.
+        options:
+            path: robot/EDA/resources/EDA.py,robot/EDA/resources/EDA.robot,robot/EDA/resources/*PageObject.py
+            output: robot/EDA/doc/Keywords.html
+
+    update_admin_profile:
+        # description: Retrieves, edits, and redeploys the System Administrator profile with full FLS perms for all objects/fields. Also sets record type visibilities.
+        options:
+            record_types:
+                - record_type: "Account.Administrative"
+                  default: true
+                - record_type: "Account.Academic_Program"
+                - record_type: "Account.Business_Organization"
+                - record_type: "Account.Educational_Institution"
+                - record_type: "Account.HH_Account"
+                - record_type: "Account.Sports_Organization"
+                - record_type: "Account.University_Department"
+                - record_type: "{managed}Attribute__c.{managed}Credential"
+                  default: true
+                - record_type: "{managed}Attribute__c.{managed}Student_Characteristic"
+                - record_type: "{managed}Course_Enrollment__c.Default"
+                - record_type: "{managed}Course_Enrollment__c.Faculty"
+                - record_type: "{managed}Course_Enrollment__c.Student"
+                  default: true
+
+flows:
+    setup_encryption:
+        description: Sets up Shield Platform Encryption in the target Org. It is recommended that this flow be run in developer scratch orgs only.
+        steps:
+            1:
+                task: deploy_encryption_permset
+            2:
+                task: assign_encryption_permset
+            3:
+                task: create_tenant_secret
+
+    edaectomy:
+        description: Remove all the EDA metadata in the target Org.
+        steps:
+            1:
+                task: delete_dev_config
+            2:
+                task: uninstall_packaged
+
+    config_apextest:
+        # description: Configure an org to run apex tests after package metadata is deployed.
+        steps:
+            3:
+                task: deploy_install_emulator
+                when: "'hed' not in org_config.installed_packages"
+            4:
+                task: execute_install_apex
+                when: "'hed' not in org_config.installed_packages"
+
+    config_dev:
+        # description: Configure an org for use as a dev org after package metadata is deployed.
+        steps:
+            3:
+                task: deploy_install_emulator
+                when: "'hed' not in org_config.installed_packages"
+            4:
+                task: execute_install_apex
+                when: "'hed' not in org_config.installed_packages"
+            5:
+                task: cancel_eda_scheduled_jobs
+            6:
+                task: deploy_dev_config
+            7:
+                flow: eda_settings
+            8:
+                task: deploy_release_gating
+            9:
+                task: deploy_settings_product
+            10:
+                flow: create_additional_users
+
+    config_dev_namespaced:
+        # description: Configure an org for use as a namespaced dev org after package metadata is deployed.
+        steps:
+            1:
+                task: deploy_post
+                options:
+                    namespaced_org: True
+            2:
+                task: update_admin_profile
+                options:
+                    namespaced_org: True
+            3:
+                task: deploy_install_emulator
+                when: "'hed' not in org_config.installed_packages"
+            4:
+                task: execute_install_apex
+                when: "'hed' not in org_config.installed_packages"
+            5:
+                task: deploy_dev_config
+            6:
+                flow: eda_settings
+            7:
+                task: deploy_release_gating
+            8:
+                task: deploy_settings_product
+            9:
+                flow: create_additional_users
+
+    config_managed:
+        # description: Configure an org for use as a dev org after package metadata is deployed.
+        steps:
+            3:
+                task: deploy_dev_config
+                options:
+                    unmanaged: False
+            4:
+                task: deploy_einstein_templates
+
+    config_packaging:
+        # description: Configure packaging org for upload after package metadata is deployed
+        steps:
+            1:
+                # Configure update_admin_profile
+                task: update_admin_profile
+                options:
+                    record_types:
+                        - record_type: "Account.Administrative"
+                          default: true
+                        - record_type: "Account.Academic_Program"
+                        - record_type: "Account.Business_Organization"
+                        - record_type: "Account.Educational_Institution"
+                        - record_type: "Account.HH_Account"
+                        - record_type: "Account.Sports_Organization"
+                        - record_type: "Account.University_Department"
+
+    config_qa:
+        # descripton: Configure an org for use as a QA org after package metadata is deployed.
+        steps:
+            3:
+                task: deploy_install_emulator
+                when: "'hed' not in org_config.installed_packages"
+            4:
+                task: execute_install_apex
+                when: "'hed' not in org_config.installed_packages"
+            5:
+                task: deploy_dev_config
+            6:
+                task: execute_qa_apex
+            7:
+                task: deploy_qa_config
+            8:
+                flow: eda_settings
+            9:
+                task: deploy_release_gating
+            10:
+                task: deploy_settings_product
+            11:
+                flow: create_additional_users
+
+    config_regression:
+        # description: Configure an org for QA regression after the package is installed.
+        steps:
+            2:
+                task: execute_qa_apex
+            3:
+                task: deploy_qa_config
+                options:
+                    unmanaged: False
+            4:
+                flow: eda_settings
+            5:
+                flow: run_functional_tests
+
+    create_additional_users:
+        # description: Create additional users
+        steps:
+            1:
+                task: create_no_access_user
+
+    deploy_unmanaged:
+        # description: Deploy the unmanaged metadata from the package
+        steps:
+            4:
+                # Disable uninstall_packaged_incremental
+                task: None
+
+    eda_picklists:
+        description: Inspects metadata, adds appropriate picklist values using MetadataETL Framework.
+        steps:
+            1:
+                task: add_relationship_type_values
+
+    eda_settings:
+        description: Enables various settings in a managed context on the EDA Settings tab.
+        steps:
+            1:
+                task: execute_enable_record_type_validation
+            2:
+                task: execute_preferred_phone_selection
+            3:
+                task: execute_send_error_notifications
+            4:
+                task: execute_automatic_household_naming
+            5:
+                task: execute_enable_course_connections
+
+    eda_settings_unmanaged:
+        description: Enables various settings in an unmanaged context on the EDA Settings tab.
+        steps:
+            1:
+                task: execute_enable_record_type_validation
+                options:
+                    namespaced: False
+            2:
+                task: execute_preferred_phone_selection
+                options:
+                    namespaced: False
+            3:
+                task: execute_send_error_notifications
+                options:
+                    namespaced: False
+            4:
+                task: execute_automatic_household_naming
+                options:
+                    namespaced: False
+            5:
+                task: execute_enable_course_connections
+                options:
+                    namespaced: False
+
+    learner_portal_setup:
+        group: "EDA: Community Config"
+        description: Create, deploy, and publish a community in an unmanaged org.
+        steps:
+            1:
+                task: create_learner_portal_community
+            2:
+                task: deploy_learner_portal
+            3:
+                task: util_sleep
+                options:
+                    seconds: 20
+            4:
+                task: publish_learner_portal
+
+    qa_org_2gp_ftests:
+        group: "Org Setup"
+        description: Set up an org and run functional tests as a QA environment using a second-generation package
+        steps:
+            1:
+                flow: qa_org_2gp
+            2:
+                flow: run_functional_tests
+
+    release_production:
+        steps:
+            3:
+                task: None
+
+    run_functional_tests:
+        # description: Configure an org for use as a dev org after package metadata is deployed.
+        steps:
+            1:
+                task: deploy_functional_test_utilities
+                when: "'hed' in org_config.installed_packages"
+            2:
+                task: deploy_functional_tests
+                when: "'hed' in org_config.installed_packages"
+            3:
+                # execute tests in unmanaged package
+                task: run_tests
+                options:
+                    test_name_match: '%\_FTST'
+                    namespace: ""
+
+    run_unpackaged_tests:
+        # description: Configure an org for use as a dev org after package metadata is deployed.
+        steps:
+            1:
+                task: deploy_functional_test_utilities
+                when: "'hed' not in org_config.installed_packages"
+            2:
+                task: deploy_unpackaged_tests
+                when: "'hed' not in org_config.installed_packages"
+            3:
+                # execute tests in unmanaged package
+                task: run_tests
+                options:
+                    test_name_match: '%\_UTST'
+
+    upgraded_org:
+        description: Simulates an existing EDA customer org that has been push-upgraded from the latest production release of EDA to the current beta, including any dependencies. Deploys the unmanaged metadata from the production release.
+        steps:
+            1:
+                flow: latest_release:dependencies
+            2:
+                task: install_managed
+            3:
+                flow: latest_release:config_regression
+            4:
+                task: update_dependencies
+                options:
+                    include_beta: True
+            5:
+                task: install_managed_beta
+            6:
+                flow: eda_settings
+            7:
+                flow: eda_picklists
+
+    net_new_org:
+        description: Simulates an EDA installation for a new customer. Installs the latest beta and dependencies.
+        steps:
+            1:
+                flow: install_beta
+            2:
+                task: execute_qa_apex
+            3:
+                task: deploy_qa_config
+                options:
+                    unmanaged: False
+            4:
+                flow: eda_settings
+            5:
+                flow: eda_picklists
+
+    translations:
+        description: Enables Translation workbench, platform language settings and sets languages as active.
+        steps:
+            1:
+                task: deploy_workbench_translation_settings
+            2:
+                task: deploy_translations
+
+    trial_org:
+        description: Deploy trial configuration to an org.
+        group: "EDA: Trial"
+        steps:
+            1:
+                flow: dependencies
+            2:
+                task: install_managed
+            3:
+                task: deploy_post
+                options:
+                    unmanaged: False
+            4:
+                task: update_admin_profile
+                options:
+                    managed: True
+                    namespaced: True
+            5:
+                task: deploy_trial_config
+                options:
+                    unmanaged: False
+                    namespaced_org: True
+            6:
+                flow: eda_settings
+            7:
+                flow: eda_picklists
+
+    regression_org:
+        description:
+        steps:
+            0.1:
+                flow: translations
+
+    customer_org:
+        steps:
+            1:
+                flow: dependencies
+            2:
+                task: install_managed
+            3:
+                task: deploy_post
+                options:
+                    unmanaged: False
+
+services:
+    mockaroo:
+        description: Configure connection for Mockaroo tasks
+        attributes:
+            key:
+                description: The API key for Mockaroo
+                required: True
+
+orgs:
+    scratch:
+        dev_namespaced:
+            config_file: orgs/dev.json
+            namespaced: True
+        prerelease:
+            config_file: orgs/prerelease.json
+        prerelease_namespaced:
+            config_file: orgs/prerelease.json
+            namespaced: True
+        regression:
+            config_file: orgs/regression.json
+        trial:
+            config_file: orgs/trial.json
+
+plans:
+    install:
+        slug: install
+        title: Install
+        tier: primary
+        checks:
+            - when: "not tasks.check_my_domain_active()"
+              action: error
+              message: "Please enable My Domain in your org prior to installing."
+        steps:
+            1:
+                flow: customer_org
+
+    ra_einstein_template:
+        slug: ra_template
+        title: Install Education Cloud Recruiting Analytics Template
+        is_listed: False
+        tier: additional
+        steps:
+            1:
+                task: deploy_einstein_templates
+        checks:
+            - when: "not tasks.has_einstein_licenses()"
+              action: error
+              message: Einstein Analytics permission sets are not available.
+    upgrade:
+        slug: upgrade
+        title: Product Upgrade
+        tier: additional
+        is_listed: False
+        preflight_message: "This installer upgrades this package and any required dependencies to the latest version in your org. This installer isn't supported and has risks. Please don't run this installer unless you're aware of its specific use cases and considerations."
+        post_install_message: "Installation complete and package is on the latest version."
+        steps:
+            1:
+                task: update_dependencies
+                options:
+                    security_type: PUSH
+                    packages_only: True
+            2:
+                task: install_managed
+                options:
+                    security_type: PUSH

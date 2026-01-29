@@ -99,12 +99,23 @@ export async function createTestServer(
   }
 
   // Configure the client options
-  const clientOptions = await createClientOptions(
+  let clientOptions = await createClientOptions(
     options.serverType,
     options.verbose || false,
     workspace,
     false, // suspend
   );
+
+  // Merge extra init options (e.g. apex.environment.serverMode for queue state)
+  if (options.initOptions && typeof options.initOptions === 'object') {
+    clientOptions = {
+      ...clientOptions,
+      initializeParams: {
+        ...(clientOptions.initializeParams || {}),
+        ...options.initOptions,
+      },
+    };
+  }
 
   // Create and start the client
   const client = new ApexJsonRpcClient(clientOptions, logger);

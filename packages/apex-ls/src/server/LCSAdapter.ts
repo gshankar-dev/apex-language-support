@@ -165,6 +165,21 @@ export class LCSAdapter {
       // Don't throw - allow server to continue, scheduler will retry on first use
     }
 
+    // Initialize performance metrics service
+    try {
+      const { PerformanceMetricsService } = await import(
+        '../profiling/PerformanceMetricsService'
+      );
+      const metricsService = PerformanceMetricsService.getInstance();
+      metricsService.initialize(this.logger);
+      this.logger.debug('✅ Performance metrics service initialized');
+    } catch (error) {
+      this.logger.warn(
+        `⚠️ Failed to initialize performance metrics service: ${formattedError(error)}`,
+      );
+      // Don't throw - allow server to continue without metrics
+    }
+
     this.setupDocumentHandlers();
 
     // Document listener — safe now
@@ -704,6 +719,9 @@ export class LCSAdapter {
 
     // Register profiling handlers (only in desktop/Node.js environment)
     this.registerProfilingHandlers();
+
+    // Register performance metrics handlers
+    this.registerPerformanceMetricsHandlers();
   }
 
   /**
@@ -743,17 +761,9 @@ export class LCSAdapter {
   }
 
   /**
-   * Register profiling request handlers (only in desktop environment)
+   * Register profiling request handlers (always registered, but may return errors if not enabled)
    */
   private registerProfilingHandlers(): void {
-    const profilingStatus = this.isInteractiveProfilingEnabled();
-    if (!profilingStatus.enabled) {
-      this.logger.debug(
-        `⚠️ Profiling handlers not registered (${profilingStatus.reason})`,
-      );
-      return;
-    }
-
     // Lazy-load ProfilingService to avoid bundling issues
     let profilingService: any = null;
     const getProfilingService = async () => {
@@ -797,6 +807,15 @@ export class LCSAdapter {
             `🔍 apex/profiling/start request received for: ${JSON.stringify(params)}`,
         );
         try {
+          // Check if profiling is enabled
+          const profilingStatus = this.isInteractiveProfilingEnabled();
+          if (!profilingStatus.enabled) {
+            return {
+              success: false,
+              message: `Profiling is not enabled: ${profilingStatus.reason}`,
+            };
+          }
+
           const service = await getProfilingService();
 
           if (!service.isAvailable()) {
@@ -845,6 +864,26 @@ export class LCSAdapter {
             `🔍 apex/profiling/stop request received for: ${JSON.stringify(params)}`,
         );
         try {
+          // Check if profiling is enabled
+          const profilingStatus = this.isInteractiveProfilingEnabled();
+          if (!profilingStatus.enabled) {
+            // Still try to stop if service exists, in case profiling was enabled when started
+            // but disabled later
+            try {
+              const service = await getProfilingService();
+              if (service && service.isAvailable()) {
+                const result = await service.stopProfiling(params?.tag);
+                return result;
+              }
+            } catch (_error) {
+              // Service not available, fall through to return error
+            }
+            return {
+              success: false,
+              message: `Profiling is not enabled: ${profilingStatus.reason}`,
+            };
+          }
+
           const service = await getProfilingService();
 
           if (!service.isAvailable()) {
@@ -889,6 +928,16 @@ export class LCSAdapter {
       }> => {
         this.logger.debug('🔍 apex/profiling/status request received');
         try {
+          // Check if profiling is enabled
+          const profilingStatus = this.isInteractiveProfilingEnabled();
+          if (!profilingStatus.enabled) {
+            return {
+              isProfiling: false,
+              type: 'idle',
+              available: false,
+            };
+          }
+
           const service = await getProfilingService();
           const status = service.getStatus();
           return status;
@@ -905,6 +954,100 @@ export class LCSAdapter {
       },
     );
     this.logger.debug('✅ apex/profiling/status handler registered');
+  }
+
+  /**
+   * Register performance metrics handlers
+   */
+  private registerPerformanceMetricsHandlers(): void {
+    // Lazy-load PerformanceMetricsService to avoid bundling issues
+    let metricsService: any = null;
+    const getMetricsService = async () => {
+      if (!metricsService) {
+        const { PerformanceMetricsService } = await import(
+          '../profiling/PerformanceMetricsService'
+        );
+        metricsService = PerformanceMetricsService.getInstance();
+        // Initialize if logger is available (service may have been initialized earlier)
+        if (metricsService && this.logger) {
+          // Re-initialize is safe (just updates logger reference)
+          metricsService.initialize(this.logger);
+        }
+      }
+      return metricsService;
+    };
+
+    // Initialize metrics service on first handler registration
+    getMetricsService().catch((error) => {
+      this.logger.warn(
+        `Failed to initialize performance metrics service: ${formattedError(error)}`,
+      );
+    });
+
+    // Register apex/performance/metrics
+    this.connection.onRequest(
+      'apex/performance/metrics',
+      async (): Promise<any> => {
+        this.logger.debug('🔍 apex/performance/metrics request received');
+        try {
+          const service = await getMetricsService();
+          const metrics = service.getMetrics();
+          return metrics;
+        } catch (error) {
+          this.logger.error(
+            () => `Error getting performance metrics: ${formattedError(error)}`,
+          );
+          return {
+            requests: {},
+            memory: {
+              heapUsed: 0,
+              heapTotal: 0,
+              external: 0,
+              rss: 0,
+              timestamp: Date.now(),
+            },
+            eventLoop: {
+              lag: 0,
+              utilization: 0,
+              timestamp: Date.now(),
+            },
+            uptime: 0,
+          };
+        }
+      },
+    );
+    this.logger.debug('✅ apex/performance/metrics handler registered');
+
+    // Register apex/performance/reset
+    this.connection.onRequest(
+      'apex/performance/reset',
+      async (params?: { method?: string }): Promise<{ success: boolean }> => {
+        this.logger.debug(
+          () =>
+            `🔍 apex/performance/reset request received: ${JSON.stringify(params)}`,
+        );
+        try {
+          const service = await getMetricsService();
+          if (params?.method) {
+            service.resetMethod(params.method);
+            this.logger.debug(
+              () => `Reset metrics for method: ${params.method}`,
+            );
+          } else {
+            service.reset();
+            this.logger.debug('Reset all performance metrics');
+          }
+          return { success: true };
+        } catch (error) {
+          this.logger.error(
+            () =>
+              `Error resetting performance metrics: ${formattedError(error)}`,
+          );
+          return { success: false };
+        }
+      },
+    );
+    this.logger.debug('✅ apex/performance/reset handler registered');
   }
 
   /**

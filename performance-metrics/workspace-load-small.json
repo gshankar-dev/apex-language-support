@@ -1,0 +1,13 @@
+{
+  "scenario": "workspace-load",
+  "project": "small",
+  "collectedAt": "2026-01-29T23:03:54.884Z",
+  "source": "automated",
+  "metrics": {
+    "totalTimeMs": 3,
+    "filesProcessed": 30,
+    "filesPerSecond": 10000,
+    "queueDepthMax": null,
+    "success": true
+  }
+}

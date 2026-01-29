@@ -144,10 +144,18 @@ export async function createClientOptions(
         ? bundledPath
         : compiledPath;
 
+      const nodeArgs = [...(verbose ? ['--nolazy'] : [])];
+      if (
+        process.env.APEX_LS_CPU_PROFILE === '1' ||
+        process.env.APEX_LS_CPU_PROFILE === 'true'
+      ) {
+        nodeArgs.push('--cpu-prof');
+      }
+
       return {
         serverType: 'nodeServer',
         serverPath,
-        nodeArgs: verbose ? ['--nolazy'] : [],
+        nodeArgs,
         serverArgs: ['--stdio'],
         env: {
           ...process.env,

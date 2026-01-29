@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Das Datum, an dem das Testergebnis dem System hinzugefügt wird, entweder durch manuelles Hochladen oder direkt aus einer offiziellen Quelle.</help>
+    <label>Eingangsdatum</label>
+    <name>Date_Received__c</name>
+</CustomFieldTranslation>

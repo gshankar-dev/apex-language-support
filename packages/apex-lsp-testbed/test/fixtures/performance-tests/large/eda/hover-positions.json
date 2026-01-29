@@ -1,0 +1,1178 @@
+{
+  "timestamp": "2026-01-27T18:44:19.847Z",
+  "config": {
+    "hoverCount": 5000,
+    "delayMs": 50
+  },
+  "positions": [
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 1907,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 222,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls",
+      "line": 42,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 105,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 48,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 95,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 61,
+      "character": 24,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 9,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TEST.cls",
+      "line": 65,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 39,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 35,
+      "character": 45,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 78,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 509,
+      "character": 69,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 813,
+      "character": 11,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Account_TEST.cls",
+      "line": 51,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls",
+      "line": 58,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 35,
+      "character": 56,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 73,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_OtherAcc_TEST.cls",
+      "line": 43,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_OtherAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TEST.cls",
+      "line": 48,
+      "character": 27,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TEST.cls",
+      "line": 332,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 178,
+      "character": 52,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 2742,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 58,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 58,
+      "character": 69,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 36,
+      "character": 11,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 102,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls",
+      "line": 43,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 103,
+      "character": 50,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 43,
+      "character": 15,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 58,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 56,
+      "character": 24,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls",
+      "line": 52,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TEST.cls",
+      "line": 98,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 94,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 207,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 60,
+      "character": 36,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 76,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TEST.cls",
+      "line": 63,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 58,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 35,
+      "character": 35,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 493,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 52,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 77,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 86,
+      "character": 43,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 174,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 63,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 197,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 596,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 201,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 112,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_BATCH.cls",
+      "line": 48,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_BATCH.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls",
+      "line": 35,
+      "character": 66,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls",
+      "line": 51,
+      "character": 36,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 38,
+      "character": 96,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls",
+      "line": 44,
+      "character": 55,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 126,
+      "character": 4,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 45,
+      "character": 73,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 90,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls",
+      "line": 48,
+      "character": 55,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 52,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 77,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 57,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 104,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 53,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 40,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TEST.cls",
+      "line": 63,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 68,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 58,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls",
+      "line": 45,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 57,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 215,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls",
+      "line": 33,
+      "character": 11,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 43,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls",
+      "line": 41,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 378,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TEST.cls",
+      "line": 255,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 314,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 151,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TEST.cls",
+      "line": 40,
+      "character": 44,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 697,
+      "character": 48,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 55,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 101,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 81,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 294,
+      "character": 45,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 917,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 61,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 111,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TEST.cls",
+      "line": 59,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 50,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 83,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 61,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 34,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 67,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Account_TEST.cls",
+      "line": 7,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 50,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 210,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 50,
+      "character": 33,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 1751,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 77,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 105,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TEST.cls",
+      "line": 94,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 190,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 58,
+      "character": 54,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 55,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_OtherAcc_TEST.cls",
+      "line": 69,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_OtherAcc_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 98,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 166,
+      "character": 15,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 40,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls",
+      "line": 55,
+      "character": 36,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 96,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 41,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 331,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls",
+      "line": 82,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 39,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls",
+      "line": 40,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TEST.cls",
+      "line": 50,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 104,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_SCHED.cls",
+      "line": 46,
+      "character": 6,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_SCHED.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 109,
+      "character": 108,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 114,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 151,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 57,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 42,
+      "character": 76,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TEST.cls",
+      "line": 42,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 39,
+      "character": 24,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls",
+      "line": 35,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 39,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls",
+      "line": 62,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_OtherAcc_TEST.cls",
+      "line": 67,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_OtherAcc_TEST.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 39,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 30,
+      "character": 11,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TEST.cls",
+      "line": 57,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 61,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 2137,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls",
+      "line": 30,
+      "character": 11,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_HouseholdNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls",
+      "line": 61,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TDTM.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 96,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ADDR_Account_TDTM.cls",
+      "line": 107,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Account_TDTM.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TEST.cls",
+      "line": 57,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls",
+      "line": 40,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_OtherAcc_TEST.cls",
+      "line": 53,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_OtherAcc_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 1930,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 1144,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 68,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TEST.cls",
+      "line": 43,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Addresses_TDTM.cls",
+      "line": 74,
+      "character": 36,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_UTIL.cls",
+      "line": 46,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_UTIL.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Contact_TEST.cls",
+      "line": 93,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_AdminAcc_TEST.cls",
+      "line": 35,
+      "character": 49,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_AdminAcc_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_Seasonal_TEST.cls",
+      "line": 72,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Seasonal_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_Contact_TDTM.cls",
+      "line": 531,
+      "character": 41,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Contact_TDTM.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TEST.cls",
+      "line": 261,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 130,
+      "character": 13,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/AFFL_AccRecordType_TEST.cls",
+      "line": 35,
+      "character": 66,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccRecordType_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls",
+      "line": 7,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL_TEST.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TEST.cls",
+      "line": 43,
+      "character": 19,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ADDR_Addresses_UTIL.cls",
+      "line": 70,
+      "character": 99,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Addresses_UTIL.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls",
+      "line": 33,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_BATCH.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/AFFL_AccChange_TDTM.cls",
+      "line": 85,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_AccChange_TDTM.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls",
+      "line": 2050,
+      "character": 51,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_HouseholdAcc_TEST.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls",
+      "line": 45,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/AFFL_CannotDelete_TDTM.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ADDR_CannotDelete_TEST.cls",
+      "line": 71,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_CannotDelete_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls",
+      "line": 191,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_AdministrativeNameRefresh_TEST.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ADDR_OtherAcc_TEST.cls",
+      "line": 64,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_OtherAcc_TEST.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls",
+      "line": 2278,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ACCT_IndividualAccounts_TEST.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ADDR_Address_TEST.cls",
+      "line": 9,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/eda/force-app/main/default/classes/ADDR_Address_TEST.cls"
+    }
+  ]
+}

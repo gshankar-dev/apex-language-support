@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,lightning:isUrlAddressable" access="global">
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.onChange}"/>
+    <c:educationCloudSettings aura:id="educationCloudSettings" />
+</aura:component>

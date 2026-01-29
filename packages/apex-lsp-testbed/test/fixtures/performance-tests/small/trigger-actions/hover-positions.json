@@ -1,0 +1,884 @@
+{
+  "timestamp": "2026-01-27T18:42:09.434Z",
+  "config": {
+    "hoverCount": 5000,
+    "delayMs": 50
+  },
+  "positions": [
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilterTest.cls",
+      "line": 21,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilterTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddError.cls",
+      "line": 44,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddError.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 22,
+      "character": 41,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls",
+      "line": 69,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 94,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls",
+      "line": 56,
+      "character": 87,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls",
+      "line": 33,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 32,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 118,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 82,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls",
+      "line": 65,
+      "character": 87,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 42,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 56,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls",
+      "line": 42,
+      "character": 33,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 480,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls",
+      "line": 34,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionConstants.cls",
+      "line": 24,
+      "character": 46,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionConstants.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 78,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 62,
+      "character": 29,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 26,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls",
+      "line": 36,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 61,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 26,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls",
+      "line": 35,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilterTest.cls",
+      "line": 53,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilterTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls",
+      "line": 40,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls",
+      "line": 22,
+      "character": 41,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilter.cls",
+      "line": 96,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilter.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 22,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 61,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls",
+      "line": 30,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 46,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 128,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls",
+      "line": 21,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 314,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls",
+      "line": 19,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls",
+      "line": 64,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypass.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 52,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilter.cls",
+      "line": 23,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilter.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 52,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls",
+      "line": 89,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 40,
+      "character": 38,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls",
+      "line": 20,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls",
+      "line": 22,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 53,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 286,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 194,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls",
+      "line": 21,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerRecordTest.cls",
+      "line": 29,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerRecordTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls",
+      "line": 40,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls",
+      "line": 19,
+      "character": 41,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls",
+      "line": 59,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypasses.cls",
+      "line": 43,
+      "character": 43,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypasses.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls",
+      "line": 20,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 32,
+      "character": 47,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 307,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 65,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls",
+      "line": 42,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls",
+      "line": 49,
+      "character": 16,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls",
+      "line": 19,
+      "character": 122,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls",
+      "line": 82,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 33,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 137,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls",
+      "line": 49,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassed.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 40,
+      "character": 25,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 59,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassProcessor.cls",
+      "line": 34,
+      "character": 22,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassProcessor.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls",
+      "line": 30,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 142,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 40,
+      "character": 26,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/TriggerRecordTest.cls",
+      "line": 24,
+      "character": 35,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerRecordTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls",
+      "line": 20,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilter.cls",
+      "line": 73,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilter.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypasses.cls",
+      "line": 43,
+      "character": 38,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypasses.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls",
+      "line": 21,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 156,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionConstants.cls",
+      "line": 29,
+      "character": 22,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionConstants.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls",
+      "line": 282,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 40,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 482,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls",
+      "line": 20,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls",
+      "line": 33,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeaderTest.cls",
+      "line": 26,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeaderTest.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls",
+      "line": 31,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowIsBypassedTest.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilterTest.cls",
+      "line": 21,
+      "character": 54,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilterTest.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "trigger-actions-framework/main/default/classes/TriggerTestUtility.cls",
+      "line": 28,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerTestUtility.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionConstants.cls",
+      "line": 22,
+      "character": 22,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionConstants.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls",
+      "line": 22,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls",
+      "line": 32,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilterTest.cls",
+      "line": 23,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilterTest.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypassProcessor.cls",
+      "line": 20,
+      "character": 44,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypassProcessor.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 346,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 35,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddError.cls",
+      "line": 46,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddError.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 26,
+      "character": 34,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 118,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "Object",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls",
+      "line": 89,
+      "character": 24,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls",
+      "line": 40,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEvent.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls",
+      "line": 27,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FlowChangeEventHeader.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 75,
+      "character": 86,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 26,
+      "character": 22,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls",
+      "line": 56,
+      "character": 10,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowBypass.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 314,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls",
+      "line": 22,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowTest.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls",
+      "line": 27,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerAction.cls",
+      "line": 47,
+      "character": 21,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerAction.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 114,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 154,
+      "character": 27,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls",
+      "line": 38,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandlerTest.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls",
+      "line": 89,
+      "character": 7,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandler.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls",
+      "line": 20,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowAddErrorTest.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilter.cls",
+      "line": 89,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilter.cls"
+    },
+    {
+      "symbol": "Set",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 50,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 151,
+      "character": 35,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 43,
+      "character": 27,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBaseTest.cls",
+      "line": 50,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBaseTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlow.cls",
+      "line": 25,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlow.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls",
+      "line": 39,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowChangeEventTest.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "trigger-actions-framework/main/default/classes/FormulaFilter.cls",
+      "line": 106,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FormulaFilter.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/FinalizerHandler.cls",
+      "line": 62,
+      "character": 17,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/FinalizerHandler.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls",
+      "line": 27,
+      "character": 8,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearAllBypassesTest.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "trigger-actions-framework/main/default/classes/TriggerTestUtility.cls",
+      "line": 37,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerTestUtility.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls",
+      "line": 34,
+      "character": 3,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerActionFlowClearBypassTest.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "trigger-actions-framework/main/default/classes/TriggerBase.cls",
+      "line": 43,
+      "character": 23,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/TriggerBase.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls",
+      "line": 70,
+      "character": 28,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/small/trigger-actions/trigger-actions-framework/main/default/classes/MetadataTriggerHandlerTest.cls"
+    }
+  ]
+}

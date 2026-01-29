@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Comparison - Apex LS</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 24px; background: #1e1e1e; color: #d4d4d4; max-width: 1200px; }
+    h1 { color: #4ec9b0; margin-bottom: 0.25em; }
+    h2 { color: #9cdcfe; margin-top: 1.5em; margin-bottom: 0.25em; font-size: 1.1em; }
+    .meta { color: #808080; margin-bottom: 24px; font-size: 0.9em; }
+    .scenario-section { margin-bottom: 2em; }
+    .scenario-desc { color: #9e9e9e; font-size: 0.9em; margin: 0 0 12px 0; }
+    .no-data { color: #808080; font-style: italic; padding: 12px; background: #252526; border-radius: 6px; }
+    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 12px 0; }
+    .chart-card { background: #252526; border-radius: 8px; padding: 16px; border: 1px solid #404040; }
+    .chart-card h3 { margin: 0 0 12px 0; font-size: 0.9em; color: #d4d4d4; }
+    .chart-container { position: relative; height: 200px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.85em; }
+    th, td { border: 1px solid #404040; padding: 8px 10px; text-align: left; }
+    th { background: #2d2d2d; color: #4ec9b0; font-weight: 600; }
+    tr:nth-child(even) { background: #252526; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+  <h1>Performance Comparison Report</h1>
+  <p class="meta">Generated: 2026-01-29T23:04:32.496Z &bull; 24 metric file(s) &bull; 7 bottleneck areas</p>
+
+  
+  <section class="scenario-section">
+    <h2>🔴 Workspace Loading Performance</h2>
+    <p class="scenario-desc">Transitioning from lazy to full awareness freezes the client.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Total time (ms)</h3>
+        <div class="chart-container"><canvas id="chart_workspace-load_0"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Files processed</h3>
+        <div class="chart-container"><canvas id="chart_workspace-load_1"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Throughput (files/sec)</h3>
+        <div class="chart-container"><canvas id="chart_workspace-load_2"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🔴 Client Responsiveness</h2>
+    <p class="scenario-desc">UI locks during heavy processing (back pressure). From CPU profile: profile duration and node count; UI freeze/lag need instrumentation.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Profile duration (ms)</h3>
+        <div class="chart-container"><canvas id="chart_client-responsiveness_0"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Send/response/notification nodes</h3>
+        <div class="chart-container"><canvas id="chart_client-responsiveness_1"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🟠 High-Priority Request Processing</h2>
+    <p class="scenario-desc">Hover and Go-to-Definition not preempting lower-priority tasks.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Avg latency (ms)</h3>
+        <div class="chart-container"><canvas id="chart_high-priority-request_0"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>P95 latency (ms)</h3>
+        <div class="chart-container"><canvas id="chart_high-priority-request_1"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Success count</h3>
+        <div class="chart-container"><canvas id="chart_high-priority-request_2"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🟠 Event Loop Blocking</h2>
+    <p class="scenario-desc">Compute-bound tasks blocking the single thread &gt;100ms.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Long task count</h3>
+        <div class="chart-container"><canvas id="chart_event-loop-blocking_0"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Max blocking (ms)</h3>
+        <div class="chart-container"><canvas id="chart_event-loop-blocking_1"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🟡 Queue Priority Management</h2>
+    <p class="scenario-desc">6-queue priority system suffering from starvation.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Queue state samples</h3>
+        <div class="chart-container"><canvas id="chart_queue-priority_1"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🟡 Document Open Processing</h2>
+    <p class="scenario-desc">Bursts of file opens (500+) clog the pipeline.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Total time (ms)</h3>
+        <div class="chart-container"><canvas id="chart_document-open_1"></canvas></div>
+      </div></div>
+  </section>
+  <section class="scenario-section">
+    <h2>🟢 Deferred Reference Processing</h2>
+    <p class="scenario-desc">Retry mechanisms causing explosion of background work. From CPU profile: duration and deferred/retry-related node count; retry/task counts need logs or instrumentation.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>Profile duration (ms)</h3>
+        <div class="chart-container"><canvas id="chart_deferred-reference_0"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Deferred/retry/reference nodes</h3>
+        <div class="chart-container"><canvas id="chart_deferred-reference_1"></canvas></div>
+      </div></div>
+  </section>
+
+  <h2>All metrics (table)</h2>
+  <div style="overflow-x: auto;">
+  <table>
+    <thead><tr><th>Project</th><th>Scenario</th><th>Timestamp</th><th>totalProfileTimeMs</th><th>blockingRelatedNodes</th><th>profilePath</th><th>uiFreezeCount</th><th>maxFreezeDurationMs</th><th>eventLoopLagMaxMs</th><th>totalTimeMs</th><th>retryCount</th><th>deferredTaskCount</th><th>timeSpentMs</th><th>deferredRelatedNodes</th><th>documentOpenCount</th><th>documentsPerSecond</th><th>maxQueueDepth</th></tr></thead>
+    <tbody>
+    <tr>
+      <td>large</td>
+      <td>client-responsiveness</td>
+      <td>2026-01-29T22:03:18.102Z</td>
+      <td class="num">23,676</td><td class="num">2</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>client-responsiveness</td>
+      <td>2026-01-29T22:03:17.818Z</td>
+      <td class="num">24,786</td><td class="num">4</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>client-responsiveness</td>
+      <td>2026-01-29T22:03:17.548Z</td>
+      <td class="num">19,060</td><td class="num">1</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>deferred-reference</td>
+      <td>2026-01-29T22:03:18.305Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">23,676</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">74</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>deferred-reference</td>
+      <td>2026-01-29T22:03:17.976Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">24,786</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">50</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>deferred-reference</td>
+      <td>2026-01-29T22:03:17.710Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">19,060</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">29</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>document-open</td>
+      <td>2026-01-29T22:03:18.230Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">23,676</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>document-open</td>
+      <td>2026-01-29T22:03:17.923Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">24,786</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>document-open</td>
+      <td>2026-01-29T22:03:17.655Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">19,060</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>event-loop-blocking</td>
+      <td>2026-01-29T22:03:18.165Z</td>
+      <td class="num">23,676</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>event-loop-blocking</td>
+      <td>2026-01-29T22:03:17.872Z</td>
+      <td class="num">24,786</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>event-loop-blocking</td>
+      <td>2026-01-29T22:03:17.601Z</td>
+      <td class="num">19,060</td><td class="num">—</td><td class="num">/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>high-priority-request</td>
+      <td>2026-01-29T23:03:59.456Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>high-priority-request</td>
+      <td>2026-01-29T23:03:57.560Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>high-priority-request</td>
+      <td>2026-01-29T23:03:55.704Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>queue-priority</td>
+      <td>2026-01-29T23:04:00.727Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>queue-priority</td>
+      <td>2026-01-29T23:04:00.686Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>queue-priority</td>
+      <td>2026-01-29T23:04:00.639Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>unknown</td>
+      <td>-</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>unknown</td>
+      <td>-</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>unknown</td>
+      <td>-</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>workspace-load</td>
+      <td>2026-01-29T23:03:58.620Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>workspace-load</td>
+      <td>2026-01-29T23:03:56.739Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">4</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>workspace-load</td>
+      <td>2026-01-29T23:03:54.884Z</td>
+      <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <script>
+    (function() {
+      const chartData = [{"chartId":"chart_workspace-load_0","label":"Total time (ms)","labels":["small","medium","large"],"values":[3,4,3]},{"chartId":"chart_workspace-load_1","label":"Files processed","labels":["small","medium","large"],"values":[30,139,625]},{"chartId":"chart_workspace-load_2","label":"Throughput (files/sec)","labels":["small","medium","large"],"values":[10000,34750,208333.33]},{"chartId":"chart_client-responsiveness_0","label":"Profile duration (ms)","labels":["small","medium","large"],"values":[19060,24786,23676]},{"chartId":"chart_client-responsiveness_1","label":"Send/response/notification nodes","labels":["small","medium","large"],"values":[1,4,2]},{"chartId":"chart_high-priority-request_0","label":"Avg latency (ms)","labels":["small","medium","large"],"values":[27,27,27]},{"chartId":"chart_high-priority-request_1","label":"P95 latency (ms)","labels":["small","medium","large"],"values":[28,28,28]},{"chartId":"chart_high-priority-request_2","label":"Success count","labels":["small","medium","large"],"values":[30,30,30]},{"chartId":"chart_event-loop-blocking_0","label":"Long task count","labels":["small","medium","large"],"values":[2,4,11]},{"chartId":"chart_event-loop-blocking_1","label":"Max blocking (ms)","labels":["small","medium","large"],"values":[17242,22200,15684]},{"chartId":"chart_queue-priority_1","label":"Queue state samples","labels":["small","medium","large"],"values":[1,1,1]},{"chartId":"chart_document-open_1","label":"Total time (ms)","labels":["small","medium","large"],"values":[19060,24786,23676]},{"chartId":"chart_deferred-reference_0","label":"Profile duration (ms)","labels":["small","medium","large"],"values":[19060,24786,23676]},{"chartId":"chart_deferred-reference_1","label":"Deferred/retry/reference nodes","labels":["small","medium","large"],"values":[29,50,74]}];
+      const barColors = ['#4ec9b0', '#9cdcfe', '#ce9178'];
+      const opts = { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, grid: { color: '#404040' }, ticks: { color: '#d4d4d4', font: { size: 11 } } }, x: { grid: { display: false }, ticks: { color: '#d4d4d4', font: { size: 11 } } } } };
+      chartData.forEach(function(c) {
+        const el = document.getElementById(c.chartId);
+        if (!el) return;
+        const colors = barColors.slice(0, c.labels.length);
+        new Chart(el, { type: 'bar', data: { labels: c.labels, datasets: [{ label: c.label, data: c.values, backgroundColor: colors, borderColor: colors, borderWidth: 1 }] }, options: opts });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<aura:component extends="c:STG_CMP_Base" controller="STG_Courses">
+	<div class="slds-card slds-m-top--medium">
+		<div class="slds-card__header slds-grid">
+			<header class="slds-media slds-media--center slds-has-flexi-truncate">
+				<div class="slds-media__body">
+					<h2>
+						<span class="slds-text-heading--small">
+							<ui:outputText value="{!$Label.c.stgTitleCoursesDescriptionDataMigration}" class="slds-text-body--small" />
+        				</span>
+					</h2>
+				</div>
+			</header>
+		</div>
+		<div class="slds-card__body">
+			<div class="slds-p-around--medium">
+				<ui:outputText value="{!$Label.c.stgHelpCoursesDataMigration}" class="slds-text-body--small" />
+				<br />
+				<ui:outputText value="{!$Label.c.stgHelpCoursesDataMigrationCopiesValues}" class="slds-text-body--small" />
+				<br />
+				<ui:outputText value="{!$Label.c.stgHelpCoursesDataMigrationDontOverwrite}" class="slds-text-body--small" />
+				<br /><br />
+
+				<ui:outputText value="{!$Label.c.stgHelpCoursesDataMigrationUpdatePageLayouts}" class="slds-text-body--small" />
+			</div>
+		</div>
+		<div class="slds-card__footer">
+			<div class="slds-no-flex">
+				<ui:outputText aura:id="descCopyMsg" value="{!$Label.c.stgHelpCopyQueuedEmailSent}" class="slds-text-color--weak slds-hide slds-m-right--medium" />
+				<lightning:button variant="brand" label="{!$Label.c.stgBtnRunCopy}" iconName="utility:copy" iconPosition="left" onclick="{! c.startCourseDescriptionCopy }" aura:id="descCopyBtn" />
+			</div>
+		</div>
+	</div>
+</aura:component>

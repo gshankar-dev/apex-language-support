@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Education Data Architecture</description>
+    <formFactors>Large</formFactors>
+    <label>EDA</label>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Course__c</tabs>
+    <tabs>Term__c</tabs>
+    <tabs>Course_Offering__c</tabs>
+    <tabs>Program_Plan__c</tabs>
+    <tabs>Trigger_Handler__c</tabs>
+    <tabs>HEDA_Settings</tabs>
+</CustomApplication>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Status__c</name>
+    <help>Indica si es tracta d&apos;una connexió de curs actual o anterior.</help>
+    <label>Estat</label>
+    <picklistValues>
+        <masterLabel>Audit</masterLabel>
+        <translation><!-- Audit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current</masterLabel>
+        <translation>Actual</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrolled</masterLabel>
+        <translation><!-- Enrolled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Failed</masterLabel>
+        <translation><!-- Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former</masterLabel>
+        <translation>Antic</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Hold</masterLabel>
+        <translation><!-- On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Withdrew</masterLabel>
+        <translation><!-- Withdrew --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

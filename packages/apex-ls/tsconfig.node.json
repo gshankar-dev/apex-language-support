@@ -32,6 +32,7 @@
     "src/utils/Logging.ts",
     "src/utils/NodeLoggerFactory.ts",
     "src/profiling/ProfilingService.ts",
+    "src/profiling/PerformanceMetricsService.ts",
     "src/types/**/*.ts",
     "src/polyfills/**/*.ts"
   ],

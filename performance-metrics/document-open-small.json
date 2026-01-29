@@ -1,0 +1,17 @@
+{
+  "scenario": "document-open",
+  "project": "small",
+  "collectedAt": "2026-01-29T22:03:17.655Z",
+  "source": {
+    "type": "cpuprofile",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile"
+  },
+  "metrics": {
+    "totalTimeMs": 19060,
+    "documentOpenCount": null,
+    "documentsPerSecond": null,
+    "maxQueueDepth": null,
+    "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+    "documentRelatedNodes": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario": "event-loop-blocking",
+  "project": "medium",
+  "collectedAt": "2026-01-29T22:03:17.872Z",
+  "source": {
+    "type": "cpuprofile",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+  },
+  "metrics": {
+    "totalProfileTimeMs": 24786,
+    "longTaskCount": 4,
+    "maxBlockingMs": 22200,
+    "eventLoopLagMaxMs": null,
+    "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+  }
+}

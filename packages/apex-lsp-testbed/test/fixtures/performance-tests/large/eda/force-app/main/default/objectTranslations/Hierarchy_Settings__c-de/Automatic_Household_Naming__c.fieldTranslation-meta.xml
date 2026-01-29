@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Falls aktiviert, wird &quot;Haushalt-Name&quot; automatisch basierend auf den Formateinstellungen für den Haushalt-Namen festgelegt.</help>
+    <label>Automatische Benennung von Haushalten</label>
+    <name>Automatic_Household_Naming__c</name>
+</CustomFieldTranslation>

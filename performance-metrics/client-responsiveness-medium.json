@@ -1,0 +1,17 @@
+{
+  "scenario": "client-responsiveness",
+  "project": "medium",
+  "collectedAt": "2026-01-29T22:03:17.818Z",
+  "source": {
+    "type": "cpuprofile",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile"
+  },
+  "metrics": {
+    "totalProfileTimeMs": 24786,
+    "blockingRelatedNodes": 4,
+    "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-medium.cpuprofile",
+    "uiFreezeCount": null,
+    "maxFreezeDurationMs": null,
+    "eventLoopLagMaxMs": null
+  }
+}

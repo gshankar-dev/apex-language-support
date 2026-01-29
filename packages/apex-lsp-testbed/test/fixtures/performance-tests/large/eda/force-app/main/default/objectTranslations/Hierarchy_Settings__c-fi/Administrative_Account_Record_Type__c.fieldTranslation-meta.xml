@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Hallintatileihin käytetty tilitietueen tyyppi. Tämä asetus vaikuttaa osoitetietueiden hallintaan ja hallintatilien nimeämismuotoon.</help>
+    <label>Hallintatilin tietuetyyppi</label>
+    <name>Administrative_Account_Record_Type__c</name>
+</CustomFieldTranslation>

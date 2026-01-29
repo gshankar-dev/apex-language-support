@@ -1,0 +1,22 @@
+{
+    "orgName": "EDA - Regression Test Org",
+    "edition": "Enterprise",
+    "features": ["Communities", "DevelopmentWave"],
+    "settings": {
+        "chatterSettings": {
+            "enableChatter": true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true
+        },
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        }
+    }
+}

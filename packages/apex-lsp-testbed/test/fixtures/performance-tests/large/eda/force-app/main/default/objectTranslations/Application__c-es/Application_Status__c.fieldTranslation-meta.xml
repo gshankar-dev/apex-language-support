@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Application_Status__c</name>
+    <help>El estado del proceso de la solicitud.</help>
+    <label>Estado de solicitud</label>
+    <picklistValues>
+        <masterLabel>Submitted</masterLabel>
+        <translation>Presentado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incomplete</masterLabel>
+        <translation>Incompleto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Received</masterLabel>
+        <translation>Recibido</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Review</masterLabel>
+        <translation>En revisión</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waitlist</masterLabel>
+        <translation>En lista de espera</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admit</masterLabel>
+        <translation>Admisión</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admit with Conditions</masterLabel>
+        <translation>Admisión con condiciones</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deny</masterLabel>
+        <translation>Denegación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred Offer</masterLabel>
+        <translation>Oferta aplazada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Accepted Offer</masterLabel>
+        <translation>Oferta aceptada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Declined Offer</masterLabel>
+        <translation>Oferta declinada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Started</masterLabel>
+        <translation><!-- Started --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

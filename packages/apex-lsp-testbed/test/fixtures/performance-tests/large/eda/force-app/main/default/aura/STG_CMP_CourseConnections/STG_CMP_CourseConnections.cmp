@@ -1,0 +1,164 @@
+<aura:component extends="c:STG_CMP_Base" controller="STG_CourseConnections">
+
+  <aura:attribute name="courseConnectionRecTypes" type="Map" />
+
+  <aura:attribute name="studentRecTypeId" type="String" />
+  <aura:attribute name="facultyRecTypeId" type="String" />
+  <aura:attribute name="studentRecTypeName" type="String" />
+  <aura:attribute name="facultyRecTypeName" type="String" />
+  <aura:attribute name="allowBackfill" type="Boolean" default="false" />
+  <aura:attribute name="backfillStarted" type="Boolean" default="false" />
+  <aura:attribute name="startBackfillMessage" type="String" default="" />
+  <aura:attribute name="backFillToastIcon" type="String" default="" />
+  <aura:attribute name="backFillToastClass" type="String" default="" />
+  
+  <div class="slds-hide" id="backFillToast" aura:id="backFillToast">
+      <div class="slds-box">
+          <div class="slds-notify_container slds-notify_container--inline">
+              <div class="{!v.backFillToastClass}" role="status">
+                  <span class="slds-assistive-text">{!v.startBackfillMessage}</span>
+                      <button class="slds-button slds-button--icon-inverse slds-notify__close" tabindex="-1">
+                          <c:svgIcon name="close" category="utility" size="small" assistiveText="Close" pressIcon="{!c.closeBackFillToast}" containerClass="toast-icon" />
+                      </button>
+                  <div class="slds-notify__content slds-grid slds-gutters">
+                      <div class="slds-col slds-align-left">
+                          <c:svgIcon name="{!v.backFillToastIcon}" category="utility" size="small" assistiveText="Close" pressIcon="{!c.closeBackFillToast}" containerClass="toast-icon" />
+                      </div>
+                      <div class="slds-col slds-align-middle slds-gutters">
+                          <h2 class="slds-text-heading_small">{!v.startBackfillMessage}</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>  
+
+  <div id="relTabs" class="slds-tabs--scoped">
+    <ul class="slds-tabs--scoped__nav" role="tablist">
+      <li aura:id="settsTab" class="slds-tabs__item slds-text-heading--label slds-active" title="Settings" role="tab">
+        <ui:outputURL value="#" label="{!$Label.c.stgTabSettings}" class="rel-settings-menulink" click="{!c.settsLinkClicked}" />
+      </li>
+      <li aura:id="backfillTab" class="slds-tabs__item slds-text-heading--label" title="Backfill" role="tab">
+        <ui:outputURL value="#" label="{!$Label.c.stgTabBackfill}" class="rel-recip-settings-menulink"  click="{!c.backfillLinkClicked}" />
+      </li>
+    </ul>
+
+    <div aura:id="settsTabContent" class="slds-tabs__content" role="tabpanel">
+
+      <span class="{!and(not(v.isView), not(v.hierarchySettings.Enable_Course_Connections__c)) ? '' : 'slds-hide ' }">
+        <div class="slds-m-bottom--medium">
+          <div class="slds-notify_container">
+            <div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" role="alert">
+              <h2>
+                <lightning:icon iconName="utility:warning" size="small" class="slds-m-right--small enable-connection-error-icon" />
+                    <ui:outputText value="{!$Label.c.stgHelpEnableCourseConnBeforeRecordTypes}" class="slds-text-body--small" />
+              </h2>
+            </div>
+          </div>
+        </div>
+      </span>
+
+      <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size--1-of-2">
+              {!$Label.c.stgEnableCourseConnectionsTitle}
+          </div>
+          <div class="slds-col slds-size--1-of-2">
+            <label class="slds-checkbox">
+              <aura:if isTrue="{!v.isView}">
+                  <span style="margin-right: 8px">
+                      <ui:outputCheckbox value="{!v.hierarchySettings.Enable_Course_Connections__c}" class="slds-checkbox course-cons-outputcheck" />
+                  </span>
+              <aura:set attribute="else">
+                  <ui:inputCheckbox value="{!v.hierarchySettings.Enable_Course_Connections__c}" class="slds-checkbox course-cons-inputcheck"
+                                    aura:id="checkboxIds" text="" />
+                  <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.hierarchySettings.Enable_Course_Connections__c}"></span>
+                  <span class="slds-form-element__label"></span>
+              </aura:set>
+              </aura:if>
+            </label>
+          </div>
+          <div class="slds-col slds-size--1-of-1">
+            <ui:outputText value="{!$Label.c.stgHelpEnableCourseConnections}" class="slds-text-body--small" />
+          </div>
+          <div class="slds-col slds-grid slds-m-top--medium">
+            <div class="slds-col slds-size--1-of-2">
+                {!$Label.c.stgDefaultStudentTypeTitle}
+            </div>
+            <div class="slds-col slds-size--1-of-2">
+              <c:CMP_RecTypes_Dropdown class="student-course-connection-record-type"
+                setting="{!v.hierarchySettings.Student_RecType__c}"
+                isView="{!v.isView}"
+                recTypeId="{!v.studentRecTypeId}"
+                recTypeName="{!v.studentRecTypeName}"
+                recTypes="{!v.courseConnectionRecTypes}"
+                dropdownDisabled="{!!v.hierarchySettings.Enable_Course_Connections__c}"
+              />
+            </div>
+          </div>
+          <div class="slds-col slds-size--1-of-1">
+            <ui:outputText value="{!$Label.c.stgHelpDefaultStudentType}" class="slds-text-body--small" />
+          </div>
+
+          <div class="slds-col slds-grid slds-m-top--medium">
+            <div class="slds-col slds-size--1-of-2">
+                {!$Label.c.stgDefaultFacultyTypeTitle}
+            </div>
+            <div class="slds-col slds-size--1-of-2">
+              <c:CMP_RecTypes_Dropdown class="faculty-course-connection-record-type"
+                setting="{!v.hierarchySettings.Faculty_RecType__c}"
+                isView="{!v.isView}"
+                recTypeId="{!v.facultyRecTypeId}"
+                recTypeName="{!v.facultyRecTypeName}"
+                recTypes="{!v.courseConnectionRecTypes}"
+                dropdownDisabled="{!!v.hierarchySettings.Enable_Course_Connections__c}"
+              />
+            </div>
+          </div>
+          <div class="slds-col slds-size--1-of-1">
+            <ui:outputText value="{!$Label.c.stgHelpDefaultFacultyType}" class="slds-text-body--small" />
+          </div>
+      </div>
+    </div>
+
+    <div aura:id="backfillTabContent" class="slds-tabs__content slds-hide" role="tabpanel">
+      <span class="{!v.hierarchySettings.Enable_Course_Connections__c ? 'slds-hide ' : '' }">
+        <div class="slds-m-bottom--medium">
+          <div class="slds-notify_container">
+            <div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" role="alert">
+              <h2>
+                <lightning:icon iconName="utility:warning" size="small" class="slds-m-right--small enable-connection-error-icon" />
+                    <ui:outputText value="{!$Label.c.stgHelpEnableCourseConnBeforeBackfill}" class="slds-text-body--small" />
+              </h2>
+            </div>
+          </div>
+        </div>
+      </span>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size--1-of-1">
+          <ui:outputText value="{!$Label.c.stgTitleCourseConnectionBackfill}" class="slds-text-body--small" />
+        </div>
+      </div>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size--1-of-1">
+          <ui:outputText value="{!$Label.c.stgHelpCourseConnBackfillDescription}" class="slds-text-body--small" />
+        </div>
+      </div>
+      <div class="slds-grid slds-grid--align-center">
+        <div>
+          <label class="slds-checkbox">
+            <ui:inputCheckbox value="{!v.allowBackfill}" class="slds-checkbox allow-backfill-checkbox"
+                              text="" disabled="{!not(v.hierarchySettings.Enable_Course_Connections__c)}"/>
+            <span class="slds-checkbox--faux" data-qa-checkbox-state="{!v.allowBackfill}"></span>
+            <span class="slds-form-element__label"></span>
+            <ui:outputText value="{!$Label.c.stgConfirmReadyRunBackfill}" class="slds-text-body--small" />
+          </label>
+        </div>
+      </div>
+      <div class="slds-grid slds-grid--align-center slds-m-top--medium">
+        <div>
+          <ui:button class="slds-button slds-button--neutral settings-edit-bttn" disabled="{!or(not(v.allowBackfill), v.backfillStarted)}" label="{!$Label.c.stgBtnRunBackfill}" press="{!c.startBackfill}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</aura:component>

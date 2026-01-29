@@ -142,7 +142,7 @@
       ]
     },
     "lint": {
-      "command": "eslint --color --cache --cache-location .eslintcache src test",
+      "command": "eslint --color --cache --cache-location .eslintcache --ignore-pattern 'test/fixtures/performance-tests/**' src test",
       "dependencies": [
         "compile"
       ],
@@ -154,7 +154,7 @@
       "output": []
     },
     "lint:fix": {
-      "command": "eslint --fix --color --cache --cache-location .eslintcache src test",
+      "command": "eslint --fix --color --cache --cache-location .eslintcache --ignore-pattern 'test/fixtures/performance-tests/**' src test",
       "dependencies": [
         "compile"
       ],
@@ -175,6 +175,7 @@
   "devDependencies": {
     "@apexdevtools/apex-parser": "4.4.1",
     "@salesforce/apex-lsp-parser-ast": "1.0.0",
-    "@salesforce/apex-lsp-shared": "1.0.0"
+    "@salesforce/apex-lsp-shared": "1.0.0",
+    "prettier-plugin-apex": "^2.2.6"
   }
 }

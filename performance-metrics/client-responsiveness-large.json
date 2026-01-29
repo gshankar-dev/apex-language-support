@@ -1,0 +1,17 @@
+{
+  "scenario": "client-responsiveness",
+  "project": "large",
+  "collectedAt": "2026-01-29T22:03:18.102Z",
+  "source": {
+    "type": "cpuprofile",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile"
+  },
+  "metrics": {
+    "totalProfileTimeMs": 23676,
+    "blockingRelatedNodes": 2,
+    "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-large.cpuprofile",
+    "uiFreezeCount": null,
+    "maxFreezeDurationMs": null,
+    "eventLoopLagMaxMs": null
+  }
+}

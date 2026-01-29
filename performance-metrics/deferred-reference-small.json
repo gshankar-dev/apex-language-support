@@ -1,0 +1,17 @@
+{
+  "scenario": "deferred-reference",
+  "project": "small",
+  "collectedAt": "2026-01-29T22:03:17.710Z",
+  "source": {
+    "type": "cpuprofile",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile"
+  },
+  "metrics": {
+    "totalTimeMs": 19060,
+    "retryCount": null,
+    "deferredTaskCount": null,
+    "timeSpentMs": null,
+    "profilePath": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/workspace-load-small.cpuprofile",
+    "deferredRelatedNodes": 29
+  }
+}

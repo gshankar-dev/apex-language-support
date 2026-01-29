@@ -1,0 +1,14 @@
+{
+  "scenario": "high-priority-request",
+  "project": "small",
+  "collectedAt": "2026-01-29T23:03:55.704Z",
+  "source": "automated",
+  "metrics": {
+    "requestCount": 30,
+    "successCount": 30,
+    "avgLatencyMs": 27,
+    "minLatencyMs": 26,
+    "maxLatencyMs": 30,
+    "p95LatencyMs": 28
+  }
+}

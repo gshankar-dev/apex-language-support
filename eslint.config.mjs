@@ -30,6 +30,7 @@ export default [
       '**/server-bundle/**',
       '**/test-artifacts/**',
       '**/src/generated/**',
+      'packages/apex-lsp-testbed/test/fixtures/performance-tests/**',
     ],
     files: ['**/*.ts', '**/*.mjs'],
     languageOptions: {

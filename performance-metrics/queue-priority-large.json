@@ -1,0 +1,15 @@
+{
+  "scenario": "queue-priority",
+  "project": "large",
+  "collectedAt": "2026-01-29T23:04:00.727Z",
+  "source": {
+    "type": "queue-samples",
+    "path": "/Users/g.shankar/Documents/GitHub/apex-language-support/performance-metrics/queue-samples-large.json"
+  },
+  "metrics": {
+    "sampleCount": 1,
+    "queueDepthMaxByPriority": null,
+    "avgQueueDepth": 0,
+    "starvationCount": null
+  }
+}

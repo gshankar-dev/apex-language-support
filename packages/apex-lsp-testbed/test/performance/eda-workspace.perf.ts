@@ -78,7 +78,10 @@ const DEFAULT_CONFIG: TestConfig = {
  */
 describe('EDA Workspace Performance Tests', () => {
   let compilerService: CompilerService;
-  const EDA_REPO_PATH = path.join(__dirname, '../fixtures/eda');
+  const EDA_REPO_PATH = path.join(
+    __dirname,
+    '../fixtures/performance-tests/large/eda',
+  );
   const EDA_FORCE_APP_PATH = path.join(EDA_REPO_PATH, 'force-app');
   const EDA_REPO_URL = 'https://github.com/mshanemc/EDA.git';
 
