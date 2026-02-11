@@ -6,13 +6,13 @@ This document lists **concrete optimizations** suggested by the performance metr
 
 ## Summary of metrics (from your runs)
 
-| Scenario                  | Small                        | Medium                       | Large                         | Issue                                                                               |
-| ------------------------- | ---------------------------- | ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------------- |
-| **Workspace load**        | ~19 s (profile)              | ~25 s                        | ~24 s                         | Profile duration 19–25 s; needs reduction and less blocking.                        |
-| **Event-loop blocking**   | 2 long tasks, **max 17.2 s** | 4 long tasks, **max 22.2 s** | 11 long tasks, **max 15.7 s** | Single-thread blocking 15–22 s → UI freezes.                                        |
-| **High-priority (hover)** | 0 or 30 success, 1–30 ms     | varies                       | varies                        | When positions invalid: empty; when valid: e.g. 30 success, ~27 ms (small).         |
-| **Deferred reference**    | 29 nodes                     | 50 nodes                     | 74 nodes                      | Deferred/retry work scales with project size.                                       |
-| **Queue priority**        | Often **0–1 samples**        | same                         | **0–1 samples** (starved)     | Under load, `apex/queueState` times out or is starved; large most affected. See §4. |
+| Scenario                  | Small                        | Medium                       | Large                         | Issue                                                                                       |
+| ------------------------- | ---------------------------- | ---------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------- |
+| **Workspace load**        | ~19 s (profile)              | ~25 s                        | ~24 s                         | Profile duration 19–25 s; needs reduction and less blocking.                                |
+| **Event-loop blocking**   | 2 long tasks, **max 17.2 s** | 4 long tasks, **max 22.2 s** | 11 long tasks, **max 15.7 s** | Single-thread blocking 15–22 s → UI freezes.                                                |
+| **High-priority (hover)** | 0 or 30 success, 1–30 ms     | same                         | same                          | When positions invalid: empty; when valid: 30 success, ~27 ms (all projects in latest run). |
+| **Deferred reference**    | 29 nodes                     | 50 nodes                     | 74 nodes                      | Deferred/retry work scales with project size.                                               |
+| **Queue priority**        | Often **0–1 samples**        | same                         | **0–1 samples** (starved)     | Under load, `apex/queueState` times out or is starved; large most affected. See §4.         |
 
 **Main takeaway:** Long synchronous work (15–22 s) is the primary cause of UI freezes. Under load, queue-state polling often gets 0–1 samples across all projects (especially large), so queue metrics are sparse when they would be most useful. Breaking up that work and making `apex/queueState` non-blocking will improve responsiveness and observability.
 
@@ -23,6 +23,10 @@ This document lists **concrete optimizations** suggested by the performance metr
 ## 1. Reduce event-loop blocking (highest impact)
 
 **Observed:** `maxBlockingMs` 15.7–22.2 s, `longTaskCount` 4–11.
+
+**How we know there’s blocking:** The numbers come from **`collect-event-loop-blocking-metrics.js --parse-profile <file.cpuprofile>`**. That script reads the V8 CPU profile, sums self-time per profile node, and reports how many nodes had self-time &gt; 100 ms (`longTaskCount`) and the maximum self-time (`maxBlockingMs`). So the metrics tell us _that_ the main thread is blocked for 15–22 s in long chunks, but **not which functions** caused it.
+
+**How we identified the code above:** Root causes were identified by (1) **inspecting the same CPU profile** to see which functions had the highest self-time: run **`node scripts/analyze-cpu-profiles.js performance-metrics/workspace-load-large.cpuprofile`** and open the generated HTML report — the “Top 30 Functions by Self Time” table and the “Time by Bottleneck Category” breakdown show where CPU time went (e.g. decompression, batch handling, symbol table work). (2) **Code review** of the workspace-load path: `apex/sendWorkspaceBatch` → `WorkspaceBatchHandler` → `unzipSync(compressedData)` and then symbol indexing; that path explains why decompression and `addSymbolTable` show up in the profile. So the _data_ (profile + analyzer) shows heavy self-time in long-running sync work; the _attribution_ to `WorkspaceBatchHandler.ts` / `unzipSync` and `ApexSymbolManager.addSymbolTable` comes from the profile’s function list plus tracing the code path.
 
 **Root causes in code:**
 
@@ -58,16 +62,19 @@ This document lists **concrete optimizations** suggested by the performance metr
 
 **Optimizations:**
 
-1. **Same as §1** – Reducing blocking directly shortens the time the main thread is busy and improves perceived load time.
+1. **Same as §1** – Reducing blocking directly shortens the time the main thread is busy and improves perceived load time. See §1 for files/lines (e.g. `WorkspaceBatchHandler.ts` ~290–308, `ApexSymbolManager.ts` ~1719–1735, ~1747–1772, ~1814–1830).
 2. **Ensure references don’t wait on full workspace load** – Already the case: `ReferencesProcessingService` queues workspace load (Low priority) and proceeds with `findReferences` (partial results). Keep this; avoid adding any “wait until workspace loaded” before returning references.
+   - **Files/lines:** `packages/lsp-compliant-services/src/services/ReferencesProcessingService.ts` — queue at Low: **128–140** (`queueWorkspaceLoadIfNeeded`, `offer(Priority.Low, queuedItem)`); proceed without waiting: **155–169**; `findReferences`: **217**.
 3. **Smaller batches from the client** – If the client sends very large `apex/sendWorkspaceBatch` payloads, smaller batches (e.g. 50–100 files per batch) will spread decompression and processing over more scheduler turns and reduce long tasks.
+   - **Files/lines:** Client batch size default: `packages/apex-lsp-shared/src/settings/ApexSettingsUtilities.ts` **62** (`batchSize: 100`); type: `packages/apex-lsp-shared/src/server/ApexLanguageServerSettings.ts` **161**. Client creating/sending batches: `packages/apex-lsp-vscode-extension/src/workspace-loader.ts` **172**, **196** (`batchSize`, `createFileBatches(validFiles, batchSize)`); send: **311–314** (`apex/sendWorkspaceBatch`). Server receive + decompress: `packages/apex-ls/src/server/WorkspaceBatchHandler.ts` **290–308** (decode + `unzipSync`); process: **379–383** (`processDocumentOpenBatch`). Handler registration: `packages/apex-ls/src/server/LCSAdapter.ts` **544–571** (`apex/sendWorkspaceBatch`).
 4. **Lazy or on-demand cross-file resolution** – The code already defers cross-file references to avoid queue pressure. Keep and extend: avoid doing heavy cross-file work during initial load when possible.
+   - **Files/lines:** Skip cross-file during workspace load: `packages/lsp-compliant-services/src/services/DiagnosticProcessingService.ts` **231–233**, **307–309**. Add symbols without cross-file during load: `packages/lsp-compliant-services/src/services/DocumentProcessingService.ts` **321** (batch), **462** (single). Defer cross-file in symbol layer: `packages/apex-parser-ast/src/symbols/ApexSymbolManager.ts` **1677**, **1686**; `packages/apex-parser-ast/src/symbols/ApexSymbolGraph.ts` **1100**.
 
 ---
 
 ## 3. High-priority request (hover)
 
-**Observed:** In some runs `successCount: 0` and latencies 0–1 ms (empty or fast failure); in others (e.g. automated run with valid positions) `successCount: 30`, avg ~27 ms for small. Behavior depends on test positions and timing.
+**Observed:** In some runs `successCount: 0` and latencies 0–1 ms (empty or fast failure); in the latest automated run with valid positions, all three projects show `successCount: 30`, avg ~27 ms. Behavior depends on test positions and timing.
 
 **Possible causes when successCount is 0:**
 

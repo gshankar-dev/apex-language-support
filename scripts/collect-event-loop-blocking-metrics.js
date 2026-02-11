@@ -28,7 +28,9 @@ function writeTemplate(outputPath, project) {
     instructions:
       'Manual: Start profiling. Trigger workspace load. During load, type/scroll. Note UI freezes. Stop profiling. Fill metrics or use --parse-profile.',
     metrics: {
+      // longTaskCount: number of tasks that ran >100ms (event-loop blockers).
       longTaskCount: null,
+      // maxBlockingMs: longest single blocking stretch in ms (max self-time of any sample).
       maxBlockingMs: null,
       eventLoopLagMaxMs: null,
       profilePath: null,

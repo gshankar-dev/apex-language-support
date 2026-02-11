@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU Profile Analysis - Apex LS</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; background: #1e1e1e; color: #d4d4d4; }
+    h1 { color: #4ec9b0; }
+    h2 { color: #9cdcfe; margin-top: 32px; }
+    .meta { color: #808080; margin-bottom: 24px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #404040; padding: 8px 12px; text-align: left; }
+    th { background: #2d2d2d; color: #4ec9b0; }
+    tr:nth-child(even) { background: #252526; }
+    .chart-container { max-width: 600px; height: 300px; margin: 24px 0; }
+    code { background: #3c3c3c; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>CPU Profile Analysis</h1>
+  <p class="meta">Source: workspace-load-large.cpuprofile | Total sampled time: 23675.75 ms | Generated: 2026-02-05T17:27:47.964Z</p>
+
+  <h2>Time by Bottleneck Category</h2>
+  <div class="chart-container">
+    <canvas id="categoryChart"></canvas>
+  </div>
+  <table>
+    <thead><tr><th>Category</th><th>Time (ms)</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>Workspace Loading</td><td>4.08</td><td>0.0%</td></tr><tr><td>Client Responsiveness</td><td>0.00</td><td>0.0%</td></tr><tr><td>High-Priority Request (Hover, Go-to-Def)</td><td>20.45</td><td>0.1%</td></tr><tr><td>Event Loop Blocking</td><td>16011.05</td><td>67.6%</td></tr><tr><td>Queue Priority Management</td><td>8.79</td><td>0.0%</td></tr><tr><td>Document Open Processing</td><td>0.14</td><td>0.0%</td></tr><tr><td>Deferred Reference Processing</td><td>56.33</td><td>0.2%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Top 30 Functions by Self Time</h2>
+  <table>
+    <thead><tr><th>Function</th><th>Category</th><th>Self time (ms)</th></tr></thead>
+    <tbody>
+      <tr><td><code>(idle)</code></td><td>eventLoopBlocking</td><td>15683.89</td></tr><tr><td><code>_getIterator</code></td><td>other</td><td>674.08</td></tr><tr><td><code>detectCircularDependencies</code></td><td>other</td><td>212.21</td></tr><tr><td><code>(garbage collector)</code></td><td>other</td><td>212.17</td></tr><tr><td><code>(program)</code></td><td>eventLoopBlocking</td><td>201.80</td></tr><tr><td><code>getText</code></td><td>other</td><td>198.36</td></tr><tr><td><code>_getIterator</code></td><td>other</td><td>178.92</td></tr><tr><td><code>detectCyclesDFS</code></td><td>other</td><td>176.11</td></tr><tr><td><code>_getIterator</code></td><td>other</td><td>137.93</td></tr><tr><td><code>walk</code></td><td>other</td><td>111.40</td></tr><tr><td><code>compile</code></td><td>other</td><td>111.18</td></tr><tr><td><code>_getVertex</code></td><td>other</td><td>87.58</td></tr><tr><td><code>processTimers</code></td><td>eventLoopBlocking</td><td>82.01</td></tr><tr><td><code>getText</code></td><td>other</td><td>64.97</td></tr><tr><td><code>keys</code></td><td>other</td><td>63.59</td></tr><tr><td><code>post</code></td><td>other</td><td>62.79</td></tr><tr><td><code>detectCircularDependencies</code></td><td>other</td><td>58.83</td></tr><tr><td><code>detectCyclesDFS</code></td><td>other</td><td>53.16</td></tr><tr><td><code>(anonymous)</code></td><td>other</td><td>49.92</td></tr><tr><td><code>IterableEntryBase</code></td><td>other</td><td>48.90</td></tr><tr><td><code>(anonymous)</code></td><td>other</td><td>41.14</td></tr><tr><td><code>_getIterator</code></td><td>other</td><td>40.63</td></tr><tr><td><code>detectCircularDependencies</code></td><td>other</td><td>40.16</td></tr><tr><td><code>walk</code></td><td>other</td><td>37.54</td></tr><tr><td><code>getStats</code></td><td>other</td><td>37.47</td></tr><tr><td><code>getText</code></td><td>other</td><td>36.34</td></tr><tr><td><code>_getVertex</code></td><td>other</td><td>34.88</td></tr><tr><td><code>enterRule</code></td><td>other</td><td>33.81</td></tr><tr><td><code>detectCyclesDFS</code></td><td>other</td><td>33.13</td></tr><tr><td><code>enterEveryRule</code></td><td>other</td><td>31.42</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    const categories = [{"key":"workspaceLoading","name":"Workspace Loading","timeMs":4.076,"percent":"0.0"},{"key":"clientResponsiveness","name":"Client Responsiveness","timeMs":0,"percent":"0.0"},{"key":"highPriorityRequest","name":"High-Priority Request (Hover, Go-to-Def)","timeMs":20.448,"percent":"0.1"},{"key":"eventLoopBlocking","name":"Event Loop Blocking","timeMs":16011.047,"percent":"67.6"},{"key":"queuePriority","name":"Queue Priority Management","timeMs":8.788,"percent":"0.0"},{"key":"documentOpen","name":"Document Open Processing","timeMs":0.136,"percent":"0.0"},{"key":"deferredReference","name":"Deferred Reference Processing","timeMs":56.325,"percent":"0.2"}];
+    const ctx = document.getElementById('categoryChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: categories.map(c => c.name),
+        datasets: [{
+          label: 'Time (ms)',
+          data: categories.map(c => c.timeMs),
+          backgroundColor: categories.map((_, i) => [
+            'rgba(78, 201, 176, 0.8)',
+            'rgba(156, 220, 254, 0.8)',
+            'rgba(206, 145, 120, 0.8)',
+            'rgba(189, 147, 249, 0.8)',
+            'rgba(241, 250, 140, 0.8)',
+            'rgba(255, 121, 198, 0.8)',
+            'rgba(80, 250, 123, 0.8)',
+            'rgba(128, 128, 128, 0.8)',
+          ][i % 8]),
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: '#404040' }, ticks: { color: '#d4d4d4' } },
+          x: { grid: { display: false }, ticks: { color: '#d4d4d4', maxRotation: 45 } },
+        },
+      },
+    });
+  </script>
+</body>
+</html>
