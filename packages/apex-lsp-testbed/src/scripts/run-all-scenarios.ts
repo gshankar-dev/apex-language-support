@@ -41,6 +41,7 @@ const PROJECT_PATHS: Record<string, string> = {
   small: path.join(FIXTURES_ROOT, 'small', 'trigger-actions'),
   medium: path.join(FIXTURES_ROOT, 'medium', 'apex-recipes'),
   large: path.join(FIXTURES_ROOT, 'large', 'eda'),
+  xlarge: path.join(FIXTURES_ROOT, 'xlarge', 'mega-enterprise'),
 };
 
 const DEFAULT_HOVER_COUNT = 30;

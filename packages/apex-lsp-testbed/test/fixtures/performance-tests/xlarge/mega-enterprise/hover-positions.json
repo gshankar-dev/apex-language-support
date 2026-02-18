@@ -1,0 +1,1409 @@
+{
+  "timestamp": "2026-02-18T17:28:10.495Z",
+  "config": {
+    "hoverCount": 5000,
+    "delayMs": 50
+  },
+  "positions": [
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_RecordService_01.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordService_01.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/ACCT_RecordService_01.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordService_01.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_RecordController_01.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordController_01.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_RecordBatch_01.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordBatch_01.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Record_TEST_01.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_Record_TEST_01.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "Id",
+      "file": "force-app/main/default/classes/ACCT_RecordHelper_01.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordHelper_01.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_RecordSelector_01.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RecordSelector_01.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_TransactionService_02.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionService_02.cls"
+    },
+    {
+      "symbol": "Case",
+      "file": "force-app/main/default/classes/ACCT_TransactionService_02.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionService_02.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_TransactionController_02.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionController_02.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_TransactionBatch_02.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionBatch_02.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Transaction_TEST_02.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/ACCT_Transaction_TEST_02.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ACCT_TransactionHelper_02.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionHelper_02.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/ACCT_TransactionSelector_02.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_TransactionSelector_02.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_EventService_03.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventService_03.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/ACCT_EventService_03.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventService_03.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_EventController_03.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventController_03.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_EventBatch_03.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventBatch_03.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Event_TEST_03.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/ACCT_Event_TEST_03.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/ACCT_EventHelper_03.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventHelper_03.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/ACCT_EventSelector_03.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_EventSelector_03.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_ConfigService_04.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigService_04.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/ACCT_ConfigService_04.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigService_04.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_ConfigController_04.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigController_04.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_ConfigBatch_04.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigBatch_04.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Config_TEST_04.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/ACCT_Config_TEST_04.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/ACCT_ConfigHelper_04.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigHelper_04.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/ACCT_ConfigSelector_04.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ConfigSelector_04.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_RuleService_05.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleService_05.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/ACCT_RuleService_05.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleService_05.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_RuleController_05.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleController_05.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_RuleBatch_05.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleBatch_05.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Rule_TEST_05.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/ACCT_Rule_TEST_05.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Datetime",
+      "file": "force-app/main/default/classes/ACCT_RuleHelper_05.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleHelper_05.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/ACCT_RuleSelector_05.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RuleSelector_05.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_PolicyService_06.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicyService_06.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/ACCT_PolicyService_06.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicyService_06.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_PolicyController_06.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicyController_06.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_PolicyBatch_06.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicyBatch_06.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Policy_TEST_06.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Policy_TEST_06.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/ACCT_Policy_TEST_06.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Policy_TEST_06.cls"
+    },
+    {
+      "symbol": "Double",
+      "file": "force-app/main/default/classes/ACCT_PolicyHelper_06.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicyHelper_06.cls"
+    },
+    {
+      "symbol": "Case",
+      "file": "force-app/main/default/classes/ACCT_PolicySelector_06.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_PolicySelector_06.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_RequestService_07.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestService_07.cls"
+    },
+    {
+      "symbol": "Case",
+      "file": "force-app/main/default/classes/ACCT_RequestService_07.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestService_07.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_RequestController_07.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestController_07.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_RequestBatch_07.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestBatch_07.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Request_TEST_07.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Request_TEST_07.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/ACCT_Request_TEST_07.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Request_TEST_07.cls"
+    },
+    {
+      "symbol": "Datetime",
+      "file": "force-app/main/default/classes/ACCT_RequestHelper_07.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestHelper_07.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/ACCT_RequestSelector_07.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_RequestSelector_07.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_ResponseService_08.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseService_08.cls"
+    },
+    {
+      "symbol": "Case",
+      "file": "force-app/main/default/classes/ACCT_ResponseService_08.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseService_08.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_ResponseController_08.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseController_08.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_ResponseBatch_08.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseBatch_08.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Response_TEST_08.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Response_TEST_08.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/ACCT_Response_TEST_08.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Response_TEST_08.cls"
+    },
+    {
+      "symbol": "Id",
+      "file": "force-app/main/default/classes/ACCT_ResponseHelper_08.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseHelper_08.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/ACCT_ResponseSelector_08.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_ResponseSelector_08.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_AuditService_09.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditService_09.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/ACCT_AuditService_09.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditService_09.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_AuditController_09.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditController_09.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_AuditBatch_09.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditBatch_09.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Audit_TEST_09.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Audit_TEST_09.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/ACCT_Audit_TEST_09.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Audit_TEST_09.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/ACCT_AuditHelper_09.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditHelper_09.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/ACCT_AuditSelector_09.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_AuditSelector_09.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/ACCT_StatusService_10.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusService_10.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/ACCT_StatusService_10.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusService_10.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/ACCT_StatusController_10.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusController_10.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/ACCT_StatusBatch_10.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusBatch_10.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/ACCT_Status_TEST_10.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Status_TEST_10.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/ACCT_Status_TEST_10.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_Status_TEST_10.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/ACCT_StatusHelper_10.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusHelper_10.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/ACCT_StatusSelector_10.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/ACCT_StatusSelector_10.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_RecordService_01.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordService_01.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/CMPL_RecordService_01.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordService_01.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_RecordController_01.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordController_01.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_RecordBatch_01.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordBatch_01.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Record_TEST_01.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_Record_TEST_01.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "Decimal",
+      "file": "force-app/main/default/classes/CMPL_RecordHelper_01.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordHelper_01.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/CMPL_RecordSelector_01.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RecordSelector_01.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_TransactionService_02.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionService_02.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/CMPL_TransactionService_02.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionService_02.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_TransactionController_02.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionController_02.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_TransactionBatch_02.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionBatch_02.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Transaction_TEST_02.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_Transaction_TEST_02.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/CMPL_TransactionHelper_02.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionHelper_02.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_TransactionSelector_02.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_TransactionSelector_02.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_EventService_03.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventService_03.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_EventService_03.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventService_03.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_EventController_03.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventController_03.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_EventBatch_03.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventBatch_03.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Event_TEST_03.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_Event_TEST_03.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "Double",
+      "file": "force-app/main/default/classes/CMPL_EventHelper_03.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventHelper_03.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/CMPL_EventSelector_03.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_EventSelector_03.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_ConfigService_04.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigService_04.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_ConfigService_04.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigService_04.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_ConfigController_04.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigController_04.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_ConfigBatch_04.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigBatch_04.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Config_TEST_04.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Case",
+      "file": "force-app/main/default/classes/CMPL_Config_TEST_04.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Id",
+      "file": "force-app/main/default/classes/CMPL_ConfigHelper_04.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigHelper_04.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/CMPL_ConfigSelector_04.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ConfigSelector_04.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_RuleService_05.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleService_05.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_RuleService_05.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleService_05.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_RuleController_05.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleController_05.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_RuleBatch_05.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleBatch_05.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Rule_TEST_05.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_Rule_TEST_05.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Decimal",
+      "file": "force-app/main/default/classes/CMPL_RuleHelper_05.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleHelper_05.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_RuleSelector_05.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RuleSelector_05.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_PolicyService_06.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicyService_06.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_PolicyService_06.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicyService_06.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_PolicyController_06.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicyController_06.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_PolicyBatch_06.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicyBatch_06.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Policy_TEST_06.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Policy_TEST_06.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/CMPL_Policy_TEST_06.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Policy_TEST_06.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/CMPL_PolicyHelper_06.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicyHelper_06.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_PolicySelector_06.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_PolicySelector_06.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_RequestService_07.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestService_07.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_RequestService_07.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestService_07.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_RequestController_07.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestController_07.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_RequestBatch_07.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestBatch_07.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Request_TEST_07.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Request_TEST_07.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/CMPL_Request_TEST_07.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Request_TEST_07.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/CMPL_RequestHelper_07.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestHelper_07.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/CMPL_RequestSelector_07.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_RequestSelector_07.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_ResponseService_08.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseService_08.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/CMPL_ResponseService_08.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseService_08.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_ResponseController_08.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseController_08.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_ResponseBatch_08.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseBatch_08.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Response_TEST_08.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Response_TEST_08.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/CMPL_Response_TEST_08.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Response_TEST_08.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/CMPL_ResponseHelper_08.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseHelper_08.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/CMPL_ResponseSelector_08.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_ResponseSelector_08.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_AuditService_09.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditService_09.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/CMPL_AuditService_09.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditService_09.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_AuditController_09.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditController_09.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_AuditBatch_09.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditBatch_09.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Audit_TEST_09.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Audit_TEST_09.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/CMPL_Audit_TEST_09.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Audit_TEST_09.cls"
+    },
+    {
+      "symbol": "Id",
+      "file": "force-app/main/default/classes/CMPL_AuditHelper_09.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditHelper_09.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/CMPL_AuditSelector_09.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_AuditSelector_09.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/CMPL_StatusService_10.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusService_10.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/CMPL_StatusService_10.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusService_10.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/CMPL_StatusController_10.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusController_10.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/CMPL_StatusBatch_10.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusBatch_10.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/CMPL_Status_TEST_10.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Status_TEST_10.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/CMPL_Status_TEST_10.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_Status_TEST_10.cls"
+    },
+    {
+      "symbol": "Double",
+      "file": "force-app/main/default/classes/CMPL_StatusHelper_10.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusHelper_10.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/CMPL_StatusSelector_10.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/CMPL_StatusSelector_10.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/LEND_RecordService_01.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordService_01.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_RecordService_01.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordService_01.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/LEND_RecordController_01.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordController_01.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/LEND_RecordBatch_01.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordBatch_01.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/LEND_Record_TEST_01.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_Record_TEST_01.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Record_TEST_01.cls"
+    },
+    {
+      "symbol": "String",
+      "file": "force-app/main/default/classes/LEND_RecordHelper_01.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordHelper_01.cls"
+    },
+    {
+      "symbol": "Account",
+      "file": "force-app/main/default/classes/LEND_RecordSelector_01.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RecordSelector_01.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/LEND_TransactionService_02.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionService_02.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/LEND_TransactionService_02.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionService_02.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/LEND_TransactionController_02.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionController_02.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/LEND_TransactionBatch_02.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionBatch_02.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/LEND_Transaction_TEST_02.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/LEND_Transaction_TEST_02.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Transaction_TEST_02.cls"
+    },
+    {
+      "symbol": "Double",
+      "file": "force-app/main/default/classes/LEND_TransactionHelper_02.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionHelper_02.cls"
+    },
+    {
+      "symbol": "Lead",
+      "file": "force-app/main/default/classes/LEND_TransactionSelector_02.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_TransactionSelector_02.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/LEND_EventService_03.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventService_03.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/LEND_EventService_03.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventService_03.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/LEND_EventController_03.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventController_03.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/LEND_EventBatch_03.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventBatch_03.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/LEND_Event_TEST_03.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_Event_TEST_03.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Event_TEST_03.cls"
+    },
+    {
+      "symbol": "Date",
+      "file": "force-app/main/default/classes/LEND_EventHelper_03.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventHelper_03.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_EventSelector_03.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_EventSelector_03.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/LEND_ConfigService_04.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigService_04.cls"
+    },
+    {
+      "symbol": "Opportunity",
+      "file": "force-app/main/default/classes/LEND_ConfigService_04.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigService_04.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/LEND_ConfigController_04.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigController_04.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/LEND_ConfigBatch_04.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigBatch_04.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/LEND_Config_TEST_04.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_Config_TEST_04.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Config_TEST_04.cls"
+    },
+    {
+      "symbol": "Boolean",
+      "file": "force-app/main/default/classes/LEND_ConfigHelper_04.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigHelper_04.cls"
+    },
+    {
+      "symbol": "Event",
+      "file": "force-app/main/default/classes/LEND_ConfigSelector_04.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_ConfigSelector_04.cls"
+    },
+    {
+      "symbol": "Map",
+      "file": "force-app/main/default/classes/LEND_RuleService_05.cls",
+      "line": 8,
+      "character": 12,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleService_05.cls"
+    },
+    {
+      "symbol": "User",
+      "file": "force-app/main/default/classes/LEND_RuleService_05.cls",
+      "line": 15,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleService_05.cls"
+    },
+    {
+      "symbol": "List",
+      "file": "force-app/main/default/classes/LEND_RuleController_05.cls",
+      "line": 5,
+      "character": 20,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleController_05.cls"
+    },
+    {
+      "symbol": "Database",
+      "file": "force-app/main/default/classes/LEND_RuleBatch_05.cls",
+      "line": 3,
+      "character": 40,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleBatch_05.cls"
+    },
+    {
+      "symbol": "System",
+      "file": "force-app/main/default/classes/LEND_Rule_TEST_05.cls",
+      "line": 8,
+      "character": 9,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Contact",
+      "file": "force-app/main/default/classes/LEND_Rule_TEST_05.cls",
+      "line": 14,
+      "character": 14,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_Rule_TEST_05.cls"
+    },
+    {
+      "symbol": "Integer",
+      "file": "force-app/main/default/classes/LEND_RuleHelper_05.cls",
+      "line": 4,
+      "character": 18,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleHelper_05.cls"
+    },
+    {
+      "symbol": "Task",
+      "file": "force-app/main/default/classes/LEND_RuleSelector_05.cls",
+      "line": 6,
+      "character": 30,
+      "uri": "file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/xlarge/mega-enterprise/force-app/main/default/classes/LEND_RuleSelector_05.cls"
+    }
+  ]
+}
