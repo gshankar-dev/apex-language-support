@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: Arial, sans-serif; max-width: 1200px; margin: 40px auto; padding: 0 20px; color: #333; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; margin-top: 28px; }
+  table { border-collapse: collapse; margin: 12px 0 20px 0; font-size: 10pt; }
+  th, td { border: 1px solid #ccc; padding: 4px 10px; text-align: left; }
+  th { background: #f3f3f3; font-weight: bold; }
+  td:not(:first-child) { text-align: right; }
+  tr.total td { font-weight: bold; }
+  .meta { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<h1>UI Preview Extension: Startup Performance Impact Analysis</h1>
+
+<p class="meta">Extension under test: salesforcedx-vscode-ui-preview v1.1.4</p>
+<p class="meta">Test project: mega-enterprise (~1,500 classes, ~89 triggers, namespace fsc, API v60.0)</p>
+<p class="meta">Platform: macOS</p>
+<p class="meta">Context: Extension pack validation ahead of TDX; UI Preview is a new candidate for the pack.</p>
+
+<h2>Installed Salesforce Extension Versions</h2>
+<table>
+<tr><th>Extension</th><th>Version</th></tr>
+<tr><td>salesforcedx-vscode (pack)</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex-debugger</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-expanded</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-lightning</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-org-browser</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-soql</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-vscode-visualforce</td><td>66.3.2</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>3.24.0</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>1.11.0</td></tr>
+<tr><td>agent-script-language-client</td><td>1.2.14</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>1.15.0</td></tr>
+<tr><td>apex-language-server-extension</td><td>0.5.0</td></tr>
+<tr><td>salesforce-metadata-visualizer-vscode</td><td>1.0.0</td></tr>
+<tr><td>salesforce-vscode-slds</td><td>2.0.12</td></tr>
+<tr><td>salesforce-internal-dx</td><td>1.5.6</td></tr>
+</table>
+
+<h2>Notes</h2>
+<ul>
+<li>salesforcedx-vscode-visualforce activated in all 3 "with" runs but not in the "without" runs. Its impact is negligible (5 ms load, 0 ms finish activate).</li>
+<li>salesforcedx-vscode-apex-log recorded a Call Activate outlier of 41 ms in With Run 3 (vs. 8-11 ms in all other runs).</li>
+</ul>
+
+<h2>UI Preview Baseline (Own Activation Times)</h2>
+<table>
+<tr><th>Metric</th><th>Run 1</th><th>Run 2</th><th>Run 3</th><th>Average</th></tr>
+<tr><td>Load Code (ms)</td><td>136</td><td>132</td><td>134</td><td>134</td></tr>
+<tr><td>Call Activate (ms)</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>Finish Activate (ms)</td><td>37</td><td>24</td><td>25</td><td>29</td></tr>
+</table>
+<p>The UI Preview extension activates eagerly via workspaceContains:sfdx-project.json. It loads in ~134 ms and completes activation in ~29 ms.</p>
+
+<h2>Load Code (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th><th>% Change</th></tr>
+<tr><td>agent-script-language-client</td><td>12</td><td>13</td><td>13</td><td>13</td><td>12</td><td>12</td><td>13</td><td>12</td><td>0</td><td>-2.6%</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>451</td><td>436</td><td>456</td><td>448</td><td>417</td><td>443</td><td>444</td><td>435</td><td>-13</td><td>-2.9%</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>340</td><td>289</td><td>275</td><td>301</td><td>284</td><td>159</td><td>167</td><td>203</td><td>-98</td><td>-32.5%</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>198</td><td>196</td><td>203</td><td>199</td><td>190</td><td>190</td><td>190</td><td>190</td><td>-9</td><td>-4.5%</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>63</td><td>64</td><td>65</td><td>64</td><td>63</td><td>67</td><td>67</td><td>66</td><td>+2</td><td>+2.6%</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>283</td><td>295</td><td>289</td><td>289</td><td>294</td><td>287</td><td>286</td><td>289</td><td>0</td><td>0.0%</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>216</td><td>208</td><td>206</td><td>210</td><td>204</td><td>206</td><td>205</td><td>205</td><td>-5</td><td>-2.4%</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>169</td><td>170</td><td>167</td><td>169</td><td>166</td><td>170</td><td>170</td><td>169</td><td>0</td><td>0.0%</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>263</td><td>250</td><td>246</td><td>253</td><td>253</td><td>251</td><td>253</td><td>252</td><td>-1</td><td>-0.3%</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>232</td><td>211</td><td>209</td><td>217</td><td>216</td><td>214</td><td>212</td><td>214</td><td>-3</td><td>-1.5%</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>79</td><td>86</td><td>82</td><td>82</td><td>83</td><td>76</td><td>83</td><td>81</td><td>-2</td><td>-2.0%</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>221</td><td>222</td><td>208</td><td>217</td><td>220</td><td>210</td><td>222</td><td>217</td><td>0</td><td>+0.2%</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>309</td><td>315</td><td>303</td><td>309</td><td>312</td><td>305</td><td>319</td><td>312</td><td>+3</td><td>+1.0%</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>6</td><td>6</td><td>7</td><td>6</td><td>6</td><td>6</td><td>11</td><td>8</td><td>+1</td><td>+21.1%</td></tr>
+<tr><td>apex-language-server-extension</td><td>121</td><td>125</td><td>128</td><td>125</td><td>131</td><td>134</td><td>128</td><td>131</td><td>+6</td><td>+5.1%</td></tr>
+<tr><td>salesforce-internal-dx</td><td>21</td><td>21</td><td>22</td><td>21</td><td>20</td><td>20</td><td>21</td><td>20</td><td>-1</td><td>-4.7%</td></tr>
+<tr class="total"><td>Total (excl. internal-dx)</td><td></td><td></td><td></td><td>2,901</td><td></td><td></td><td></td><td>2,784</td><td>-117</td><td>-4.0%</td></tr>
+</table>
+<p>Load Code is flat or slightly lower with UI Preview present. The vscode-agents drop (-98 ms) is driven by high inherent variance in that extension (range: 159-340 ms across all runs), not a UI Preview effect.</p>
+
+<h2>Call Activate (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th></tr>
+<tr><td>agent-script-language-client</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>9</td><td>11</td><td>8</td><td>9</td><td>11</td><td>8</td><td>41</td><td>20</td><td>+11</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>11</td><td>8</td><td>7</td><td>9</td><td>11</td><td>8</td><td>7</td><td>9</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>2</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>2</td><td>2</td><td>+1</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>apex-language-server-extension</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>0</td></tr>
+<tr><td>salesforce-internal-dx</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+<p>All values 0-11 ms except a single outlier (vscode-apex-log at 41 ms in With R3). No meaningful difference between scenarios.</p>
+
+<h2>Finish Activate (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th><th>% Change</th></tr>
+<tr><td>agent-script-language-client</td><td>214</td><td>219</td><td>196</td><td>210</td><td>145</td><td>232</td><td>137</td><td>171</td><td>-38</td><td>-18.3%</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>46</td><td>23</td><td>29</td><td>33</td><td>73</td><td>28</td><td>64</td><td>55</td><td>+22</td><td>+68.3%</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>4</td><td>3</td><td>3</td><td>3</td><td>4</td><td>5</td><td>4</td><td>4</td><td>+1</td><td>+30.0%</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>1269</td><td>1295</td><td>1290</td><td>1285</td><td>1090</td><td>1057</td><td>1110</td><td>1086</td><td>-199</td><td>-15.5%</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>15</td><td>40</td><td>20</td><td>25</td><td>16</td><td>15</td><td>16</td><td>16</td><td>-9</td><td>-37.3%</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>389</td><td>331</td><td>323</td><td>348</td><td>345</td><td>196</td><td>204</td><td>248</td><td>-99</td><td>-28.6%</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>22</td><td>21</td><td>27</td><td>23</td><td>29</td><td>18</td><td>17</td><td>21</td><td>-2</td><td>-8.6%</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>41</td><td>44</td><td>51</td><td>45</td><td>42</td><td>58</td><td>58</td><td>53</td><td>+7</td><td>+16.2%</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>1260</td><td>1031</td><td>1620</td><td>1304</td><td>1079</td><td>1355</td><td>1098</td><td>1177</td><td>-126</td><td>-9.7%</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>743</td><td>544</td><td>638</td><td>642</td><td>605</td><td>615</td><td>588</td><td>603</td><td>-39</td><td>-6.1%</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>2036</td><td>816</td><td>1135</td><td>1329</td><td>1388</td><td>987</td><td>2391</td><td>1589</td><td>+260</td><td>+19.5%</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>1924</td><td>2095</td><td>1065</td><td>1695</td><td>1866</td><td>1062</td><td>997</td><td>1308</td><td>-386</td><td>-22.8%</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>72</td><td>72</td><td>68</td><td>71</td><td>76</td><td>64</td><td>69</td><td>70</td><td>-1</td><td>-1.4%</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>27</td><td>13</td><td>12</td><td>17</td><td>71</td><td>16</td><td>48</td><td>45</td><td>+28</td><td>+159.7%</td></tr>
+<tr><td>apex-language-server-extension</td><td>5</td><td>5</td><td>6</td><td>5</td><td>5</td><td>7</td><td>6</td><td>6</td><td>+1</td><td>+12.5%</td></tr>
+<tr><td>salesforce-internal-dx</td><td>18119</td><td>15557</td><td>15207</td><td>16294</td><td>15333</td><td>15578</td><td>15203</td><td>15371</td><td>-923</td><td>-5.7%</td></tr>
+<tr class="total"><td>Total (excl. internal-dx)</td><td></td><td></td><td></td><td>7,033</td><td></td><td></td><td></td><td>6,452</td><td>-581</td><td>-8.3%</td></tr>
+</table>
+<p>Finish Activate shows high variance in both scenarios, particularly for vscode-metadata (816-2,391 ms), vscode-org (997-2,095 ms), and vscode-core (1,031-1,620 ms). Extensions with large percentage changes (einstein-gpt +68%, code-analyzer +160%) have small absolute baselines (17-33 ms), making them noise. No consistent directional trend across extensions.</p>
+
+<h2>Conclusion</h2>
+<p>The UI Preview extension (salesforcedx-vscode-ui-preview v1.1.4) has no measurable negative impact on the startup performance of other Salesforce extensions.</p>
+<table>
+<tr><th>Metric</th><th>Aggregate Delta (excl. internal-dx)</th><th>Direction</th></tr>
+<tr><td>Load Code</td><td>-117 ms (-4.0%)</td><td>Slightly lower with UI Preview</td></tr>
+<tr><td>Call Activate</td><td>No change (0-11 ms range)</td><td>Flat</td></tr>
+<tr><td>Finish Activate</td><td>-581 ms (-8.3%)</td><td>Slightly lower with UI Preview</td></tr>
+</table>
+<p>All observed differences are attributable to normal run-to-run variance. The UI Preview extension itself is lightweight: 134 ms load, 1 ms call activate, 29 ms finish activate. It activates eagerly on workspaceContains:sfdx-project.json but completes quickly with minimal resource consumption.</p>
+
+</body>
+</html>
