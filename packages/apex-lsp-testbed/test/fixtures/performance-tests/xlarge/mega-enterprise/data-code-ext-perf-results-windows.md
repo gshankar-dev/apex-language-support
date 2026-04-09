@@ -1,20 +1,22 @@
-# UI Preview Extension: Startup Performance Test Results (Windows)
+# Data Code Extension CLI Plugin: Startup Performance Test Results (Windows)
 
-**Extension under test:** salesforcedx-vscode-ui-preview v1.1.4
+**CLI plugin under test:** @salesforce/plugin-data-code-extension v0.1.0
+**Install command:** sf plugins:install @salesforce/plugin-data-code-extension
 **Test project:** dreamhouse (Dreamhouse LWC sample app)
 **Platform:** Windows 11 (VM) -- VS Code 1.106.2, AMD EPYC 7763 (4 cores), 16 GB RAM
-**Context:** Extension pack validation ahead of TDX; UI Preview is a new candidate for the pack. This is the Windows counterpart to the macOS test. Note: macOS used mega-enterprise; Windows uses dreamhouse, so absolute times are not directly comparable across platforms.
+**Context:** Plugin is being added to the AFV IDE image ahead of TDX; validating it does not negatively affect IDE performance. This is the Windows counterpart to the macOS test.
 
-**Reminder:** Fully quit VS Code between each run (not just reload window). Expect higher absolute times and wider variance compared to macOS due to VM overhead.
+Note: This is a CLI plugin, not a VS Code extension. It will not appear in Developer: Startup Performance output directly. The test measures whether its presence in the CLI affects VS Code extension activation times.
+
+**Important:** The "without" runs are reused from the UI Preview Windows test (Scenario A: Without UI Preview). During those runs, neither UI Preview nor the CLI plugin was installed. Ensure UI Preview remains uninstalled for the "with" runs so the only variable is the CLI plugin.
 
 ---
 
-## Scenario A: Without UI Preview Extension
-
-Disable or uninstall salesforcedx-vscode-ui-preview before starting.
+## Scenario A: Without CLI Plugin (reused from UI Preview test)
 
 ### Run 1
 
+(Reused from ui-preview-perf-results-windows.md Scenario A Run 1)
 
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
@@ -60,6 +62,8 @@ Disable or uninstall salesforcedx-vscode-ui-preview before starting.
 
 ### Run 2
 
+(Reused from ui-preview-perf-results-windows.md Scenario A Run 2)
+
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
 | vscode.git                                          | true  | 57        | 15            | 2880            | *                                                  | vscode.git                                       |
@@ -104,6 +108,7 @@ Disable or uninstall salesforcedx-vscode-ui-preview before starting.
 
 ### Run 3
 
+(Reused from ui-preview-perf-results-windows.md Scenario A Run 3)
 
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
@@ -148,54 +153,54 @@ Disable or uninstall salesforcedx-vscode-ui-preview before starting.
 
 ---
 
-## Scenario B: With UI Preview Extension
+## Scenario B: With CLI Plugin
 
-Enable or install salesforcedx-vscode-ui-preview v1.1.4 before starting.
+Install before starting (ensure UI Preview is NOT installed to match baseline):
+sf plugins:install @salesforce/plugin-data-code-extension
 
 ### Run 1
 
 
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
-| vscode.git                                          | true  | 55        | 6             | 2735            | *                                                  | vscode.git                                       |
-| vscode.git-base                                     | true  | 10        | 0             | 0               | *                                                  | vscode.git                                       |
-| vscode.github                                       | true  | 3657      | 2             | 10              | *                                                  | vscode.github                                    |
-| vscode.npm                                          | true  | 54        | 0             | 6719            | workspaceContains:package.json                     | vscode.npm                                       |
-| MS-SarifVSCode.sarif-viewer                         | true  | 132       | 9             | 585             | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
-| Salesforce.agent-script-language-client             | true  | 30        | 0             | 1197            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-einstein-gpt                | true  | 1141      | 1             | 368             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| Salesforce.salesforcedx-vscode-agents               | true  | 1130      | 4             | 130             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex                 | true  | 507       | 0             | 14280           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-log             | true  | 187       | 30            | 38              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-oas             | true  | 736       | 0             | 7264            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
-| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 541       | 1             | 4175            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-testing         | true  | 473       | 29            | 349             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
-| salesforce.salesforcedx-vscode-core                 | true  | 715       | 1             | 7265            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| salesforce.salesforcedx-vscode-lightning            | true  | 542       | 3             | 6096            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
-| salesforce.salesforcedx-vscode-lwc                  | true  | 574       | 1             | 5397            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
-| salesforce.salesforcedx-vscode-metadata             | true  | 212       | 3             | 3422            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
-| salesforce.salesforcedx-vscode-org                  | true  | 492       | 5             | 3532            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-services             | true  | 830       | 3             | 278             | *                                                  | salesforce.salesforcedx-vscode-services          |
-| salesforce.salesforcedx-vscode-ui-preview           | true  | 355       | 4             | 421             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-ui-preview        |
-| salesforce.sfdx-code-analyzer-vscode                | true  | 28        | 1             | 285             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
+| vscode.git                                          | true  | 71        | 9             | 2138            | *                                                  | vscode.git                                       |
+| vscode.git-base                                     | true  | 36        | 1             | 0               | *                                                  | vscode.git                                       |
+| vscode.github                                       | true  | 3507      | 2             | 9               | *                                                  | vscode.github                                    |
+| vscode.npm                                          | true  | 49        | 0             | 6345            | workspaceContains:package.json                     | vscode.npm                                       |
+| MS-SarifVSCode.sarif-viewer                         | true  | 47        | 8             | 728             | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
+| Salesforce.agent-script-language-client             | true  | 29        | 0             | 912             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-einstein-gpt                | true  | 1144      | 1             | 358             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| Salesforce.salesforcedx-vscode-agents               | true  | 1124      | 3             | 128             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex                 | true  | 511       | 0             | 13455           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-log             | true  | 193       | 30            | 36              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-oas             | true  | 752       | 0             | 9137            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
+| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 604       | 1             | 3812            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-testing         | true  | 459       | 32            | 769             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
+| salesforce.salesforcedx-vscode-core                 | true  | 699       | 0             | 7710            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| salesforce.salesforcedx-vscode-lightning            | true  | 505       | 41            | 1494            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
+| salesforce.salesforcedx-vscode-lwc                  | true  | 562       | 0             | 4876            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
+| salesforce.salesforcedx-vscode-metadata             | true  | 207       | 4             | 3683            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
+| salesforce.salesforcedx-vscode-org                  | true  | 500       | 6             | 3818            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-services             | true  | 1194      | 3             | 227             | *                                                  | salesforce.salesforcedx-vscode-services          |
+| salesforce.sfdx-code-analyzer-vscode                | true  | 29        | 1             | 265             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
 | vscode.configuration-editing                        | false | 10        | 1             | 0               | onLanguage:jsonc                                   | vscode.configuration-editing                     |
-| vscode.css-language-features                        | false | 215       | 34            | 1139            | onLanguage:css                                     | vscode.css-language-features                     |
-| vscode.debug-auto-launch                            | false | 2         | 0             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
-| vscode.emmet                                        | false | 99        | 69            | 0               | onLanguage                                         | vscode.emmet                                     |
-| vscode.extension-editing                            | false | 117       | 2             | 0               | onLanguage:markdown                                | vscode.extension-editing                         |
-| vscode.github-authentication                        | false | 50        | 5             | 10              | onAuthenticationRequest:github                     | vscode.github-authentication                     |
-| vscode.html-language-features                       | false | 47        | 6             | 2900            | onLanguage:html                                    | vscode.html-language-features                    |
-| vscode.json-language-features                       | false | 75        | 0             | 858             | onLanguage:jsonc                                   | vscode.json-language-features                    |
-| vscode.markdown-language-features                   | false | 425       | 20            | 910             | onLanguage:markdown                                | vscode.markdown-language-features                |
-| vscode.markdown-math                                | false | 9         | 0             | 0               | api                                                | vscode.markdown-language-features                |
-| vscode.merge-conflict                               | false | 16        | 4             | 4               | onStartupFinished                                  | vscode.merge-conflict                            |
-| vscode.terminal-suggest                             | false | 243       | 4             | 5569            | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
-| vscode.typescript-language-features                 | false | 51        | 8             | 10              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
-| esbenp.prettier-vscode                              | false | 404       | 1             | 249             | onStartupFinished                                  | esbenp.prettier-vscode                           |
-| redhat.vscode-xml                                   | false | 166       | 0             | 2664            | api                                                | salesforce.salesforcedx-vscode-core              |
-| salesforce.apex-language-server-extension           | false | 84        | 11            | 1               | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
-| salesforce.salesforce-metadata-visualizer-vscode    | false | 22        | 1             | 672             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
-| salesforce.salesforce-vscode-slds                   | false | 267       | 1             | 115             | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
+| vscode.css-language-features                        | false | 516       | 9             | 1161            | onLanguage:css                                     | vscode.css-language-features                     |
+| vscode.debug-auto-launch                            | false | 4         | 0             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
+| vscode.emmet                                        | false | 80        | 40            | 0               | onLanguage                                         | vscode.emmet                                     |
+| vscode.extension-editing                            | false | 53        | 2             | 0               | onLanguage:markdown                                | vscode.extension-editing                         |
+| vscode.github-authentication                        | false | 46        | 4             | 5               | onAuthenticationRequest:github                     | vscode.github-authentication                     |
+| vscode.html-language-features                       | false | 63        | 10            | 1466            | onLanguage:html                                    | vscode.html-language-features                    |
+| vscode.json-language-features                       | false | 56        | 1             | 927             | onLanguage:jsonc                                   | vscode.json-language-features                    |
+| vscode.markdown-language-features                   | false | 262       | 40            | 1795            | onLanguage:markdown                                | vscode.markdown-language-features                |
+| vscode.markdown-math                                | false | 8         | 0             | 0               | api                                                | vscode.markdown-language-features                |
+| vscode.merge-conflict                               | false | 38        | 3             | 5               | onStartupFinished                                  | vscode.merge-conflict                            |
+| vscode.terminal-suggest                             | false | 190       | 0             | 553             | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
+| vscode.typescript-language-features                 | false | 45        | 11            | 14              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
+| esbenp.prettier-vscode                              | false | 528       | 1             | 440             | onStartupFinished                                  | esbenp.prettier-vscode                           |
+| redhat.vscode-xml                                   | false | 143       | 0             | 2789            | api                                                | salesforce.salesforcedx-vscode-core              |
+| salesforce.apex-language-server-extension           | false | 48        | 19            | 4               | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
+| salesforce.salesforce-metadata-visualizer-vscode    | false | 20        | 29            | 598             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
+| salesforce.salesforce-vscode-slds                   | false | 295       | 1             | 200             | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
 
 
 ### Run 2
@@ -203,45 +208,44 @@ Enable or install salesforcedx-vscode-ui-preview v1.1.4 before starting.
 
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
-| vscode.git                                          | true  | 92        | 9             | 2128            | *                                                  | vscode.git                                       |
-| vscode.git-base                                     | true  | 85        | 1             | 0               | *                                                  | vscode.git                                       |
-| vscode.github                                       | true  | 3592      | 10            | 24              | *                                                  | vscode.github                                    |
-| vscode.npm                                          | true  | 41        | 0             | 7247            | workspaceContains:package.json                     | vscode.npm                                       |
-| MS-SarifVSCode.sarif-viewer                         | true  | 46        | 8             | 569             | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
-| Salesforce.agent-script-language-client             | true  | 30        | 0             | 794             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-einstein-gpt                | true  | 1157      | 1             | 437             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| Salesforce.salesforcedx-vscode-agents               | true  | 1162      | 5             | 244             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex                 | true  | 511       | 0             | 16209           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-log             | true  | 183       | 30            | 38              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-oas             | true  | 737       | 0             | 6863            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
-| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 570       | 1             | 2546            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-testing         | true  | 421       | 53            | 810             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
-| salesforce.salesforcedx-vscode-core                 | true  | 703       | 1             | 8057            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| salesforce.salesforcedx-vscode-lightning            | true  | 509       | 4             | 1694            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
-| salesforce.salesforcedx-vscode-lwc                  | true  | 630       | 1             | 5308            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
-| salesforce.salesforcedx-vscode-metadata             | true  | 237       | 4             | 3951            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
-| salesforce.salesforcedx-vscode-org                  | true  | 496       | 6             | 3196            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-services             | true  | 1030      | 4             | 274             | *                                                  | salesforce.salesforcedx-vscode-services          |
-| salesforce.salesforcedx-vscode-ui-preview           | true  | 353       | 4             | 202             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-ui-preview        |
-| salesforce.sfdx-code-analyzer-vscode                | true  | 29        | 1             | 358             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
-| vscode.configuration-editing                        | false | 8         | 0             | 0               | onLanguage:jsonc                                   | vscode.configuration-editing                     |
-| vscode.css-language-features                        | false | 235       | 10            | 766             | onLanguage:css                                     | vscode.css-language-features                     |
-| vscode.debug-auto-launch                            | false | 4         | 1             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
-| vscode.emmet                                        | false | 71        | 18            | 0               | onLanguage                                         | vscode.emmet                                     |
-| vscode.extension-editing                            | false | 72        | 2             | 0               | onLanguage:markdown                                | vscode.extension-editing                         |
-| vscode.github-authentication                        | false | 83        | 13            | 13              | onAuthenticationRequest:github                     | vscode.github-authentication                     |
-| vscode.html-language-features                       | false | 289       | 12            | 1543            | onLanguage:html                                    | vscode.html-language-features                    |
-| vscode.json-language-features                       | false | 50        | 0             | 974             | onLanguage:jsonc                                   | vscode.json-language-features                    |
-| vscode.markdown-language-features                   | false | 384       | 48            | 1267            | onLanguage:markdown                                | vscode.markdown-language-features                |
-| vscode.markdown-math                                | false | 9         | 0             | 0               | api                                                | vscode.markdown-language-features                |
-| vscode.merge-conflict                               | false | 18        | 4             | 6               | onStartupFinished                                  | vscode.merge-conflict                            |
-| vscode.terminal-suggest                             | false | 338       | 3             | 5918            | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
-| vscode.typescript-language-features                 | false | 46        | 43            | 21              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
-| esbenp.prettier-vscode                              | false | 599       | 1             | 516             | onStartupFinished                                  | esbenp.prettier-vscode                           |
-| redhat.vscode-xml                                   | false | 152       | 1             | 2996            | api                                                | salesforce.salesforcedx-vscode-core              |
-| salesforce.apex-language-server-extension           | false | 100       | 31            | 56              | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
-| salesforce.salesforce-metadata-visualizer-vscode    | false | 18        | 2             | 484             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
-| salesforce.salesforce-vscode-slds                   | false | 161       | 1             | 21              | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
+| vscode.git                                          | true  | 82        | 6             | 2079            | *                                                  | vscode.git                                       |
+| vscode.git-base                                     | true  | 7         | 0             | 0               | *                                                  | vscode.git                                       |
+| vscode.github                                       | true  | 3491      | 2             | 8               | *                                                  | vscode.github                                    |
+| vscode.npm                                          | true  | 62        | 1             | 6780            | workspaceContains:package.json                     | vscode.npm                                       |
+| MS-SarifVSCode.sarif-viewer                         | true  | 49        | 9             | 706             | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
+| Salesforce.agent-script-language-client             | true  | 29        | 1             | 1072            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-einstein-gpt                | true  | 1192      | 1             | 456             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| Salesforce.salesforcedx-vscode-agents               | true  | 1206      | 5             | 120             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex                 | true  | 524       | 1             | 15134           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-log             | true  | 172       | 32            | 45              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-oas             | true  | 743       | 0             | 5114            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
+| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 511       | 1             | 996             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-testing         | true  | 415       | 26            | 764             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
+| salesforce.salesforcedx-vscode-core                 | true  | 700       | 1             | 8354            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| salesforce.salesforcedx-vscode-lightning            | true  | 513       | 9             | 2068            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
+| salesforce.salesforcedx-vscode-lwc                  | true  | 563       | 0             | 5228            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
+| salesforce.salesforcedx-vscode-metadata             | true  | 217       | 4             | 3934            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
+| salesforce.salesforcedx-vscode-org                  | true  | 503       | 7             | 3226            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-services             | true  | 1250      | 3             | 290             | *                                                  | salesforce.salesforcedx-vscode-services          |
+| salesforce.sfdx-code-analyzer-vscode                | true  | 17        | 1             | 301             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
+| vscode.configuration-editing                        | false | 8         | 1             | 0               | onLanguage:jsonc                                   | vscode.configuration-editing                     |
+| vscode.css-language-features                        | false | 54        | 9             | 1843            | onLanguage:css                                     | vscode.css-language-features                     |
+| vscode.debug-auto-launch                            | false | 3         | 0             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
+| vscode.emmet                                        | false | 152       | 60            | 0               | onLanguage                                         | vscode.emmet                                     |
+| vscode.extension-editing                            | false | 54        | 1             | 0               | onLanguage:markdown                                | vscode.extension-editing                         |
+| vscode.github-authentication                        | false | 60        | 10            | 10              | onAuthenticationRequest:github                     | vscode.github-authentication                     |
+| vscode.html-language-features                       | false | 76        | 7             | 1306            | onLanguage:html                                    | vscode.html-language-features                    |
+| vscode.json-language-features                       | false | 50        | 0             | 1066            | onLanguage:jsonc                                   | vscode.json-language-features                    |
+| vscode.markdown-language-features                   | false | 343       | 14            | 1357            | onLanguage:markdown                                | vscode.markdown-language-features                |
+| vscode.markdown-math                                | false | 8         | 0             | 0               | api                                                | vscode.markdown-language-features                |
+| vscode.merge-conflict                               | false | 20        | 4             | 5               | onStartupFinished                                  | vscode.merge-conflict                            |
+| vscode.terminal-suggest                             | false | 235       | 1             | 5978            | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
+| vscode.typescript-language-features                 | false | 45        | 36            | 10              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
+| esbenp.prettier-vscode                              | false | 760       | 1             | 389             | onStartupFinished                                  | esbenp.prettier-vscode                           |
+| redhat.vscode-xml                                   | false | 126       | 1             | 2828            | api                                                | salesforce.salesforcedx-vscode-core              |
+| salesforce.apex-language-server-extension           | false | 235       | 9             | 2               | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
+| salesforce.salesforce-metadata-visualizer-vscode    | false | 18        | 1             | 601             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
+| salesforce.salesforce-vscode-slds                   | false | 177       | 1             | 280             | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
 
 
 ### Run 3
@@ -249,43 +253,42 @@ Enable or install salesforcedx-vscode-ui-preview v1.1.4 before starting.
 
 | Extension                                           | Eager | Load Code | Call Activate | Finish Activate | Event                                              | By                                               |
 | --------------------------------------------------- | ----- | --------- | ------------- | --------------- | -------------------------------------------------- | ------------------------------------------------ |
-| vscode.git                                          | true  | 66        | 7             | 2059            | *                                                  | vscode.git                                       |
-| vscode.git-base                                     | true  | 8         | 0             | 0               | *                                                  | vscode.git                                       |
-| vscode.github                                       | true  | 3501      | 2             | 9               | *                                                  | vscode.github                                    |
-| vscode.npm                                          | true  | 28        | 1             | 6110            | workspaceContains:package.json                     | vscode.npm                                       |
-| MS-SarifVSCode.sarif-viewer                         | true  | 62        | 21            | 404             | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
-| Salesforce.agent-script-language-client             | true  | 30        | 0             | 1090            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-einstein-gpt                | true  | 1167      | 1             | 355             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| Salesforce.salesforcedx-vscode-agents               | true  | 1248      | 5             | 112             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex                 | true  | 512       | 0             | 14747           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-log             | true  | 165       | 26            | 36              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-oas             | true  | 868       | 0             | 4883            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
-| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 607       | 2             | 1682            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-apex-testing         | true  | 414       | 31            | 759             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
-| salesforce.salesforcedx-vscode-core                 | true  | 660       | 0             | 7564            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
-| salesforce.salesforcedx-vscode-lightning            | true  | 515       | 3             | 2127            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
-| salesforce.salesforcedx-vscode-lwc                  | true  | 593       | 0             | 4706            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
-| salesforce.salesforcedx-vscode-metadata             | true  | 221       | 5             | 3437            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
-| salesforce.salesforcedx-vscode-org                  | true  | 514       | 5             | 3667            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
-| salesforce.salesforcedx-vscode-services             | true  | 758       | 4             | 253             | *                                                  | salesforce.salesforcedx-vscode-services          |
-| salesforce.salesforcedx-vscode-ui-preview           | true  | 355       | 3             | 378             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-ui-preview        |
-| salesforce.sfdx-code-analyzer-vscode                | true  | 18        | 0             | 261             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
+| vscode.git                                          | true  | 58        | 6             | 2171            | *                                                  | vscode.git                                       |
+| vscode.git-base                                     | true  | 5         | 0             | 0               | *                                                  | vscode.git                                       |
+| vscode.github                                       | true  | 3294      | 2             | 10              | *                                                  | vscode.github                                    |
+| vscode.npm                                          | true  | 26        | 0             | 5431            | workspaceContains:package.json                     | vscode.npm                                       |
+| MS-SarifVSCode.sarif-viewer                         | true  | 58        | 10            | 95              | workspaceContains:.git                             | MS-SarifVSCode.sarif-viewer                      |
+| Salesforce.agent-script-language-client             | true  | 33        | 1             | 775             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-einstein-gpt                | true  | 1165      | 1             | 227             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| Salesforce.salesforcedx-vscode-agents               | true  | 1605      | 6             | 406             | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex                 | true  | 539       | 0             | 18018           | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-log             | true  | 178       | 43            | 34              | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-oas             | true  | 771       | 0             | 6012            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-oas          |
+| salesforce.salesforcedx-vscode-apex-replay-debugger | true  | 597       | 11            | 1458            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-apex-testing         | true  | 444       | 24            | 730             | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-apex-testing      |
+| salesforce.salesforcedx-vscode-core                 | true  | 752       | 1             | 5695            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-einstein-gpt             |
+| salesforce.salesforcedx-vscode-lightning            | true  | 539       | 3             | 2421            | workspaceContains:**/aura/**,**/workspace-user.xml | salesforce.salesforcedx-vscode-lightning         |
+| salesforce.salesforcedx-vscode-lwc                  | true  | 613       | 0             | 4006            | workspaceContains:**/lwc/**,**/workspace-user.xml  | salesforce.salesforcedx-vscode-lwc               |
+| salesforce.salesforcedx-vscode-metadata             | true  | 238       | 3             | 2907            | workspaceContains:sfdx-project.json                | salesforce.salesforcedx-vscode-metadata          |
+| salesforce.salesforcedx-vscode-org                  | true  | 493       | 6             | 3061            | workspaceContains:sfdx-project.json                | Salesforce.salesforcedx-vscode-agents            |
+| salesforce.salesforcedx-vscode-services             | true  | 1489      | 3             | 185             | *                                                  | salesforce.salesforcedx-vscode-services          |
+| salesforce.sfdx-code-analyzer-vscode                | true  | 19        | 1             | 140             | workspaceContains:sfdx-project.json                | salesforce.sfdx-code-analyzer-vscode             |
 | vscode.configuration-editing                        | false | 10        | 1             | 0               | onLanguage:jsonc                                   | vscode.configuration-editing                     |
-| vscode.css-language-features                        | false | 125       | 13            | 2117            | onLanguage:css                                     | vscode.css-language-features                     |
-| vscode.debug-auto-launch                            | false | 3         | 0             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
-| vscode.emmet                                        | false | 68        | 17            | 0               | onLanguage                                         | vscode.emmet                                     |
-| vscode.extension-editing                            | false | 73        | 2             | 0               | onLanguage:markdown                                | vscode.extension-editing                         |
-| vscode.github-authentication                        | false | 60        | 2             | 4               | onAuthenticationRequest:github                     | vscode.github-authentication                     |
-| vscode.html-language-features                       | false | 54        | 10            | 2625            | onLanguage:html                                    | vscode.html-language-features                    |
-| vscode.json-language-features                       | false | 55        | 1             | 1075            | onLanguage:jsonc                                   | vscode.json-language-features                    |
-| vscode.markdown-language-features                   | false | 158       | 22            | 274             | onLanguage:markdown                                | vscode.markdown-language-features                |
-| vscode.markdown-math                                | false | 13        | 0             | 0               | api                                                | vscode.markdown-language-features                |
-| vscode.merge-conflict                               | false | 20        | 6             | 6               | onStartupFinished                                  | vscode.merge-conflict                            |
-| vscode.terminal-suggest                             | false | 61        | 1             | 65              | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
-| vscode.typescript-language-features                 | false | 47        | 8             | 11              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
-| esbenp.prettier-vscode                              | false | 144       | 2             | 102             | onStartupFinished                                  | esbenp.prettier-vscode                           |
-| redhat.vscode-xml                                   | false | 154       | 1             | 2684            | api                                                | salesforce.salesforcedx-vscode-core              |
-| salesforce.apex-language-server-extension           | false | 35        | 16            | 2               | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
-| salesforce.salesforce-metadata-visualizer-vscode    | false | 20        | 10            | 188             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
-| salesforce.salesforce-vscode-slds                   | false | 220       | 1             | 193             | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
+| vscode.css-language-features                        | false | 217       | 45            | 7517            | onLanguage:css                                     | vscode.css-language-features                     |
+| vscode.debug-auto-launch                            | false | 3         | 1             | 0               | onStartupFinished                                  | vscode.debug-auto-launch                         |
+| vscode.emmet                                        | false | 38        | 82            | 0               | onLanguage                                         | vscode.emmet                                     |
+| vscode.extension-editing                            | false | 21        | 1             | 0               | onLanguage:json                                    | vscode.extension-editing                         |
+| vscode.github-authentication                        | false | 93        | 27            | 5               | onAuthenticationRequest:github                     | vscode.github-authentication                     |
+| vscode.html-language-features                       | false | 49        | 8             | 2692            | onLanguage:html                                    | vscode.html-language-features                    |
+| vscode.json-language-features                       | false | 53        | 1             | 428             | onLanguage:jsonc                                   | vscode.json-language-features                    |
+| vscode.markdown-language-features                   | false | 117       | 10            | 911             | onLanguage:markdown                                | vscode.markdown-language-features                |
+| vscode.markdown-math                                | false | 7         | 0             | 0               | api                                                | vscode.markdown-language-features                |
+| vscode.merge-conflict                               | false | 17        | 4             | 5               | onStartupFinished                                  | vscode.merge-conflict                            |
+| vscode.terminal-suggest                             | false | 164       | 22            | 95              | onTerminalShellIntegration:*                       | vscode.terminal-suggest                          |
+| vscode.typescript-language-features                 | false | 49        | 8             | 11              | onLanguage:jsonc                                   | vscode.typescript-language-features              |
+| esbenp.prettier-vscode                              | false | 457       | 1             | 1285            | onStartupFinished                                  | esbenp.prettier-vscode                           |
+| redhat.vscode-xml                                   | false | 124       | 0             | 2349            | api                                                | salesforce.salesforcedx-vscode-core              |
+| salesforce.apex-language-server-extension           | false | 50        | 7             | 0               | onLanguage:apex                                    | salesforce.apex-language-server-extension        |
+| salesforce.salesforce-metadata-visualizer-vscode    | false | 23        | 23            | 419             | onLanguage:xml                                     | salesforce.salesforce-metadata-visualizer-vscode |
+| salesforce.salesforce-vscode-slds                   | false | 273       | 1             | 263             | onLanguage:javascript                              | salesforce.salesforce-vscode-slds                |
 

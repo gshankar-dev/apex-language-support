@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: Arial, sans-serif; max-width: 1200px; margin: 40px auto; padding: 0 20px; color: #333; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; margin-top: 28px; }
+  table { border-collapse: collapse; margin: 12px 0 20px 0; font-size: 10pt; }
+  th, td { border: 1px solid #ccc; padding: 4px 10px; text-align: left; }
+  th { background: #f3f3f3; font-weight: bold; }
+  td:not(:first-child) { text-align: right; }
+  tr.total td { font-weight: bold; }
+  .meta { margin-bottom: 4px; }
+  .callout { background: #fff3cd; border: 1px solid #ffc107; padding: 10px 14px; margin: 16px 0; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Data Code Extension CLI Plugin: Startup Performance Impact Analysis (Windows)</h1>
+
+<p class="meta">CLI plugin under test: @salesforce/plugin-data-code-extension v0.1.0</p>
+<p class="meta">Test project: dreamhouse (Dreamhouse LWC sample app)</p>
+<p class="meta">Platform: Windows 11 (VM) -- VS Code 1.106.2, AMD EPYC 7763 (4 cores), 16 GB RAM</p>
+<p class="meta">Context: Plugin is being added to the AFV IDE image ahead of TDX. This is a CLI plugin (not a VS Code extension); it does not appear in Developer: Startup Performance. The test measures whether its presence in the SF CLI affects VS Code extension activation times. This is the Windows counterpart to the macOS test.</p>
+
+<div class="callout">
+<strong>Without Run 1 Cold-Start Outlier:</strong> The "without" runs are reused from the UI Preview Windows test. Without R1 shows significantly elevated Load Code for many extensions due to a cold-cache first-run effect (e.g., vscode-agents 2,129 ms vs. 1,139-1,183 ms in R2/R3). The conclusion uses R2/R3 comparison for accuracy.
+</div>
+
+<h2>Notes</h2>
+<ul>
+<li>This is a CLI plugin, not a VS Code extension. It has no Load Code, Call Activate, or Finish Activate of its own. The test measures whether its presence in the SF CLI indirectly affects VS Code extension activation times.</li>
+<li>apex-language-server-extension did not activate in Without R3. Its "without" averages use R1/R2 only.</li>
+<li>apex-language-server-extension Load Code spiked to 235 ms in With R2 (vs. 48/50 ms in R1/R3) -- a single-run outlier.</li>
+</ul>
+
+<h2>Load Code (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th><th>% Change</th></tr>
+<tr><td>agent-script-language-client</td><td>58</td><td>30</td><td>30</td><td>39</td><td>29</td><td>29</td><td>33</td><td>30</td><td>-9</td><td>-23.8%</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>1,712</td><td>1,153</td><td>1,109</td><td>1,325</td><td>1,144</td><td>1,192</td><td>1,165</td><td>1,167</td><td>-158</td><td>-11.9%</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>2,129</td><td>1,183</td><td>1,139</td><td>1,484</td><td>1,124</td><td>1,206</td><td>1,605</td><td>1,312</td><td>-172</td><td>-11.6%</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>865</td><td>504</td><td>505</td><td>625</td><td>511</td><td>524</td><td>539</td><td>525</td><td>-100</td><td>-16.0%</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>232</td><td>172</td><td>168</td><td>191</td><td>193</td><td>172</td><td>178</td><td>181</td><td>-10</td><td>-5.2%</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>1,240</td><td>817</td><td>752</td><td>936</td><td>752</td><td>743</td><td>771</td><td>755</td><td>-181</td><td>-19.3%</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>824</td><td>566</td><td>507</td><td>632</td><td>604</td><td>511</td><td>597</td><td>571</td><td>-61</td><td>-9.7%</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>625</td><td>485</td><td>464</td><td>525</td><td>459</td><td>415</td><td>444</td><td>439</td><td>-85</td><td>-16.3%</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>653</td><td>711</td><td>720</td><td>695</td><td>699</td><td>700</td><td>752</td><td>717</td><td>+22</td><td>+3.2%</td></tr>
+<tr><td>salesforcedx-vscode-lightning</td><td>2,217</td><td>515</td><td>516</td><td>1,083</td><td>505</td><td>513</td><td>539</td><td>519</td><td>-564</td><td>-52.1%</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>2,199</td><td>585</td><td>616</td><td>1,133</td><td>562</td><td>563</td><td>613</td><td>579</td><td>-554</td><td>-48.9%</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>258</td><td>207</td><td>225</td><td>230</td><td>207</td><td>217</td><td>238</td><td>221</td><td>-9</td><td>-3.9%</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>997</td><td>563</td><td>497</td><td>686</td><td>500</td><td>503</td><td>493</td><td>499</td><td>-187</td><td>-27.3%</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>721</td><td>1,191</td><td>1,032</td><td>981</td><td>1,194</td><td>1,250</td><td>1,489</td><td>1,311</td><td>+330</td><td>+33.6%</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>20</td><td>17</td><td>17</td><td>18</td><td>29</td><td>17</td><td>19</td><td>22</td><td>+4</td><td>+20.0%</td></tr>
+<tr><td>apex-language-server-extension</td><td>136</td><td>32</td><td>--</td><td>84*</td><td>48</td><td>235</td><td>50</td><td>111</td><td>+27</td><td>+32.1%</td></tr>
+<tr><td>salesforce-metadata-visualizer-vscode</td><td>32</td><td>17</td><td>18</td><td>22</td><td>20</td><td>18</td><td>23</td><td>20</td><td>-2</td><td>-9.1%</td></tr>
+<tr><td>salesforce-vscode-slds</td><td>159</td><td>150</td><td>207</td><td>172</td><td>295</td><td>177</td><td>273</td><td>248</td><td>+76</td><td>+44.2%</td></tr>
+</table>
+<p>The large negative deltas (vscode-lightning -52%, vscode-lwc -49%, vscode-agents -12%) are artifacts of the Without R1 cold-start outlier. Comparing R2/R3 only: Without total = 8,699 ms, With total = 9,264 ms, delta = +565 ms (+6.5%). The +6.5% is driven by vscode-agents With R3 outlier (1,605 ms vs. 1,124/1,206 ms) and vscode-services variance. R2-only comparison shows -1.3%. Load Code is flat within normal Windows VM variance.</p>
+
+<h2>Call Activate (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th></tr>
+<tr><td>agent-script-language-client</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>5</td><td>5</td><td>4</td><td>5</td><td>3</td><td>5</td><td>6</td><td>5</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>23</td><td>28</td><td>30</td><td>27</td><td>30</td><td>32</td><td>43</td><td>35</td><td>+8</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>4</td><td>+3</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>21</td><td>29</td><td>41</td><td>30</td><td>32</td><td>26</td><td>24</td><td>27</td><td>-3</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-lightning</td><td>4</td><td>4</td><td>4</td><td>4</td><td>41</td><td>9</td><td>3</td><td>18</td><td>+14</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>3</td><td>4</td><td>3</td><td>3</td><td>4</td><td>4</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>8</td><td>6</td><td>4</td><td>6</td><td>6</td><td>7</td><td>6</td><td>6</td><td>0</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>3</td><td>6</td><td>4</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>-1</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>apex-language-server-extension</td><td>15</td><td>8</td><td>--</td><td>12*</td><td>19</td><td>9</td><td>7</td><td>12</td><td>0</td></tr>
+<tr><td>salesforce-metadata-visualizer-vscode</td><td>1</td><td>2</td><td>1</td><td>1</td><td>29</td><td>1</td><td>23</td><td>18</td><td>+17</td></tr>
+<tr><td>salesforce-vscode-slds</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+</table>
+<p>All values in the 0-43 ms range. vscode-lightning With R1 had a 41 ms outlier (vs. 3-9 ms otherwise). metadata-visualizer-vscode shows sporadic Call Activate spikes unrelated to the CLI plugin. No meaningful difference between scenarios.</p>
+
+<h2>Finish Activate (ms)</h2>
+<table>
+<tr><th>Extension</th><th>Without (R1)</th><th>Without (R2)</th><th>Without (R3)</th><th>Avg Without</th><th>With (R1)</th><th>With (R2)</th><th>With (R3)</th><th>Avg With</th><th>Delta</th><th>% Change</th></tr>
+<tr><td>agent-script-language-client</td><td>1,073</td><td>641</td><td>745</td><td>820</td><td>912</td><td>1,072</td><td>775</td><td>920</td><td>+100</td><td>+12.2%</td></tr>
+<tr><td>salesforcedx-einstein-gpt</td><td>1,129</td><td>364</td><td>378</td><td>624</td><td>358</td><td>456</td><td>227</td><td>347</td><td>-277</td><td>-44.4%</td></tr>
+<tr><td>salesforcedx-vscode-agents</td><td>351</td><td>124</td><td>141</td><td>205</td><td>128</td><td>120</td><td>406</td><td>218</td><td>+13</td><td>+6.1%</td></tr>
+<tr><td>salesforcedx-vscode-apex</td><td>31,688</td><td>18,190</td><td>12,981</td><td>20,953</td><td>13,455</td><td>15,134</td><td>18,018</td><td>15,536</td><td>-5,417</td><td>-25.9%</td></tr>
+<tr><td>salesforcedx-vscode-apex-log</td><td>30</td><td>36</td><td>38</td><td>35</td><td>36</td><td>45</td><td>34</td><td>38</td><td>+3</td><td>+10.0%</td></tr>
+<tr><td>salesforcedx-vscode-apex-oas</td><td>10,991</td><td>6,346</td><td>7,090</td><td>8,142</td><td>9,137</td><td>5,114</td><td>6,012</td><td>6,754</td><td>-1,388</td><td>-17.0%</td></tr>
+<tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>2,943</td><td>2,840</td><td>3,875</td><td>3,219</td><td>3,812</td><td>996</td><td>1,458</td><td>2,089</td><td>-1,131</td><td>-35.1%</td></tr>
+<tr><td>salesforcedx-vscode-apex-testing</td><td>79</td><td>163</td><td>141</td><td>128</td><td>769</td><td>764</td><td>730</td><td>754</td><td>+627</td><td>+490%</td></tr>
+<tr><td>salesforcedx-vscode-core</td><td>7,732</td><td>7,556</td><td>6,983</td><td>7,424</td><td>7,710</td><td>8,354</td><td>5,695</td><td>7,253</td><td>-171</td><td>-2.3%</td></tr>
+<tr><td>salesforcedx-vscode-lightning</td><td>2,321</td><td>1,923</td><td>1,777</td><td>2,007</td><td>1,494</td><td>2,068</td><td>2,421</td><td>1,994</td><td>-13</td><td>-0.6%</td></tr>
+<tr><td>salesforcedx-vscode-lwc</td><td>6,036</td><td>5,458</td><td>5,106</td><td>5,533</td><td>4,876</td><td>5,228</td><td>4,006</td><td>4,703</td><td>-830</td><td>-15.0%</td></tr>
+<tr><td>salesforcedx-vscode-metadata</td><td>1,528</td><td>3,216</td><td>3,213</td><td>2,652</td><td>3,683</td><td>3,934</td><td>2,907</td><td>3,508</td><td>+856</td><td>+32.3%</td></tr>
+<tr><td>salesforcedx-vscode-org</td><td>1,745</td><td>3,489</td><td>3,398</td><td>2,877</td><td>3,818</td><td>3,226</td><td>3,061</td><td>3,368</td><td>+491</td><td>+17.1%</td></tr>
+<tr><td>salesforcedx-vscode-services</td><td>198</td><td>221</td><td>318</td><td>246</td><td>227</td><td>290</td><td>185</td><td>234</td><td>-12</td><td>-4.8%</td></tr>
+<tr><td>sfdx-code-analyzer-vscode</td><td>220</td><td>319</td><td>299</td><td>279</td><td>265</td><td>301</td><td>140</td><td>235</td><td>-44</td><td>-15.7%</td></tr>
+<tr><td>apex-language-server-extension</td><td>75</td><td>1</td><td>--</td><td>38*</td><td>4</td><td>2</td><td>0</td><td>2</td><td>-36</td><td>--</td></tr>
+<tr><td>salesforce-metadata-visualizer-vscode</td><td>27</td><td>21</td><td>313</td><td>120</td><td>598</td><td>601</td><td>419</td><td>539</td><td>+419</td><td>+349%</td></tr>
+<tr><td>salesforce-vscode-slds</td><td>104</td><td>23</td><td>175</td><td>101</td><td>200</td><td>280</td><td>263</td><td>248</td><td>+147</td><td>+146%</td></tr>
+</table>
+
+<p>Key observations:</p>
+<ul>
+<li><strong>salesforcedx-vscode-apex</strong> (-5,417 ms / -26%): Extreme variance on Windows VM (12,981-31,688 ms without, 13,455-18,018 ms with). The Without R1 cold-start value of 31,688 ms dominates the average. R2/R3 comparison: Without avg 15,586 ms vs. With avg 16,576 ms (+6%) -- within normal variance.</li>
+<li><strong>salesforcedx-vscode-apex-testing</strong> (+627 ms / +490%): Consistently higher in "with" (730-769 ms vs. 79-163 ms). However, this same pattern appeared in the UI Preview Windows test, which shares the same "without" baseline. This indicates a VM scheduling artifact in the early "without" runs rather than an effect of the CLI plugin.</li>
+<li><strong>salesforce-metadata-visualizer-vscode</strong> (+419 ms / +349%): Depends on which XML files VS Code opens on startup; unrelated to the CLI plugin.</li>
+<li><strong>salesforcedx-vscode-metadata</strong> (+856 ms / +32%): High variance in both scenarios (1,528-3,934 ms range). R2/R3 comparison: Without 3,215 ms vs. With 3,421 ms (+6%) -- within variance.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Comparing R2/R3 only (excluding the Without R1 cold-start outlier):</p>
+<table>
+<tr><th>Metric</th><th>Aggregate R2/R3 Delta</th><th>Assessment</th></tr>
+<tr><td>Load Code</td><td>+565 ms (+6.5%)</td><td>Within variance -- driven by single-run outliers in vscode-agents and vscode-services</td></tr>
+<tr><td>Call Activate</td><td>No change (0-43 ms range)</td><td>Flat</td></tr>
+<tr><td>Finish Activate</td><td>-1,579 ms (-3.2%)</td><td>Flat -- mixed increases and decreases across extensions</td></tr>
+</table>
+
+<p>The @salesforce/plugin-data-code-extension CLI plugin (v0.1.0) has no measurable negative impact on IDE startup performance on Windows. This is consistent with the macOS result. The CLI plugin does not participate in the VS Code extension lifecycle, and no consistent regression pattern is attributable to its presence in the SF CLI.</p>
+
+</body>
+</html>
