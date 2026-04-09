@@ -1,0 +1,2024 @@
+{
+  "0.5.0": {
+    "medians": {
+      "initialize": 341,
+      "hover file1 (cold open)": 28,
+      "hover file1 (after edit)": 14,
+      "hover file2 (second file)": 19,
+      "hover file3 (third file)": 7,
+      "hover file1 (warm cache)": 27,
+      "completion file1": 0,
+      "documentSymbol file1": 18,
+      "definition file1": 0
+    },
+    "runs": [
+      [
+        {
+          "label": "initialize",
+          "ms": 328,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 30,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 14,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 30,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 6,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 27,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "completion file1",
+          "ms": 1,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 18,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 1,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 341,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 6,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 14,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 19,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 7,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 29,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "completion file1",
+          "ms": 0,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 18,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 0,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 364,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 28,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 16,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 17,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 9,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 27,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "completion file1",
+          "ms": 0,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 19,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 0,
+          "error": null,
+          "result": []
+        }
+      ]
+    ]
+  },
+  "0.5.39": {
+    "medians": {
+      "initialize": 449,
+      "hover file1 (cold open)": 13,
+      "hover file1 (after edit)": 21,
+      "hover file2 (second file)": 29,
+      "hover file3 (third file)": 8,
+      "hover file1 (warm cache)": 28,
+      "completion file1": 1,
+      "documentSymbol file1": 36,
+      "definition file1": 2
+    },
+    "runs": [
+      [
+        {
+          "label": "initialize",
+          "ms": 449,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false,
+                "workDoneProgress": true
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 13,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor.extractFeatures\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 21,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 29,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nAction.getExpression\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 8,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 27,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 1,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 35,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 2,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 451,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false,
+                "workDoneProgress": true
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 9,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor.extractFeatures\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 20,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 29,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nAction.getExpression\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 9,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 28,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 0,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 36,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 2,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 442,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false,
+                "workDoneProgress": true
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 14,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor.extractFeatures\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 21,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 24,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nAction.getExpression\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 8,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 28,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nSampleCustomFeatureExtractor\n```\n**Modifiers:** default\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 1,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 36,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 7,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 4,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 4,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 5,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 5,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 1,
+          "error": null,
+          "result": []
+        }
+      ]
+    ]
+  },
+  "local-build": {
+    "medians": {
+      "initialize": 382,
+      "hover file1 (cold open)": 79,
+      "hover file1 (after edit)": 17,
+      "hover file2 (second file)": 6,
+      "hover file3 (third file)": 13,
+      "hover file1 (warm cache)": 29,
+      "completion file1": 1,
+      "documentSymbol file1": 9,
+      "definition file1": 1
+    },
+    "runs": [
+      [
+        {
+          "label": "initialize",
+          "ms": 367,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 94,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 17,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 10,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nString Action.getExpression()\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 13,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 29,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 1,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 9,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 5,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 2,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 2,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 1,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 399,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 79,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 17,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 5,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nString Action.getExpression()\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 6,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 29,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 1,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 9,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 5,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 2,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 2,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 0,
+          "error": null,
+          "result": []
+        }
+      ],
+      [
+        {
+          "label": "initialize",
+          "ms": 382,
+          "error": null,
+          "result": {
+            "capabilities": {
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 1,
+                "save": true,
+                "willSave": false,
+                "willSaveWaitUntil": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                }
+              },
+              "experimental": {
+                "findMissingArtifactProvider": {
+                  "enabled": true,
+                  "supportedModes": [
+                    "blocking",
+                    "background"
+                  ],
+                  "maxCandidatesToOpen": 3,
+                  "timeoutMsHint": 1500
+                },
+                "profilingProvider": {
+                  "enabled": true
+                }
+              },
+              "documentSymbolProvider": true,
+              "hoverProvider": true,
+              "foldingRangeProvider": true,
+              "diagnosticProvider": {
+                "identifier": "apex-ls-ts",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "completionProvider": {
+                "resolveProvider": false,
+                "triggerCharacters": [
+                  "."
+                ]
+              },
+              "referencesProvider": true,
+              "definitionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": false
+              }
+            }
+          }
+        },
+        {
+          "label": "hover file1 (cold open)",
+          "ms": 69,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file1 (after edit)",
+          "ms": 16,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file2 (second file)",
+          "ms": 6,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nString Action.getExpression()\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/ApexPages/Action.cls"
+            }
+          }
+        },
+        {
+          "label": "hover file3 (third file)",
+          "ms": 14,
+          "error": null,
+          "result": null
+        },
+        {
+          "label": "hover file1 (warm cache)",
+          "ms": 30,
+          "error": null,
+          "result": {
+            "contents": {
+              "kind": "markdown",
+              "value": "\n```apex\nMap<String, Object> SampleCustomFeatureExtractor.extractFeatures(List<Map<String, Object>> request, Map<String, Object> extractedFeatures)\n```\n**Modifiers:** global\n\n**File:** file:///Users/g.shankar/Documents/GitHub/apex-language-support/packages/apex-lsp-testbed/test/fixtures/performance-tests/large/.sfdx/tools/258/StandardApexLibrary/AiAccelerator/SampleCustomFeatureExtractor.cls"
+            }
+          }
+        },
+        {
+          "label": "completion file1",
+          "ms": 0,
+          "error": "Unhandled method textDocument/completion"
+        },
+        {
+          "label": "documentSymbol file1",
+          "ms": 8,
+          "error": null,
+          "result": [
+            {
+              "name": "SampleCustomFeatureExtractor",
+              "kind": 5,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 5,
+                  "character": 1
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 0,
+                  "character": 13
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                }
+              },
+              "children": [
+                {
+                  "name": "SampleCustomFeatureExtractor",
+                  "kind": 9,
+                  "range": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 42
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 1,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "character": 36
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "clone() : Object",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 2,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 26
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 2,
+                      "character": 15
+                    },
+                    "end": {
+                      "line": 2,
+                      "character": 20
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "name": "extractFeatures(List<Map<String, Object>>, Map<String, Object>) : Map<String, Object>",
+                  "kind": 6,
+                  "range": {
+                    "start": {
+                      "line": 3,
+                      "character": 8
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 118
+                    }
+                  },
+                  "selectionRange": {
+                    "start": {
+                      "line": 3,
+                      "character": 27
+                    },
+                    "end": {
+                      "line": 3,
+                      "character": 42
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "definition file1",
+          "ms": 1,
+          "error": null,
+          "result": []
+        }
+      ]
+    ]
+  }
+}

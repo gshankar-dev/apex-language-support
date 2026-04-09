@@ -326,11 +326,13 @@ async function stressTestProject(label, projectPath, config) {
   // ── Phase 2: Start fresh server ──
 
   step(2, 'Starting fresh server...');
-  const serverPath = findServerPath();
+  const serverPath = config.serverPath || findServerPath();
   if (!serverPath) {
     console.error('    Server not found. Run: npm run compile && npm run bundle');
+    console.error('    Or specify --server-path <path-to-server.js>');
     return null;
   }
+  console.log(`    Server: ${serverPath}`);
 
   const client = new JsonRpcClient(serverPath, [], {
     APEX_LS_MODE: 'development',
@@ -430,23 +432,45 @@ async function stressTestProject(label, projectPath, config) {
     }, 60000);
   } catch { /* compilation may fail for some types — that's fine */ }
 
-  // Wait for the server to finish all background processing (protobuf + ZIP + compilation)
+  // Wait for background processing to settle.
+  // Try queue state polling first; fall back to a fixed delay if the server doesn't support it.
   let warmupIdleStreak = 0;
+  let supportsQueueState = true;
   const warmupStart = Date.now();
   const warmupTimeout = 60000;
-  while (warmupIdleStreak < 3 && (Date.now() - warmupStart) < warmupTimeout) {
+
+  // Quick probe to see if queueState is supported
+  try {
+    await client.sendRequest('apex/queueState', {}, 3000);
+  } catch {
+    supportsQueueState = false;
+  }
+
+  if (supportsQueueState) {
+    while (warmupIdleStreak < 3 && (Date.now() - warmupStart) < warmupTimeout) {
+      await sleep(2000);
+      try {
+        const qs = await client.sendRequest('apex/queueState', {}, 5000);
+        const metrics = qs?.metrics || qs || {};
+        const totalQueued = Object.values(metrics.queueSizes || {})
+          .reduce((a, b) => a + b, 0);
+        const isIdle = totalQueued === 0 &&
+          metrics.tasksStarted > 0 &&
+          metrics.tasksStarted === metrics.tasksCompleted;
+        if (isIdle) warmupIdleStreak++;
+        else warmupIdleStreak = 0;
+      } catch { warmupIdleStreak = 0; }
+    }
+  } else {
+    // No queue state support — send a second hover and wait for it (proves compilation is done)
     await sleep(2000);
     try {
-      const qs = await client.sendRequest('apex/queueState', {}, 5000);
-      const metrics = qs?.metrics || qs || {};
-      const totalQueued = Object.values(metrics.queueSizes || {})
-        .reduce((a, b) => a + b, 0);
-      const isIdle = totalQueued === 0 &&
-        metrics.tasksStarted > 0 &&
-        metrics.tasksStarted === metrics.tasksCompleted;
-      if (isIdle) warmupIdleStreak++;
-      else warmupIdleStreak = 0;
-    } catch { warmupIdleStreak = 0; }
+      await client.sendRequest('textDocument/hover', {
+        textDocument: { uri: warmupUri },
+        position: { line: 5, character: 12 },
+      }, 30000);
+    } catch { /* ok */ }
+    warmupIdleStreak = 3;
   }
 
   const warmupTimeMs = Date.now() - warmupStart;
@@ -498,7 +522,7 @@ async function stressTestProject(label, projectPath, config) {
       const result = await client.sendRequest('apex/sendWorkspaceBatch', batch, 30000);
       if (!result?.success && !result?.stored) batchErrors++;
     } catch (err) {
-      if (err.message.includes('Method not found') || err.message.includes('-32601')) {
+      if (err.message.includes('Method not found') || err.message.includes('-32601') || err.message.includes('Unhandled method')) {
         useBatchProtocol = false;
         break;
       }
@@ -590,8 +614,8 @@ async function stressTestProject(label, projectPath, config) {
     hoverPromises.push(p);
   }, config.hoverIntervalMs);
 
-  // Queue state polling (independent of hovers)
-  const queueTimer = setInterval(async () => {
+  // Queue state polling (independent of hovers) — only if the server supports it
+  const queueTimer = supportsQueueState ? setInterval(async () => {
     try {
       const qs = await client.sendRequest('apex/queueState', {}, 5000);
       const metrics = qs?.metrics || qs || {};
@@ -620,18 +644,33 @@ async function stressTestProject(label, projectPath, config) {
         }
       }
     } catch { /* server blocked — that's data too */ }
-  }, 2000);
+  }, 2000) : null;
 
-  // Wait for load to complete or timeout
+  // Wait for load to complete or timeout.
+  // Detection methods:
+  //   1. Queue state polling (when supported): all queues empty + tasks balanced for 3 consecutive polls
+  //   2. Hover latency stabilization (fallback): last 10 hovers all < 200ms, with a minimum 10s wait
   const maxWaitMs = config.maxWaitMs;
   const waitStart = Date.now();
+  const MIN_PROCESSING_BEFORE_STABLE_CHECK = 10000;
+
   while (!loadComplete && (Date.now() - waitStart) < maxWaitMs) {
     await sleep(1000);
+
+    // Fallback: detect completion via hover latency when queue state isn't available
+    if (!supportsQueueState && (Date.now() - processingStart) > MIN_PROCESSING_BEFORE_STABLE_CHECK) {
+      const recent = hoverResults.slice(-10);
+      if (recent.length >= 10 && recent.every((h) => h.status === 'success' && h.latencyMs < 200)) {
+        loadComplete = true;
+        loadCompleteMs = Date.now();
+      }
+    }
   }
 
   if (loadComplete) {
     const elapsed = ((loadCompleteMs - processingStart) / 1000).toFixed(1);
-    console.log(`    Load complete at ${elapsed}s, gathering post-load baseline...`);
+    const method = supportsQueueState ? 'queue drained' : 'hover latency stabilized';
+    console.log(`    Load complete at ${elapsed}s (${method}), gathering post-load baseline...`);
     await sleep(config.hoverIntervalMs * 15);
   } else {
     console.log(`    Load did not complete within ${maxWaitMs / 1000}s timeout`);
@@ -639,7 +678,7 @@ async function stressTestProject(label, projectPath, config) {
   }
 
   clearInterval(hoverTimer);
-  clearInterval(queueTimer);
+  if (queueTimer) clearInterval(queueTimer);
   await Promise.allSettled(hoverPromises);
 
   const processingTimeMs = loadCompleteMs - processingStart;
@@ -738,6 +777,9 @@ async function main() {
     hoverTargets: 20,
     maxWaitMs: 300000,
     cooldownMs: 5000,
+    serverPath: '',
+    outputFile: '',
+    label: '',
   };
   let projectFilter = '';
   let thresholdMs = LATENCY_THRESHOLDS.degraded;
@@ -750,6 +792,9 @@ async function main() {
     else if (args[i] === '--threshold' && i + 1 < args.length) thresholdMs = parseInt(args[++i], 10);
     else if (args[i] === '--max-wait' && i + 1 < args.length) config.maxWaitMs = parseInt(args[++i], 10) * 1000;
     else if (args[i] === '--cooldown' && i + 1 < args.length) config.cooldownMs = parseInt(args[++i], 10) * 1000;
+    else if (args[i] === '--server-path' && i + 1 < args.length) config.serverPath = args[++i];
+    else if (args[i] === '--output' && i + 1 < args.length) config.outputFile = args[++i];
+    else if (args[i] === '--label' && i + 1 < args.length) config.label = args[++i];
     else if (args[i] === '--help' || args[i] === '-h') {
       console.log(`
 Single-Thread Bottleneck Stress Test v2
@@ -760,6 +805,11 @@ Each project gets a fresh server process ("reload window").
 
 Options:
   --project <name>        Run one project (small|medium|large|xlarge)
+  --server-path <path>    Path to server.js (default: local repo build)
+                          Use to test VS Code extension versions, e.g.:
+                          ~/.vscode/extensions/salesforce.apex-*/server.js
+  --output <path>         Output JSON path (default: performance-metrics/single-thread-bottleneck.json)
+  --label <name>          Label for this test run (e.g. "release-0.4.0", "pre-release-0.5.0")
   --hover-interval <ms>   Delay between hover probes (default: 300)
   --batch-size <n>        Files per ZIP batch (default: 100)
   --hover-targets <n>     Distinct hover target files (default: 20)
@@ -774,6 +824,8 @@ Environment:
     }
   }
 
+  const serverLabel = config.label || (config.serverPath ? path.basename(path.dirname(config.serverPath)) : 'local-build');
+
   console.log(`
 ╔══════════════════════════════════════════════════════════════════════╗
 ║  SINGLE-THREAD BOTTLENECK STRESS TEST v2                           ║
@@ -783,6 +835,8 @@ Environment:
 ╚══════════════════════════════════════════════════════════════════════╝
 
   Config:
+    Server:          ${config.serverPath || 'local repo build'}
+    Label:           ${serverLabel}
     Hover interval:  ${config.hoverIntervalMs}ms
     Batch size:      ${config.batchSize} files/batch
     Hover targets:   ${config.hoverTargets}
@@ -802,8 +856,13 @@ Environment:
       continue;
     }
 
-    const data = await stressTestProject(label, projectPath, config);
-    if (data) allResults.push(data);
+    try {
+      const data = await stressTestProject(label, projectPath, config);
+      if (data) allResults.push(data);
+    } catch (err) {
+      console.error(`\n  ERROR testing ${label}: ${err.message}`);
+      console.error('  Continuing to next project...');
+    }
 
     if (pi < projects.length - 1) {
       console.log(`\n  Cooldown: ${config.cooldownMs / 1000}s before next project...`);
@@ -894,11 +953,15 @@ Environment:
 
   const metricsDir = path.join(REPO_ROOT, 'performance-metrics');
   fs.mkdirSync(metricsDir, { recursive: true });
-  const outputPath = path.join(metricsDir, 'single-thread-bottleneck.json');
+  const outputPath = config.outputFile
+    ? path.resolve(config.outputFile)
+    : path.join(metricsDir, 'single-thread-bottleneck.json');
 
   const output = {
     testType: 'single-thread-bottleneck-v2',
     timestamp: new Date().toISOString(),
+    serverLabel,
+    serverPath: config.serverPath || 'local-build',
     config,
     thresholds: LATENCY_THRESHOLDS,
     results: allResults.map((d) => d.result),
@@ -922,6 +985,12 @@ Environment:
   console.log(`\n  Results: ${outputPath}`);
   console.log(`\n${'═'.repeat(78)}\n`);
 }
+
+process.on('uncaughtException', (err) => {
+  if (err.code === 'EPIPE' || err.code === 'ERR_STREAM_DESTROYED') return;
+  console.error('Uncaught exception:', err);
+  process.exit(1);
+});
 
 main().catch((err) => {
   console.error(err);

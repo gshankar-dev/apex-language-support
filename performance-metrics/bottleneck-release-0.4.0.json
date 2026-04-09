@@ -1,0 +1,1644 @@
+{
+  "testType": "single-thread-bottleneck-v2",
+  "timestamp": "2026-04-08T23:13:48.542Z",
+  "serverLabel": "release-0.4.0",
+  "serverPath": "/Users/g.shankar/.vscode/extensions/salesforce.apex-language-server-extension-0.4.0/server.js",
+  "config": {
+    "batchSize": 100,
+    "hoverIntervalMs": 300,
+    "hoverTargets": 20,
+    "maxWaitMs": 300000,
+    "cooldownMs": 5000,
+    "serverPath": "/Users/g.shankar/.vscode/extensions/salesforce.apex-language-server-extension-0.4.0/server.js",
+    "outputFile": "performance-metrics/bottleneck-release-0.4.0.json",
+    "label": "release-0.4.0"
+  },
+  "thresholds": {
+    "acceptable": 500,
+    "degraded": 2000,
+    "unresponsive": 5000,
+    "timeout": 15000
+  },
+  "results": [
+    {
+      "project": "small",
+      "fileCount": 30,
+      "batchCount": 1,
+      "loadMode": "didOpen",
+      "warmupTimeMs": 2002,
+      "batchSendTimeMs": 1,
+      "processingTimeMs": 10009,
+      "severity": "OK",
+      "baseline": {
+        "count": 5,
+        "avg": 2,
+        "p50": 2,
+        "p95": 2,
+        "max": 2,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "duringLoad": {
+        "count": 33,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 4,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "afterLoad": {
+        "count": 15,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 2,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "overall": {
+        "count": 48,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 4,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "queueSampleCount": 0,
+      "eventLoopStalls": 0,
+      "filesPerSecond": 3
+    },
+    {
+      "project": "medium",
+      "fileCount": 142,
+      "batchCount": 2,
+      "loadMode": "didOpen",
+      "warmupTimeMs": 2003,
+      "batchSendTimeMs": 5,
+      "processingTimeMs": 10011,
+      "severity": "OK",
+      "baseline": {
+        "count": 5,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 2,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "duringLoad": {
+        "count": 33,
+        "avg": 8,
+        "p50": 1,
+        "p95": 3,
+        "max": 236,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "afterLoad": {
+        "count": 15,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 2,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "overall": {
+        "count": 48,
+        "avg": 6,
+        "p50": 1,
+        "p95": 2,
+        "max": 236,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "queueSampleCount": 0,
+      "eventLoopStalls": 0,
+      "filesPerSecond": 14.18
+    },
+    {
+      "project": "large",
+      "fileCount": 662,
+      "batchCount": 7,
+      "loadMode": "didOpen",
+      "warmupTimeMs": 2004,
+      "batchSendTimeMs": 6,
+      "processingTimeMs": 10007,
+      "severity": "UNRESPONSIVE",
+      "baseline": {
+        "count": 5,
+        "avg": 2,
+        "p50": 2,
+        "p95": 2,
+        "max": 2,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "duringLoad": {
+        "count": 33,
+        "avg": 736,
+        "p50": 2,
+        "p95": 3371,
+        "max": 3670,
+        "min": 1,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "afterLoad": {
+        "count": 15,
+        "avg": 1,
+        "p50": 1,
+        "p95": 2,
+        "max": 2,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "overall": {
+        "count": 48,
+        "avg": 506,
+        "p50": 1,
+        "p95": 3069,
+        "max": 3670,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "queueSampleCount": 0,
+      "eventLoopStalls": 6,
+      "filesPerSecond": 66.15
+    },
+    {
+      "project": "xlarge",
+      "fileCount": 1602,
+      "batchCount": 17,
+      "loadMode": "didOpen",
+      "warmupTimeMs": 2005,
+      "batchSendTimeMs": 4,
+      "processingTimeMs": 12007,
+      "severity": "BLOCKED",
+      "baseline": {
+        "count": 5,
+        "avg": 2,
+        "p50": 2,
+        "p95": 2,
+        "max": 2,
+        "min": 2,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "duringLoad": {
+        "count": 39,
+        "avg": 3189,
+        "p50": 2787,
+        "p95": 8193,
+        "max": 8494,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "afterLoad": {
+        "count": 15,
+        "avg": 1,
+        "p50": 1,
+        "p95": 3,
+        "max": 3,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "overall": {
+        "count": 54,
+        "avg": 2303,
+        "p50": 683,
+        "p95": 7891,
+        "max": 8494,
+        "min": 0,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "queueSampleCount": 0,
+      "eventLoopStalls": 22,
+      "filesPerSecond": 133.42
+    }
+  ],
+  "inflectionPoint": {
+    "project": "large",
+    "fileCount": 662,
+    "p95DuringLoadMs": 3371,
+    "processingTimeMs": 10007
+  },
+  "detailedHoverData": {
+    "small": [
+      {
+        "index": 0,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 301,
+        "status": "success"
+      },
+      {
+        "index": 1,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 602,
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 903,
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 1204,
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 1505,
+        "status": "success"
+      },
+      {
+        "index": 5,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 1807,
+        "status": "success"
+      },
+      {
+        "index": 6,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 2108,
+        "status": "success"
+      },
+      {
+        "index": 7,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 2409,
+        "status": "success"
+      },
+      {
+        "index": 8,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 2711,
+        "status": "success"
+      },
+      {
+        "index": 9,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 3011,
+        "status": "success"
+      },
+      {
+        "index": 10,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 3311,
+        "status": "success"
+      },
+      {
+        "index": 11,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 3611,
+        "status": "success"
+      },
+      {
+        "index": 12,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 3911,
+        "status": "success"
+      },
+      {
+        "index": 13,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4211,
+        "status": "success"
+      },
+      {
+        "index": 14,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4511,
+        "status": "success"
+      },
+      {
+        "index": 15,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4812,
+        "status": "success"
+      },
+      {
+        "index": 16,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5113,
+        "status": "success"
+      },
+      {
+        "index": 17,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5414,
+        "status": "success"
+      },
+      {
+        "index": 18,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 5715,
+        "status": "success"
+      },
+      {
+        "index": 19,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 6016,
+        "status": "success"
+      },
+      {
+        "index": 20,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 6317,
+        "status": "success"
+      },
+      {
+        "index": 21,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6619,
+        "status": "success"
+      },
+      {
+        "index": 22,
+        "latencyMs": 4,
+        "duringLoad": true,
+        "elapsedMs": 6920,
+        "status": "success"
+      },
+      {
+        "index": 23,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7222,
+        "status": "success"
+      },
+      {
+        "index": 24,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7523,
+        "status": "success"
+      },
+      {
+        "index": 25,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7823,
+        "status": "success"
+      },
+      {
+        "index": 26,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 8123,
+        "status": "success"
+      },
+      {
+        "index": 27,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 8424,
+        "status": "success"
+      },
+      {
+        "index": 28,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8725,
+        "status": "success"
+      },
+      {
+        "index": 29,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9025,
+        "status": "success"
+      },
+      {
+        "index": 30,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 9327,
+        "status": "success"
+      },
+      {
+        "index": 31,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9629,
+        "status": "success"
+      },
+      {
+        "index": 32,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9929,
+        "status": "success"
+      },
+      {
+        "index": 33,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 10230,
+        "status": "success"
+      },
+      {
+        "index": 34,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 10531,
+        "status": "success"
+      },
+      {
+        "index": 35,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 10831,
+        "status": "success"
+      },
+      {
+        "index": 36,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11132,
+        "status": "success"
+      },
+      {
+        "index": 37,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11433,
+        "status": "success"
+      },
+      {
+        "index": 38,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11735,
+        "status": "success"
+      },
+      {
+        "index": 39,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12037,
+        "status": "success"
+      },
+      {
+        "index": 40,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12338,
+        "status": "success"
+      },
+      {
+        "index": 41,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12639,
+        "status": "success"
+      },
+      {
+        "index": 42,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 12940,
+        "status": "success"
+      },
+      {
+        "index": 43,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13241,
+        "status": "success"
+      },
+      {
+        "index": 44,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13543,
+        "status": "success"
+      },
+      {
+        "index": 45,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13844,
+        "status": "success"
+      },
+      {
+        "index": 46,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14144,
+        "status": "success"
+      },
+      {
+        "index": 47,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 14444,
+        "status": "success"
+      }
+    ],
+    "medium": [
+      {
+        "index": 0,
+        "latencyMs": 236,
+        "duringLoad": true,
+        "elapsedMs": 302,
+        "status": "success"
+      },
+      {
+        "index": 1,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 603,
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 903,
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "latencyMs": 3,
+        "duringLoad": true,
+        "elapsedMs": 1204,
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 1506,
+        "status": "success"
+      },
+      {
+        "index": 5,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 1807,
+        "status": "success"
+      },
+      {
+        "index": 6,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 2108,
+        "status": "success"
+      },
+      {
+        "index": 7,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 2409,
+        "status": "success"
+      },
+      {
+        "index": 8,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 2710,
+        "status": "success"
+      },
+      {
+        "index": 9,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 3011,
+        "status": "success"
+      },
+      {
+        "index": 10,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 3312,
+        "status": "success"
+      },
+      {
+        "index": 11,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 3613,
+        "status": "success"
+      },
+      {
+        "index": 12,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 3913,
+        "status": "success"
+      },
+      {
+        "index": 13,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 4215,
+        "status": "success"
+      },
+      {
+        "index": 14,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4516,
+        "status": "success"
+      },
+      {
+        "index": 15,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4817,
+        "status": "success"
+      },
+      {
+        "index": 16,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5118,
+        "status": "success"
+      },
+      {
+        "index": 17,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 5419,
+        "status": "success"
+      },
+      {
+        "index": 18,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5721,
+        "status": "success"
+      },
+      {
+        "index": 19,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 6021,
+        "status": "success"
+      },
+      {
+        "index": 20,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6323,
+        "status": "success"
+      },
+      {
+        "index": 21,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6624,
+        "status": "success"
+      },
+      {
+        "index": 22,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6925,
+        "status": "success"
+      },
+      {
+        "index": 23,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 7226,
+        "status": "success"
+      },
+      {
+        "index": 24,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7527,
+        "status": "success"
+      },
+      {
+        "index": 25,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 7827,
+        "status": "success"
+      },
+      {
+        "index": 26,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8129,
+        "status": "success"
+      },
+      {
+        "index": 27,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8430,
+        "status": "success"
+      },
+      {
+        "index": 28,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 8731,
+        "status": "success"
+      },
+      {
+        "index": 29,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9032,
+        "status": "success"
+      },
+      {
+        "index": 30,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 9333,
+        "status": "success"
+      },
+      {
+        "index": 31,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9634,
+        "status": "success"
+      },
+      {
+        "index": 32,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 9935,
+        "status": "success"
+      },
+      {
+        "index": 33,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 10236,
+        "status": "success"
+      },
+      {
+        "index": 34,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 10538,
+        "status": "success"
+      },
+      {
+        "index": 35,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 10839,
+        "status": "success"
+      },
+      {
+        "index": 36,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 11140,
+        "status": "success"
+      },
+      {
+        "index": 37,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 11441,
+        "status": "success"
+      },
+      {
+        "index": 38,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11742,
+        "status": "success"
+      },
+      {
+        "index": 39,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12043,
+        "status": "success"
+      },
+      {
+        "index": 40,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12344,
+        "status": "success"
+      },
+      {
+        "index": 41,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 12644,
+        "status": "success"
+      },
+      {
+        "index": 42,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12946,
+        "status": "success"
+      },
+      {
+        "index": 43,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13246,
+        "status": "success"
+      },
+      {
+        "index": 44,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13547,
+        "status": "success"
+      },
+      {
+        "index": 45,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13848,
+        "status": "success"
+      },
+      {
+        "index": 46,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 14148,
+        "status": "success"
+      },
+      {
+        "index": 47,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 14450,
+        "status": "success"
+      }
+    ],
+    "large": [
+      {
+        "index": 0,
+        "latencyMs": 3670,
+        "duringLoad": true,
+        "elapsedMs": 301,
+        "status": "success"
+      },
+      {
+        "index": 1,
+        "latencyMs": 3371,
+        "duringLoad": true,
+        "elapsedMs": 600,
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "latencyMs": 3069,
+        "duringLoad": true,
+        "elapsedMs": 902,
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "latencyMs": 2768,
+        "duringLoad": true,
+        "elapsedMs": 1203,
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "latencyMs": 2468,
+        "duringLoad": true,
+        "elapsedMs": 1503,
+        "status": "success"
+      },
+      {
+        "index": 5,
+        "latencyMs": 2167,
+        "duringLoad": true,
+        "elapsedMs": 1804,
+        "status": "success"
+      },
+      {
+        "index": 6,
+        "latencyMs": 1866,
+        "duringLoad": true,
+        "elapsedMs": 2105,
+        "status": "success"
+      },
+      {
+        "index": 7,
+        "latencyMs": 1565,
+        "duringLoad": true,
+        "elapsedMs": 2406,
+        "status": "success"
+      },
+      {
+        "index": 8,
+        "latencyMs": 1265,
+        "duringLoad": true,
+        "elapsedMs": 2706,
+        "status": "success"
+      },
+      {
+        "index": 9,
+        "latencyMs": 965,
+        "duringLoad": true,
+        "elapsedMs": 3006,
+        "status": "success"
+      },
+      {
+        "index": 10,
+        "latencyMs": 664,
+        "duringLoad": true,
+        "elapsedMs": 3307,
+        "status": "success"
+      },
+      {
+        "index": 11,
+        "latencyMs": 364,
+        "duringLoad": true,
+        "elapsedMs": 3607,
+        "status": "success"
+      },
+      {
+        "index": 12,
+        "latencyMs": 62,
+        "duringLoad": true,
+        "elapsedMs": 3909,
+        "status": "success"
+      },
+      {
+        "index": 13,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 4209,
+        "status": "success"
+      },
+      {
+        "index": 14,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4511,
+        "status": "success"
+      },
+      {
+        "index": 15,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 4812,
+        "status": "success"
+      },
+      {
+        "index": 16,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5112,
+        "status": "success"
+      },
+      {
+        "index": 17,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5414,
+        "status": "success"
+      },
+      {
+        "index": 18,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 5715,
+        "status": "success"
+      },
+      {
+        "index": 19,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 6015,
+        "status": "success"
+      },
+      {
+        "index": 20,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 6316,
+        "status": "success"
+      },
+      {
+        "index": 21,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6618,
+        "status": "success"
+      },
+      {
+        "index": 22,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 6919,
+        "status": "success"
+      },
+      {
+        "index": 23,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7220,
+        "status": "success"
+      },
+      {
+        "index": 24,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7521,
+        "status": "success"
+      },
+      {
+        "index": 25,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 7822,
+        "status": "success"
+      },
+      {
+        "index": 26,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8123,
+        "status": "success"
+      },
+      {
+        "index": 27,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8424,
+        "status": "success"
+      },
+      {
+        "index": 28,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 8725,
+        "status": "success"
+      },
+      {
+        "index": 29,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9026,
+        "status": "success"
+      },
+      {
+        "index": 30,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9327,
+        "status": "success"
+      },
+      {
+        "index": 31,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 9627,
+        "status": "success"
+      },
+      {
+        "index": 32,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 9928,
+        "status": "success"
+      },
+      {
+        "index": 33,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 10229,
+        "status": "success"
+      },
+      {
+        "index": 34,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 10531,
+        "status": "success"
+      },
+      {
+        "index": 35,
+        "latencyMs": 0,
+        "duringLoad": false,
+        "elapsedMs": 10832,
+        "status": "success"
+      },
+      {
+        "index": 36,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11133,
+        "status": "success"
+      },
+      {
+        "index": 37,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11435,
+        "status": "success"
+      },
+      {
+        "index": 38,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 11736,
+        "status": "success"
+      },
+      {
+        "index": 39,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12037,
+        "status": "success"
+      },
+      {
+        "index": 40,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12339,
+        "status": "success"
+      },
+      {
+        "index": 41,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12640,
+        "status": "success"
+      },
+      {
+        "index": 42,
+        "latencyMs": 2,
+        "duringLoad": false,
+        "elapsedMs": 12941,
+        "status": "success"
+      },
+      {
+        "index": 43,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13241,
+        "status": "success"
+      },
+      {
+        "index": 44,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13541,
+        "status": "success"
+      },
+      {
+        "index": 45,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13842,
+        "status": "success"
+      },
+      {
+        "index": 46,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14143,
+        "status": "success"
+      },
+      {
+        "index": 47,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14445,
+        "status": "success"
+      }
+    ],
+    "xlarge": [
+      {
+        "index": 0,
+        "latencyMs": 8494,
+        "duringLoad": true,
+        "elapsedMs": 300,
+        "status": "success"
+      },
+      {
+        "index": 1,
+        "latencyMs": 8193,
+        "duringLoad": true,
+        "elapsedMs": 601,
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "latencyMs": 7891,
+        "duringLoad": true,
+        "elapsedMs": 903,
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "latencyMs": 7591,
+        "duringLoad": true,
+        "elapsedMs": 1203,
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "latencyMs": 7291,
+        "duringLoad": true,
+        "elapsedMs": 1503,
+        "status": "success"
+      },
+      {
+        "index": 5,
+        "latencyMs": 6991,
+        "duringLoad": true,
+        "elapsedMs": 1803,
+        "status": "success"
+      },
+      {
+        "index": 6,
+        "latencyMs": 6689,
+        "duringLoad": true,
+        "elapsedMs": 2105,
+        "status": "success"
+      },
+      {
+        "index": 7,
+        "latencyMs": 6389,
+        "duringLoad": true,
+        "elapsedMs": 2405,
+        "status": "success"
+      },
+      {
+        "index": 8,
+        "latencyMs": 6089,
+        "duringLoad": true,
+        "elapsedMs": 2705,
+        "status": "success"
+      },
+      {
+        "index": 9,
+        "latencyMs": 5789,
+        "duringLoad": true,
+        "elapsedMs": 3005,
+        "status": "success"
+      },
+      {
+        "index": 10,
+        "latencyMs": 5489,
+        "duringLoad": true,
+        "elapsedMs": 3305,
+        "status": "success"
+      },
+      {
+        "index": 11,
+        "latencyMs": 5189,
+        "duringLoad": true,
+        "elapsedMs": 3605,
+        "status": "success"
+      },
+      {
+        "index": 12,
+        "latencyMs": 4888,
+        "duringLoad": true,
+        "elapsedMs": 3906,
+        "status": "success"
+      },
+      {
+        "index": 13,
+        "latencyMs": 4588,
+        "duringLoad": true,
+        "elapsedMs": 4206,
+        "status": "success"
+      },
+      {
+        "index": 14,
+        "latencyMs": 4288,
+        "duringLoad": true,
+        "elapsedMs": 4506,
+        "status": "success"
+      },
+      {
+        "index": 15,
+        "latencyMs": 3989,
+        "duringLoad": true,
+        "elapsedMs": 4805,
+        "status": "success"
+      },
+      {
+        "index": 16,
+        "latencyMs": 3688,
+        "duringLoad": true,
+        "elapsedMs": 5106,
+        "status": "success"
+      },
+      {
+        "index": 17,
+        "latencyMs": 3387,
+        "duringLoad": true,
+        "elapsedMs": 5407,
+        "status": "success"
+      },
+      {
+        "index": 18,
+        "latencyMs": 3087,
+        "duringLoad": true,
+        "elapsedMs": 5707,
+        "status": "success"
+      },
+      {
+        "index": 19,
+        "latencyMs": 2787,
+        "duringLoad": true,
+        "elapsedMs": 6007,
+        "status": "success"
+      },
+      {
+        "index": 20,
+        "latencyMs": 2488,
+        "duringLoad": true,
+        "elapsedMs": 6306,
+        "status": "success"
+      },
+      {
+        "index": 21,
+        "latencyMs": 2186,
+        "duringLoad": true,
+        "elapsedMs": 6608,
+        "status": "success"
+      },
+      {
+        "index": 22,
+        "latencyMs": 1886,
+        "duringLoad": true,
+        "elapsedMs": 6908,
+        "status": "success"
+      },
+      {
+        "index": 23,
+        "latencyMs": 1585,
+        "duringLoad": true,
+        "elapsedMs": 7209,
+        "status": "success"
+      },
+      {
+        "index": 24,
+        "latencyMs": 1285,
+        "duringLoad": true,
+        "elapsedMs": 7509,
+        "status": "success"
+      },
+      {
+        "index": 25,
+        "latencyMs": 983,
+        "duringLoad": true,
+        "elapsedMs": 7811,
+        "status": "success"
+      },
+      {
+        "index": 26,
+        "latencyMs": 683,
+        "duringLoad": true,
+        "elapsedMs": 8111,
+        "status": "success"
+      },
+      {
+        "index": 27,
+        "latencyMs": 382,
+        "duringLoad": true,
+        "elapsedMs": 8412,
+        "status": "success"
+      },
+      {
+        "index": 28,
+        "latencyMs": 83,
+        "duringLoad": true,
+        "elapsedMs": 8711,
+        "status": "success"
+      },
+      {
+        "index": 29,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 9013,
+        "status": "success"
+      },
+      {
+        "index": 30,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9313,
+        "status": "success"
+      },
+      {
+        "index": 31,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9613,
+        "status": "success"
+      },
+      {
+        "index": 32,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 9915,
+        "status": "success"
+      },
+      {
+        "index": 33,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 10215,
+        "status": "success"
+      },
+      {
+        "index": 34,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 10515,
+        "status": "success"
+      },
+      {
+        "index": 35,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 10816,
+        "status": "success"
+      },
+      {
+        "index": 36,
+        "latencyMs": 1,
+        "duringLoad": true,
+        "elapsedMs": 11116,
+        "status": "success"
+      },
+      {
+        "index": 37,
+        "latencyMs": 2,
+        "duringLoad": true,
+        "elapsedMs": 11417,
+        "status": "success"
+      },
+      {
+        "index": 38,
+        "latencyMs": 0,
+        "duringLoad": true,
+        "elapsedMs": 11719,
+        "status": "success"
+      },
+      {
+        "index": 39,
+        "latencyMs": 0,
+        "duringLoad": false,
+        "elapsedMs": 12020,
+        "status": "success"
+      },
+      {
+        "index": 40,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12321,
+        "status": "success"
+      },
+      {
+        "index": 41,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12622,
+        "status": "success"
+      },
+      {
+        "index": 42,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 12923,
+        "status": "success"
+      },
+      {
+        "index": 43,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 13224,
+        "status": "success"
+      },
+      {
+        "index": 44,
+        "latencyMs": 3,
+        "duringLoad": false,
+        "elapsedMs": 13524,
+        "status": "success"
+      },
+      {
+        "index": 45,
+        "latencyMs": 3,
+        "duringLoad": false,
+        "elapsedMs": 13826,
+        "status": "success"
+      },
+      {
+        "index": 46,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14127,
+        "status": "success"
+      },
+      {
+        "index": 47,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14428,
+        "status": "success"
+      },
+      {
+        "index": 48,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 14729,
+        "status": "success"
+      },
+      {
+        "index": 49,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 15029,
+        "status": "success"
+      },
+      {
+        "index": 50,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 15330,
+        "status": "success"
+      },
+      {
+        "index": 51,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 15631,
+        "status": "success"
+      },
+      {
+        "index": 52,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 15932,
+        "status": "success"
+      },
+      {
+        "index": 53,
+        "latencyMs": 1,
+        "duringLoad": false,
+        "elapsedMs": 16233,
+        "status": "success"
+      }
+    ]
+  },
+  "queueData": {
+    "small": [],
+    "medium": [],
+    "large": [],
+    "xlarge": []
+  }
+}

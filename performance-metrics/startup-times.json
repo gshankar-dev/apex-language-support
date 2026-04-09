@@ -1,0 +1,54 @@
+{
+  "0.5.0": [
+    {
+      "spawnMs": 1,
+      "initializeMs": 331,
+      "initializedMs": 0,
+      "firstHoverMs": 80,
+      "secondHoverMs": 0,
+      "totalMs": 412
+    },
+    {
+      "spawnMs": 4,
+      "initializeMs": 357,
+      "initializedMs": 0,
+      "firstHoverMs": 78,
+      "secondHoverMs": 0,
+      "totalMs": 439
+    },
+    {
+      "spawnMs": 2,
+      "initializeMs": 356,
+      "initializedMs": 0,
+      "firstHoverMs": 84,
+      "secondHoverMs": 1,
+      "totalMs": 443
+    }
+  ],
+  "0.5.39": [
+    {
+      "spawnMs": 3,
+      "initializeMs": 461,
+      "initializedMs": 0,
+      "firstHoverMs": 331,
+      "secondHoverMs": 1,
+      "totalMs": 796
+    },
+    {
+      "spawnMs": 3,
+      "initializeMs": 444,
+      "initializedMs": 0,
+      "firstHoverMs": 321,
+      "secondHoverMs": 0,
+      "totalMs": 768
+    },
+    {
+      "spawnMs": 2,
+      "initializeMs": 444,
+      "initializedMs": 0,
+      "firstHoverMs": 323,
+      "secondHoverMs": 0,
+      "totalMs": 769
+    }
+  ]
+}

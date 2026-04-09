@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; color: #333; line-height: 1.6; }
+  h1 { font-size: 20px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+  h2 { font-size: 16px; margin-top: 28px; }
+  h3 { font-size: 14px; margin-top: 20px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
+  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: right; }
+  th { background: #f5f5f5; font-weight: bold; text-align: center; }
+  td:first-child, th:first-child { text-align: left; }
+  .good { background: #e6f4ea; }
+  .bad { background: #fce8e6; }
+  .warn { background: #fef7e0; }
+  .note { font-size: 12px; color: #666; margin-top: -8px; }
+  .callout { background: #f0f4ff; border-left: 4px solid #4285f4; padding: 12px 16px; margin: 16px 0; }
+  .callout-red { background: #fef0f0; border-left: 4px solid #ea4335; padding: 12px 16px; margin: 16px 0; }
+  ul { margin: 8px 0; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>Apex Language Server — Performance Comparison Report</h1>
+<p><strong>Date:</strong> April 9, 2026<br>
+<strong>Versions tested:</strong> v0.5.0 (current Cursor release), v0.5.39 (pre-release)<br>
+<strong>Machine:</strong> macOS, Apple Silicon</p>
+
+<h2>Extension Activation Times</h2>
+<p>Captured from <em>Developer: Startup Performance</em> in Cursor after a window reload. Times shown are: code loading (loading the JS bundle), activate call (calling the activate function), and activate resolved (waiting for activate to finish).</p>
+
+<h3>Apex Language Server Extension — Head-to-Head</h3>
+<table>
+  <tr><th>Phase</th><th>v0.5.0</th><th>v0.5.39</th></tr>
+  <tr><td>Load Code</td><td class="good">126 ms</td><td>173 ms</td></tr>
+  <tr><td>Call Activate</td><td>3 ms</td><td>10 ms</td></tr>
+  <tr><td>Finish Activate</td><td>5 ms</td><td>0 ms</td></tr>
+  <tr><td><strong>Total</strong></td><td class="good"><strong>134 ms</strong></td><td><strong>183 ms</strong></td></tr>
+</table>
+<p>The v0.5.39 bundle is larger (13.6 MB vs 11.9 MB), which accounts for the slower code loading time. Overall activation is 37% slower.</p>
+
+<h3>Common Extensions — v0.5.0 vs v0.5.39</h3>
+<p class="note">Extensions that activated in both sessions.</p>
+<table>
+  <tr><th>Extension</th><th>v0.5.0 Total</th><th>v0.5.39 Total</th><th>Diff</th></tr>
+  <tr><td>apex-language-server-extension</td><td class="good">134 ms</td><td>183 ms</td><td class="warn">+37%</td></tr>
+  <tr><td>salesforcedx-vscode-services</td><td>364 ms</td><td>355 ms</td><td class="good">−2%</td></tr>
+  <tr><td>salesforcedx-vscode-core</td><td>1,356 ms</td><td>1,610 ms</td><td class="warn">+19%</td></tr>
+  <tr><td>agent-script-language-client</td><td>233 ms</td><td>140 ms</td><td class="good">−40%</td></tr>
+</table>
+
+<h3>All Salesforce Extensions — Full Activation Breakdown (v0.5.0)</h3>
+<p class="note">From a complete window reload on April 8. Sorted by total time descending.</p>
+<table>
+  <tr><th>Extension</th><th>Total</th><th>Load Code</th><th>Call Activate</th><th>Finish Activate</th></tr>
+  <tr><td>salesforce-internal-dx</td><td class="bad">15,403 ms</td><td>21 ms</td><td>0 ms</td><td>15,382 ms</td></tr>
+  <tr><td>salesforcedx-vscode-org</td><td class="bad">2,062 ms</td><td>210 ms</td><td>2 ms</td><td>1,850 ms</td></tr>
+  <tr><td>salesforcedx-vscode-apex</td><td class="bad">1,684 ms</td><td>180 ms</td><td>0 ms</td><td>1,504 ms</td></tr>
+  <tr><td>salesforcedx-vscode-core</td><td class="warn">1,356 ms</td><td>256 ms</td><td>0 ms</td><td>1,100 ms</td></tr>
+  <tr><td>salesforcedx-vscode-metadata</td><td class="warn">1,065 ms</td><td>73 ms</td><td>1 ms</td><td>991 ms</td></tr>
+  <tr><td>salesforcedx-vscode-lwc</td><td class="warn">743 ms</td><td>208 ms</td><td>0 ms</td><td>535 ms</td></tr>
+  <tr><td>salesforcedx-vscode-apex-oas</td><td class="warn">691 ms</td><td>298 ms</td><td>0 ms</td><td>393 ms</td></tr>
+  <tr><td>salesforcedx-einstein-gpt</td><td>440 ms</td><td>407 ms</td><td>1 ms</td><td>32 ms</td></tr>
+  <tr><td>salesforcedx-vscode-services</td><td>364 ms</td><td>306 ms</td><td>0 ms</td><td>58 ms</td></tr>
+  <tr><td>salesforcedx-vscode-agents</td><td>354 ms</td><td>349 ms</td><td>1 ms</td><td>4 ms</td></tr>
+  <tr><td>salesforcedx-vscode-apex-replay-debugger</td><td>242 ms</td><td>215 ms</td><td>0 ms</td><td>27 ms</td></tr>
+  <tr><td>agent-script-language-client</td><td>233 ms</td><td>12 ms</td><td>0 ms</td><td>221 ms</td></tr>
+  <tr><td>salesforcedx-vscode-apex-testing</td><td>203 ms</td><td>165 ms</td><td>6 ms</td><td>32 ms</td></tr>
+  <tr><td>salesforcedx-vscode-ui-preview</td><td>156 ms</td><td>126 ms</td><td>1 ms</td><td>29 ms</td></tr>
+  <tr><td>apex-language-server-extension</td><td class="good">134 ms</td><td>126 ms</td><td>3 ms</td><td>5 ms</td></tr>
+  <tr><td>salesforcedx-vscode-apex-log</td><td>82 ms</td><td>61 ms</td><td>7 ms</td><td>14 ms</td></tr>
+  <tr><td>salesforce-vscode-slds</td><td>41 ms</td><td>28 ms</td><td>0 ms</td><td>13 ms</td></tr>
+  <tr><td>sfdx-code-analyzer-vscode</td><td>26 ms</td><td>6 ms</td><td>0 ms</td><td>20 ms</td></tr>
+  <tr><td>salesforcedx-vscode-visualforce</td><td>7 ms</td><td>5 ms</td><td>2 ms</td><td>0 ms</td></tr>
+  <tr><td>apex-pmd (chuckjonas)</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</table>
+<p class="note">The total time across all Salesforce extensions was approximately 25 seconds, dominated by salesforce-internal-dx (15.4s). Excluding that outlier, the Salesforce extension suite takes ~9.7 seconds to fully activate.</p>
+
+<h2>Server Startup Performance</h2>
+<p>We measured how long the language server process takes to start up and become responsive, running each version 3 times.</p>
+
+<table>
+  <tr><th>Phase</th><th>What it measures</th><th>v0.5.0 (median)</th><th>v0.5.39 (median)</th></tr>
+  <tr><td>Initialize</td><td>Server process spawn → initialize response</td><td class="good">356 ms</td><td>444 ms</td></tr>
+  <tr><td>First hover</td><td>First hover response (triggers standard library loading)</td><td class="good">80 ms</td><td class="warn">323 ms</td></tr>
+  <tr><td>Second hover</td><td>Second hover (everything cached)</td><td class="good">&lt;1 ms</td><td class="good">&lt;1 ms</td></tr>
+  <tr><td><strong>Total</strong></td><td><strong>Spawn to fully responsive</strong></td><td class="good"><strong>439 ms</strong></td><td><strong>769 ms</strong></td></tr>
+</table>
+
+<p>v0.5.39 takes about 75% longer to become fully responsive. The biggest difference is in the first hover (323ms vs 80ms), which reflects the lazy standard library hydration — v0.5.39 has to load standard types on demand during the first compilation, while v0.5.0 pre-loaded them during initialization.</p>
+
+<p>Once everything is cached, both versions respond in under 1ms (second hover). The lazy loading trade-off makes individual startup cheaper but pushes the cost into the first interaction.</p>
+
+<table>
+  <tr><th>Version</th><th>Run 1</th><th>Run 2</th><th>Run 3</th><th>Median</th></tr>
+  <tr><td>v0.5.0 (total)</td><td>412 ms</td><td>439 ms</td><td>443 ms</td><td class="good"><strong>439 ms</strong></td></tr>
+  <tr><td>v0.5.39 (total)</td><td>796 ms</td><td>768 ms</td><td>769 ms</td><td><strong>769 ms</strong></td></tr>
+</table>
+
+<h2>Editing 1–3 Files (Common Workflow)</h2>
+<p>We simulated the most common developer workflow: open a file, hover, edit it, hover again, open a second and third file, go back to the first, then try completion, document symbols, and go-to-definition. No workspace batch loading — just normal editing. Each version was run 3 times; medians shown below.</p>
+
+<table>
+  <tr><th>Action</th><th>v0.5.0</th><th>v0.5.39</th></tr>
+  <tr><td>Initialize server</td><td class="good">341 ms</td><td>449 ms</td></tr>
+  <tr><td>Open file 1 + hover (cold)</td><td>28 ms</td><td class="good">13 ms</td></tr>
+  <tr><td>Edit file 1 + hover (recompile)</td><td class="good">14 ms</td><td>21 ms</td></tr>
+  <tr><td>Open file 2 + hover</td><td class="good">19 ms</td><td>29 ms</td></tr>
+  <tr><td>Open file 3 + hover</td><td class="good">7 ms</td><td>8 ms</td></tr>
+  <tr><td>Back to file 1 + hover (warm)</td><td>27 ms</td><td>28 ms</td></tr>
+  <tr><td>Document symbols</td><td class="good">18 ms</td><td>36 ms</td></tr>
+  <tr><td>Go-to-definition</td><td>&lt;1 ms</td><td>2 ms</td></tr>
+</table>
+
+<div class="callout">
+<strong>Both versions are fast for the normal editing workflow.</strong> Every operation completes in under 50ms. The differences are small — within tens of milliseconds — and both feel instant to the user. v0.5.0 is a bit quicker on most operations, while v0.5.39 is slightly faster on the first cold hover.
+</div>
+
+<p>This confirms the engineer's intent: the v0.5.39 changes don't hurt the 1–3 file editing experience. The problem only appears during bulk workspace loading, not during normal editing.</p>
+
+<h2>Progressive File Loading — Where Does It Break?</h2>
+<p>We progressively loaded files in steps (5, 10, 15, 20, 30 … up to 662) and measured hover latency after each step, with time for processing to settle between steps. This simulates a user gradually opening files rather than bulk-loading a workspace.</p>
+
+<table>
+  <tr><th>Files Loaded</th><th>v0.5.0 (p95)</th><th>v0.5.39 (p95)</th></tr>
+  <tr><td>0 (baseline)</td><td>65 ms</td><td>71 ms</td></tr>
+  <tr><td>5</td><td>40 ms</td><td>30 ms</td></tr>
+  <tr><td>10</td><td>35 ms</td><td>31 ms</td></tr>
+  <tr><td>20</td><td>36 ms</td><td>30 ms</td></tr>
+  <tr><td>50</td><td>38 ms</td><td>30 ms</td></tr>
+  <tr><td>100</td><td>40 ms</td><td>29 ms</td></tr>
+  <tr><td>200</td><td>38 ms</td><td>30 ms</td></tr>
+  <tr><td>300</td><td>39 ms</td><td>30 ms</td></tr>
+  <tr><td>450</td><td>40 ms</td><td>31 ms</td></tr>
+  <tr><td>662</td><td>40 ms</td><td>30 ms</td></tr>
+</table>
+
+<div class="callout">
+<strong>No divergence at any file count.</strong> When files are loaded incrementally (with time for each batch to settle), both versions stay under 40ms all the way up to 662 files. v0.5.39 is actually slightly faster. The regression does not appear here at all.
+</div>
+
+<p>This tells us the problem is not about the <em>number of files</em> — it's about <em>how they're loaded</em>. The regression only shows up when all files are sent at once via the bulk workspace loading protocol, which triggers a different processing path in v0.5.39 (see "What Changed" below).</p>
+
+<h2>Workspace Loading Performance (Bulk / Startup)</h2>
+<p>This is the scenario where the regression appears. The test sends all files at once (as the extension does at startup) and measures hover responsiveness while the server processes them in the background. Hover requests are fired every 300ms.</p>
+
+<p>We tested four project sizes:</p>
+<table>
+  <tr><th>Project</th><th>Files</th><th>Description</th></tr>
+  <tr><td>Small</td><td>30</td><td>Trigger actions framework</td></tr>
+  <tr><td>Medium</td><td>142</td><td>Dreamhouse sample app</td></tr>
+  <tr><td>Large</td><td>662</td><td>EDA (Education Data Architecture)</td></tr>
+  <tr><td>XLarge</td><td>1,602</td><td>Synthetic enterprise project with complex code</td></tr>
+</table>
+
+<h2>Results Summary</h2>
+
+<h3>Hover Latency During Workspace Loading (p95)</h3>
+<p class="note">Lower is better. Under 500ms feels instant; over 2,000ms feels broken.</p>
+<table>
+  <tr><th>Project</th><th>Files</th><th>v0.5.0</th><th>v0.5.39</th></tr>
+  <tr><td>Small</td><td>30</td><td class="good">28 ms</td><td class="warn">1,202 ms</td></tr>
+  <tr><td>Medium</td><td>142</td><td class="good">29 ms</td><td class="warn">686 ms</td></tr>
+  <tr><td>Large</td><td>662</td><td class="good">311 ms</td><td class="bad">15,002 ms (timed out)</td></tr>
+  <tr><td>XLarge</td><td>1,602</td><td class="bad">15,002 ms</td><td class="bad">15,002 ms (timed out)</td></tr>
+</table>
+
+<h3>Event Loop Stalls (hover took longer than 2 seconds)</h3>
+<p class="note">Zero is ideal. Each stall means the user waited 2+ seconds for a hover response.</p>
+<table>
+  <tr><th>Project</th><th>Files</th><th>v0.5.0</th><th>v0.5.39</th></tr>
+  <tr><td>Small</td><td>30</td><td class="good">0</td><td class="good">0</td></tr>
+  <tr><td>Medium</td><td>142</td><td class="good">0</td><td class="good">0</td></tr>
+  <tr><td>Large</td><td>662</td><td class="good">0</td><td class="bad">992</td></tr>
+  <tr><td>XLarge</td><td>1,602</td><td class="bad">367</td><td class="bad">993</td></tr>
+</table>
+
+<h3>Processing Time</h3>
+<p class="note">How long the server took to finish processing all the files.</p>
+<table>
+  <tr><th>Project</th><th>Files</th><th>v0.5.0</th><th>v0.5.39</th></tr>
+  <tr><td>Small</td><td>30</td><td>8.0 s</td><td>10.2 s</td></tr>
+  <tr><td>Medium</td><td>142</td><td>8.0 s</td><td>8.0 s</td></tr>
+  <tr><td>Large</td><td>662</td><td>10.0 s</td><td class="bad">300 s+ (never finished)</td></tr>
+  <tr><td>XLarge</td><td>1,602</td><td>126.1 s</td><td class="bad">300 s+ (never finished)</td></tr>
+</table>
+
+<div class="callout-red">
+<strong>Key finding:</strong> v0.5.0 processes 662 files in 10 seconds with zero stalls. v0.5.39 cannot finish processing the same 662 files within 5 minutes, and hovers are completely unresponsive the entire time.
+</div>
+
+<h2>What Changed Between v0.5.0 and v0.5.39</h2>
+
+<p>Per the engineering team, three internal changes were made:</p>
+<ol>
+  <li><strong>Standard library classes are now loaded lazily.</strong> Previously, all standard Apex types (String, List, Map, etc.) were fully loaded from a protobuf archive at startup. Now they're loaded on demand when first referenced.</li>
+  <li><strong>More debouncing during symbol relationship building.</strong> The server now batches up more work before processing cross-file relationships.</li>
+  <li><strong>Cross-file reference tracking switched from a graph to map structures.</strong></li>
+</ol>
+
+<p>We also found a fourth change by diffing the server bundles:</p>
+<ol start="4">
+  <li><strong>Workspace batch processing was restructured.</strong> In v0.5.0, each batch of files is unpacked and queued for processing as it arrives (one at a time, with gaps in between). In v0.5.39, batches are stored first, then all processed at once in a tight loop with no breathing room for other requests.</li>
+</ol>
+
+<h2>Why v0.5.39 Is Slower</h2>
+
+<p>The changes interact with each other in an unfortunate way during workspace loading:</p>
+
+<ul>
+  <li><strong>Lazy loading + batch processing = a lot of extra work at the worst time.</strong> When the server compiles hundreds of files, each file references standard types. In v0.5.0 those types were already in memory. In v0.5.39, the first reference to each type triggers an on-demand load from the protobuf archive. This adds overhead to every single file compilation during the initial load.</li>
+
+  <li><strong>Processing all batches at once removes the gaps that kept hovers responsive.</strong> In v0.5.0, each batch arrived from the client, got unpacked, and was queued individually. The round-trip time between batches gave the server a chance to handle hover requests. In v0.5.39, everything is queued in one shot, so the server grinds through all the work without ever pausing to respond to the user.</li>
+
+  <li><strong>Larger debounce windows mean bigger bursts of relationship-building.</strong> With more work accumulated before firing, the server does more in each burst, which blocks the thread for longer stretches.</li>
+</ul>
+
+<div class="callout">
+<strong>In short:</strong> v0.5.0 spreads the work out and stays responsive. v0.5.39 front-loads everything and locks up.
+</div>
+
+<h2>Verification</h2>
+<p>We ran each test multiple times to confirm the results are reproducible.</p>
+<table>
+  <tr><th>Version</th><th>Run 1 — p95</th><th>Run 2 — p95</th><th>Run 1 — Stalls</th><th>Run 2 — Stalls</th></tr>
+  <tr><td>v0.5.0 (large)</td><td class="good">311 ms</td><td class="good">306 ms</td><td class="good">0</td><td class="good">0</td></tr>
+  <tr><td>v0.5.39 (large)</td><td class="bad">15,002 ms</td><td class="bad">15,002 ms</td><td class="bad">992</td><td class="bad">393*</td></tr>
+</table>
+<p class="note">* Second v0.5.39 run used a shorter timeout (120s vs 300s), so fewer hovers were sent. The pattern is identical — every hover during load timed out.</p>
+
+<h2>Suggestions</h2>
+
+<ol>
+  <li><strong>Pre-load standard types before processing workspace batches.</strong> The lazy loading optimization makes sense for startup, but during a bulk workspace load the server knows it's about to compile hundreds of files. Hydrating the common standard types up front would avoid repeated on-demand loads during compilation.</li>
+
+  <li><strong>Go back to processing batches incrementally.</strong> The v0.5.0 approach of handling each batch as it arrives kept the server responsive. If the store-then-process-all approach is needed for other reasons, adding explicit yield points between batches would help.</li>
+
+  <li><strong>Use shorter debounce windows during workspace loading.</strong> Smaller bursts of relationship-building let hover requests get through in between.</li>
+</ol>
+
+<h2>Test Infrastructure</h2>
+<p>All tests were run using <code>scripts/single-thread-bottleneck-test.js</code> with the <code>--server-path</code> flag pointing at the installed extension server bundles. Each project size gets a fresh server process. Results are saved as JSON in <code>performance-metrics/</code>.</p>
+
+<p>To reproduce:</p>
+<pre style="background: #f5f5f5; padding: 12px; font-size: 12px; overflow-x: auto;">
+# v0.5.0
+node scripts/single-thread-bottleneck-test.js \
+  --server-path ~/.cursor/extensions/salesforce.apex-language-server-extension-0.5.0/server.node.js \
+  --label "release-0.5.0" --project large
+
+# v0.5.39
+node scripts/single-thread-bottleneck-test.js \
+  --server-path ~/.cursor/extensions/salesforce.apex-language-server-extension-0.5.39-universal/dist/server.node.js \
+  --label "pre-release-0.5.39" --project large
+</pre>
+
+</body>
+</html>

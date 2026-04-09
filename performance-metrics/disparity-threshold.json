@@ -1,0 +1,202 @@
+{
+  "0.5.0": [
+    {
+      "fileCount": 0,
+      "avg": 40,
+      "p95": 65,
+      "max": 65,
+      "count": 5
+    },
+    {
+      "fileCount": 5,
+      "avg": 32,
+      "p95": 40,
+      "max": 40,
+      "count": 5
+    },
+    {
+      "fileCount": 10,
+      "avg": 28,
+      "p95": 35,
+      "max": 35,
+      "count": 5
+    },
+    {
+      "fileCount": 15,
+      "avg": 32,
+      "p95": 41,
+      "max": 41,
+      "count": 5
+    },
+    {
+      "fileCount": 20,
+      "avg": 29,
+      "p95": 36,
+      "max": 36,
+      "count": 5
+    },
+    {
+      "fileCount": 30,
+      "avg": 32,
+      "p95": 39,
+      "max": 39,
+      "count": 5
+    },
+    {
+      "fileCount": 50,
+      "avg": 28,
+      "p95": 38,
+      "max": 38,
+      "count": 5
+    },
+    {
+      "fileCount": 75,
+      "avg": 33,
+      "p95": 42,
+      "max": 42,
+      "count": 5
+    },
+    {
+      "fileCount": 100,
+      "avg": 29,
+      "p95": 40,
+      "max": 40,
+      "count": 5
+    },
+    {
+      "fileCount": 150,
+      "avg": 33,
+      "p95": 36,
+      "max": 36,
+      "count": 5
+    },
+    {
+      "fileCount": 200,
+      "avg": 29,
+      "p95": 38,
+      "max": 38,
+      "count": 5
+    },
+    {
+      "fileCount": 300,
+      "avg": 31,
+      "p95": 39,
+      "max": 39,
+      "count": 5
+    },
+    {
+      "fileCount": 450,
+      "avg": 31,
+      "p95": 40,
+      "max": 40,
+      "count": 5
+    },
+    {
+      "fileCount": 662,
+      "avg": 29,
+      "p95": 40,
+      "max": 40,
+      "count": 5
+    }
+  ],
+  "0.5.39": [
+    {
+      "fileCount": 0,
+      "avg": 41,
+      "p95": 71,
+      "max": 71,
+      "count": 5
+    },
+    {
+      "fileCount": 5,
+      "avg": 27,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 10,
+      "avg": 29,
+      "p95": 31,
+      "max": 31,
+      "count": 5
+    },
+    {
+      "fileCount": 15,
+      "avg": 28,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 20,
+      "avg": 26,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 30,
+      "avg": 25,
+      "p95": 31,
+      "max": 31,
+      "count": 5
+    },
+    {
+      "fileCount": 50,
+      "avg": 25,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 75,
+      "avg": 25,
+      "p95": 31,
+      "max": 31,
+      "count": 5
+    },
+    {
+      "fileCount": 100,
+      "avg": 25,
+      "p95": 29,
+      "max": 29,
+      "count": 5
+    },
+    {
+      "fileCount": 150,
+      "avg": 27,
+      "p95": 29,
+      "max": 29,
+      "count": 5
+    },
+    {
+      "fileCount": 200,
+      "avg": 29,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 300,
+      "avg": 29,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    },
+    {
+      "fileCount": 450,
+      "avg": 28,
+      "p95": 31,
+      "max": 31,
+      "count": 5
+    },
+    {
+      "fileCount": 662,
+      "avg": 28,
+      "p95": 30,
+      "max": 30,
+      "count": 5
+    }
+  ]
+}

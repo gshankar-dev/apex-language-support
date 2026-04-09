@@ -1,0 +1,527 @@
+{
+  "testType": "single-thread-bottleneck-v2",
+  "timestamp": "2026-04-09T00:28:07.800Z",
+  "serverLabel": "profile-0.5.0",
+  "serverPath": "/Users/g.shankar/.cursor/extensions/salesforce.apex-language-server-extension-0.5.0/server.node.js",
+  "config": {
+    "batchSize": 100,
+    "hoverIntervalMs": 300,
+    "hoverTargets": 20,
+    "maxWaitMs": 300000,
+    "cooldownMs": 5000,
+    "serverPath": "/Users/g.shankar/.cursor/extensions/salesforce.apex-language-server-extension-0.5.0/server.node.js",
+    "outputFile": "performance-metrics/bottleneck-profile-0.5.0.json",
+    "label": "profile-0.5.0"
+  },
+  "thresholds": {
+    "acceptable": 500,
+    "degraded": 2000,
+    "unresponsive": 5000,
+    "timeout": 15000
+  },
+  "results": [
+    {
+      "project": "large",
+      "fileCount": 662,
+      "batchCount": 7,
+      "loadMode": "batch",
+      "warmupTimeMs": 6011,
+      "batchSendTimeMs": 722,
+      "processingTimeMs": 10095,
+      "severity": "OK",
+      "baseline": {
+        "count": 5,
+        "avg": 13,
+        "p50": 7,
+        "p95": 28,
+        "max": 28,
+        "min": 3,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "duringLoad": {
+        "count": 33,
+        "avg": 48,
+        "p50": 25,
+        "p95": 188,
+        "max": 264,
+        "min": 4,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "afterLoad": {
+        "count": 18,
+        "avg": 12,
+        "p50": 12,
+        "p95": 25,
+        "max": 25,
+        "min": 3,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "overall": {
+        "count": 51,
+        "avg": 35,
+        "p50": 19,
+        "p95": 122,
+        "max": 264,
+        "min": 3,
+        "timeouts": 0,
+        "errors": 0
+      },
+      "queueSampleCount": 7,
+      "eventLoopStalls": 0,
+      "filesPerSecond": 65.58
+    }
+  ],
+  "inflectionPoint": null,
+  "detailedHoverData": {
+    "large": [
+      {
+        "index": 0,
+        "latencyMs": 92,
+        "duringLoad": true,
+        "elapsedMs": 389,
+        "status": "success"
+      },
+      {
+        "index": 1,
+        "latencyMs": 90,
+        "duringLoad": true,
+        "elapsedMs": 690,
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "latencyMs": 27,
+        "duringLoad": true,
+        "elapsedMs": 991,
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "latencyMs": 35,
+        "duringLoad": true,
+        "elapsedMs": 1292,
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "latencyMs": 96,
+        "duringLoad": true,
+        "elapsedMs": 1593,
+        "status": "success"
+      },
+      {
+        "index": 5,
+        "latencyMs": 61,
+        "duringLoad": true,
+        "elapsedMs": 1894,
+        "status": "success"
+      },
+      {
+        "index": 6,
+        "latencyMs": 15,
+        "duringLoad": true,
+        "elapsedMs": 2195,
+        "status": "success"
+      },
+      {
+        "index": 7,
+        "latencyMs": 13,
+        "duringLoad": true,
+        "elapsedMs": 2496,
+        "status": "success"
+      },
+      {
+        "index": 8,
+        "latencyMs": 122,
+        "duringLoad": true,
+        "elapsedMs": 2797,
+        "status": "success"
+      },
+      {
+        "index": 9,
+        "latencyMs": 6,
+        "duringLoad": true,
+        "elapsedMs": 3098,
+        "status": "success"
+      },
+      {
+        "index": 10,
+        "latencyMs": 69,
+        "duringLoad": true,
+        "elapsedMs": 3399,
+        "status": "success"
+      },
+      {
+        "index": 11,
+        "latencyMs": 44,
+        "duringLoad": true,
+        "elapsedMs": 3700,
+        "status": "success"
+      },
+      {
+        "index": 12,
+        "latencyMs": 188,
+        "duringLoad": true,
+        "elapsedMs": 4001,
+        "status": "success"
+      },
+      {
+        "index": 13,
+        "latencyMs": 264,
+        "duringLoad": true,
+        "elapsedMs": 4302,
+        "status": "success"
+      },
+      {
+        "index": 14,
+        "latencyMs": 41,
+        "duringLoad": true,
+        "elapsedMs": 4603,
+        "status": "success"
+      },
+      {
+        "index": 15,
+        "latencyMs": 44,
+        "duringLoad": true,
+        "elapsedMs": 4904,
+        "status": "success"
+      },
+      {
+        "index": 16,
+        "latencyMs": 110,
+        "duringLoad": true,
+        "elapsedMs": 5205,
+        "status": "success"
+      },
+      {
+        "index": 17,
+        "latencyMs": 11,
+        "duringLoad": true,
+        "elapsedMs": 5506,
+        "status": "success"
+      },
+      {
+        "index": 18,
+        "latencyMs": 18,
+        "duringLoad": true,
+        "elapsedMs": 5807,
+        "status": "success"
+      },
+      {
+        "index": 19,
+        "latencyMs": 25,
+        "duringLoad": true,
+        "elapsedMs": 6107,
+        "status": "success"
+      },
+      {
+        "index": 20,
+        "latencyMs": 4,
+        "duringLoad": true,
+        "elapsedMs": 6408,
+        "status": "success"
+      },
+      {
+        "index": 21,
+        "latencyMs": 8,
+        "duringLoad": true,
+        "elapsedMs": 6709,
+        "status": "success"
+      },
+      {
+        "index": 22,
+        "latencyMs": 15,
+        "duringLoad": true,
+        "elapsedMs": 7010,
+        "status": "success"
+      },
+      {
+        "index": 23,
+        "latencyMs": 23,
+        "duringLoad": true,
+        "elapsedMs": 7310,
+        "status": "success"
+      },
+      {
+        "index": 24,
+        "latencyMs": 27,
+        "duringLoad": true,
+        "elapsedMs": 7611,
+        "status": "success"
+      },
+      {
+        "index": 25,
+        "latencyMs": 7,
+        "duringLoad": true,
+        "elapsedMs": 7911,
+        "status": "success"
+      },
+      {
+        "index": 26,
+        "latencyMs": 12,
+        "duringLoad": true,
+        "elapsedMs": 8212,
+        "status": "success"
+      },
+      {
+        "index": 27,
+        "latencyMs": 21,
+        "duringLoad": true,
+        "elapsedMs": 8512,
+        "status": "success"
+      },
+      {
+        "index": 28,
+        "latencyMs": 29,
+        "duringLoad": true,
+        "elapsedMs": 8813,
+        "status": "success"
+      },
+      {
+        "index": 29,
+        "latencyMs": 10,
+        "duringLoad": true,
+        "elapsedMs": 9114,
+        "status": "success"
+      },
+      {
+        "index": 30,
+        "latencyMs": 14,
+        "duringLoad": true,
+        "elapsedMs": 9415,
+        "status": "success"
+      },
+      {
+        "index": 31,
+        "latencyMs": 19,
+        "duringLoad": true,
+        "elapsedMs": 9717,
+        "status": "success"
+      },
+      {
+        "index": 32,
+        "latencyMs": 25,
+        "duringLoad": true,
+        "elapsedMs": 10018,
+        "status": "success"
+      },
+      {
+        "index": 33,
+        "latencyMs": 3,
+        "duringLoad": false,
+        "elapsedMs": 10319,
+        "status": "success"
+      },
+      {
+        "index": 34,
+        "latencyMs": 6,
+        "duringLoad": false,
+        "elapsedMs": 10621,
+        "status": "success"
+      },
+      {
+        "index": 35,
+        "latencyMs": 12,
+        "duringLoad": false,
+        "elapsedMs": 10922,
+        "status": "success"
+      },
+      {
+        "index": 36,
+        "latencyMs": 18,
+        "duringLoad": false,
+        "elapsedMs": 11222,
+        "status": "success"
+      },
+      {
+        "index": 37,
+        "latencyMs": 20,
+        "duringLoad": false,
+        "elapsedMs": 11523,
+        "status": "success"
+      },
+      {
+        "index": 38,
+        "latencyMs": 25,
+        "duringLoad": false,
+        "elapsedMs": 11823,
+        "status": "success"
+      },
+      {
+        "index": 39,
+        "latencyMs": 3,
+        "duringLoad": false,
+        "elapsedMs": 12124,
+        "status": "success"
+      },
+      {
+        "index": 40,
+        "latencyMs": 5,
+        "duringLoad": false,
+        "elapsedMs": 12425,
+        "status": "success"
+      },
+      {
+        "index": 41,
+        "latencyMs": 7,
+        "duringLoad": false,
+        "elapsedMs": 12727,
+        "status": "success"
+      },
+      {
+        "index": 42,
+        "latencyMs": 15,
+        "duringLoad": false,
+        "elapsedMs": 13028,
+        "status": "success"
+      },
+      {
+        "index": 43,
+        "latencyMs": 24,
+        "duringLoad": false,
+        "elapsedMs": 13329,
+        "status": "success"
+      },
+      {
+        "index": 44,
+        "latencyMs": 3,
+        "duringLoad": false,
+        "elapsedMs": 13630,
+        "status": "success"
+      },
+      {
+        "index": 45,
+        "latencyMs": 5,
+        "duringLoad": false,
+        "elapsedMs": 13931,
+        "status": "success"
+      },
+      {
+        "index": 46,
+        "latencyMs": 12,
+        "duringLoad": false,
+        "elapsedMs": 14232,
+        "status": "success"
+      },
+      {
+        "index": 47,
+        "latencyMs": 16,
+        "duringLoad": false,
+        "elapsedMs": 14533,
+        "status": "success"
+      },
+      {
+        "index": 48,
+        "latencyMs": 20,
+        "duringLoad": false,
+        "elapsedMs": 14833,
+        "status": "success"
+      },
+      {
+        "index": 49,
+        "latencyMs": 24,
+        "duringLoad": false,
+        "elapsedMs": 15134,
+        "status": "success"
+      },
+      {
+        "index": 50,
+        "latencyMs": 4,
+        "duringLoad": false,
+        "elapsedMs": 15435,
+        "status": "success"
+      }
+    ]
+  },
+  "queueData": {
+    "large": [
+      {
+        "timestampMs": 2097,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 3,
+          "5": 0
+        },
+        "tasksStarted": 20,
+        "tasksCompleted": 18
+      },
+      {
+        "timestampMs": 4206,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 30,
+        "tasksCompleted": 28
+      },
+      {
+        "timestampMs": 6092,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 36,
+        "tasksCompleted": 36
+      },
+      {
+        "timestampMs": 8093,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 43,
+        "tasksCompleted": 43
+      },
+      {
+        "timestampMs": 10095,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 50,
+        "tasksCompleted": 50
+      },
+      {
+        "timestampMs": 12096,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 56,
+        "tasksCompleted": 56
+      },
+      {
+        "timestampMs": 14098,
+        "queueSizes": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tasksStarted": 63,
+        "tasksCompleted": 63
+      }
+    ]
+  }
+}
